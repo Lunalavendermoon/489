@@ -1,0 +1,38 @@
+﻿title: Act_I_Script
+---
+Narrator: Welcome.
+Narrator: Welcome! Pure, innocent soul.  
+Narrator: I am the narrator. 
+Narrator: Trust me, we will soon be best pals. But before that, you will have to listen and believe in whatever I say. 
+Narrator: Sounds pretty easy, right?
+	-> nah
+		Narrator: Well, whether you like it or not, it’s the rule. Because life is like a box of chocolates, 
+        Narrator: It’s like an unwanted present that only brings you high blood sugar. 
+        Narrator: You should have learned this lesson many years ago—no one gets everything they want.
+        Narrator: Your childhood dream as a game designer… Well, you were very close. You poured all your ambition, confidence, passion, heart, and soul into building the game of your life…
+        Narrator: …until a large Corporation bought it out, and now you’re officially bankrupt. 
+        Narrator: You pretty much lost everything overnight. You were forced to give up on your dream, find a living, and get a REAL job. 
+        Narrator: This is why you came to the Gallinaceus Villa for an opportunity, where you are closest to the richest and the most prominent family on this planet.
+        Narrator: Before you can regret, you have already passed the application. Apparently, you are at least capable of applying for a basic physical job, such as a security guard.
+        Narrator: Today is your day one of working for the man, the guy, the legend, the CEO, the Enigma—*Eugene Aurelius K. Arthur Gallinaceus*, and you will uncover one of the greatest secrets on earth:
+        Narrator: Since no one can have everything they want, why can a Gallinaceus have everything? 
+        <<jump IntoVilla>>
+    -> ok
+        Narrator: Great, you’re getting the hang of this.
+        Narrator: Now, lemme tell you a little bit more about yourself. 
+        Narrator: You used to be a game designer… and you were very close to the life of your dream. 
+        Narrator: You poured all your ambition, confidence, passion, heart, and soul into building the game of your life,
+        Narrator: …until a large Corporation bought it out, and now you’re officially bankrupt. 
+        Narrator: You pretty much lost everything overnight. You were forced to give up on your dream, find a living, and get a REAL job. 
+        Narrator: This is why you came to the Gallinaceus Villa for an opportunity, where you are closest to the richest and the most prominent family on this planet.
+        Narrator: Before you can regret, you have already passed the application. Apparently, you are at least capable of applying for a basic physical job, such as a security guard.
+        Narrator: Today is your day one of working for the man, the guy, the legend, the CEO, the Enigma—*Eugene Aurelius K. Arthur Gallinaceus*, and you will uncover one of the greatest secrets on earth:
+        Narrator: Since no one can have everything they want, why can a Gallinaceus have everything? 
+        <<jump IntoVilla>>
+===
+
+title: IntoVilla
+---
+Narrator: You are standing in front of the Gallinaceus Villa, a mansion that is so big it can fit a small village inside.
+
+===
