@@ -6,6 +6,9 @@ public class CameraShake2D : MonoBehaviour
     private Vector3 basePos;
     private float timer;
     private float strength;
+    
+    private const float MAX_SHAKE_STRENGTH = 0.8f;
+    private const float MAX_SHAKE_DURATION = 0.25f;
 
     private void Awake()
     {
@@ -14,8 +17,15 @@ public class CameraShake2D : MonoBehaviour
 
     public void Shake(float strength, float duration)
     {
-        this.strength = Mathf.Max(this.strength, strength);
-        timer = Mathf.Max(timer, duration);
+        this.strength = Mathf.Min(Mathf.Max(this.strength, strength), MAX_SHAKE_STRENGTH);
+        timer = Mathf.Min(Mathf.Max(timer, duration), MAX_SHAKE_DURATION);
+    }
+
+    public void ResetShake()
+    {
+        timer = 0f;
+        strength = 0f;
+        transform.localPosition = basePos;
     }
 
     private void LateUpdate()

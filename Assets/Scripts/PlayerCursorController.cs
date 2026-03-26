@@ -50,6 +50,10 @@ public class PlayerCursorController : MonoBehaviour
         // Normal state input (original logic)
         if (gm.state != GameManager.GameState.Normal) return;
 
+        // Skip input if we just resumed from tutorial pause to prevent the resume click from triggering actions
+        if (gm.tutorial != null && gm.tutorial.WasJustResumedFromPause())
+            return;
+
         if (Input.GetMouseButtonDown(0))
             holdingMouse = true;
 

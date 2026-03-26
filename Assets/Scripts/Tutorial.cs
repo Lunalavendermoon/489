@@ -35,6 +35,11 @@ public class Tutorial : MonoBehaviour
     private float timeSinceLastDamage = 0f;
     private bool supermodeHappened = false;
 
+    // Pause/resume behavior for tutorial text
+    private bool isPausedForTutorial = false;
+    private string lastTutorialText = "";
+    private int resumeFrameCount = -999;
+
     private void Start()
     {
         if (!enableTutorial) return;
@@ -57,6 +62,16 @@ public class Tutorial : MonoBehaviour
     {
         if (!enableTutorial || gm == null) return;
         if (currentState == TutorialState.Complete) return;
+
+        if (isPausedForTutorial)
+        {
+            // wait until user clicks/taps to resume
+            if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+            {
+                ResumeFromTutorialPause();
+            }
+            return;
+        }
 
         stateTimer -= Time.deltaTime;
 
@@ -273,10 +288,78 @@ public class Tutorial : MonoBehaviour
 
     private void UpdateTutorialText(string text)
     {
+        // If new tutorial content appears, pause gameplay until player click/tap.
+        if (text != lastTutorialText)
+        {
+            if (!string.IsNullOrEmpty(text))
+            {
+                PauseForTutorial();
+            }
+            else
+            {
+                // no text means tutorial is not blocking and may resume if still paused
+                if (isPausedForTutorial)
+                {
+                    ResumeFromTutorialPause();
+                }
+            }
+            lastTutorialText = text;
+        }
+
         if (tutorialText != null)
         {
             tutorialText.text = text;
         }
+    }
+
+    private void PauseForTutorial()
+    {
+        if (isPausedForTutorial) return;
+
+        isPausedForTutorial = true;
+        Time.timeScale = 0f;
+
+        // Reset camera shake immediately when pausing
+        if (fx != null && fx.shake != null)
+        {
+            fx.shake.ResetShake();
+        }
+
+        // Pause audio so pulse doesn't advance independently
+        if (gm != null && gm.beat != null && gm.beat.audioSource != null)
+        {
+            gm.beat.audioSource.Pause();
+        }
+    }
+
+    private void ResumeFromTutorialPause()
+    {
+        isPausedForTutorial = false;
+        resumeFrameCount = Time.frameCount;
+        Time.timeScale = 1f;
+
+        // Resume audio
+        if (gm != null && gm.beat != null && gm.beat.audioSource != null)
+        {
+            gm.beat.audioSource.Play();
+        }
+
+        // Reset any lingering camera shake to prevent jitter
+        if (fx != null && fx.shake != null)
+        {
+            fx.shake.ResetShake();
+        }
+
+        // Reset GameManager timers to prevent accumulated state triggering unintended transitions
+        if (gm != null)
+        {
+            gm.ResetPauseAccumulatedTime();
+        }
+    }
+
+    public bool WasJustResumedFromPause()
+    {
+        return Time.frameCount == resumeFrameCount;
     }
 
     private void CompleteTutorial()

@@ -421,5 +421,14 @@ public class GameManager : MonoBehaviour
         pendingSuperCountdown = true;
         pendingSuperCountdownDelay = 0.3f;
     }
+
+    public void ResetPauseAccumulatedTime()
+    {
+        // Reset timers that may have accumulated while paused to prevent unwanted state transitions
+        superClickCooldownTimer = 0f;
+        pendingSuperCountdown = false;
+        pendingSuperCountdownDelay = 0f;
+        superCountdownTimer = superCountdownSeconds;
+    }
 }
  
