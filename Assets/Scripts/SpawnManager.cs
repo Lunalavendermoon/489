@@ -20,6 +20,17 @@ public class SpawnManager : MonoBehaviour
     [Header("Special Dots (Batch)")]
     public bool spawnSpecialDots = true;
 
+    [Header("Health Dots")]
+    [Tooltip("If true, some normal dots can spawn as health dots.")]
+    public bool spawnHealthDots = true;
+
+    [Range(0f, 1f)]
+    [Tooltip("Chance that a spawned NORMAL dot becomes a health dot.")]
+    public float healthDotChance = 0.15f;
+
+    [Tooltip("Starting health assigned to spawned health dots.")]
+    [Min(1)] public int healthDotStartingHealth = 3;
+
     [Tooltip("How many special dots appear at once on the field.")]
     public int specialBatchCount = 3;
 
@@ -124,6 +135,9 @@ public class SpawnManager : MonoBehaviour
         var d = dotPool.Spawn(pos, Quaternion.identity);
         d.Init(cam);
         d.SetSpecial(isSpecial);
+
+        bool makeHealthDot = !isSpecial && spawnHealthDots && Random.value <= healthDotChance;
+        d.ConfigureHealthDot(makeHealthDot, healthDotStartingHealth);
 
         // Pool hook
         var pr = d.GetComponent<PoolRef>() ?? d.gameObject.AddComponent<PoolRef>();

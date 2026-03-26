@@ -89,9 +89,10 @@ public class GameManager : MonoBehaviour
         }
 
         // Handle pending supermode countdown (delayed to ensure audio is done)
+        // Use unscaledDeltaTime so this works even when tutorial pauses the game
         if (pendingSuperCountdown)
         {
-            pendingSuperCountdownDelay -= Time.deltaTime;
+            pendingSuperCountdownDelay -= Time.unscaledDeltaTime;
             if (pendingSuperCountdownDelay <= 0f)
             {
                 pendingSuperCountdown = false;
@@ -104,11 +105,15 @@ public class GameManager : MonoBehaviour
         {
             if (state == GameState.CountdownToSuper)
             {
-                superCountdownTimer -= Time.deltaTime;
-                ui?.SetSuperCountdown(superCountdownTimer);
+                // Don't advance countdown if tutorial is paused
+                if (tutorial == null || !tutorial.isPausedForTutorial)
+                {
+                    superCountdownTimer -= Time.deltaTime;
+                    ui?.SetSuperCountdown(superCountdownTimer);
 
-                if (superCountdownTimer <= 0f)
-                    EnterSuperMode();
+                    if (superCountdownTimer <= 0f)
+                        EnterSuperMode();
+                }
             }
             else if (state == GameState.Super)
             {

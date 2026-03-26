@@ -302,12 +302,22 @@ public class CoreController : MonoBehaviour
         judge = beat.Judgment(out acc01, maxWindowSeconds);
         float curveAcc = acc01 * acc01;
 
-        pointsAwarded = dotBasePoints + Mathf.RoundToInt(dotBonusPoints * curveAcc);
+        bool isHealthDot = dot.IsHealthDot;
+        if (!isHealthDot)
+            pointsAwarded = dotBasePoints + Mathf.RoundToInt(dotBonusPoints * curveAcc);
 
         isPerfect = (judge == "PERFECT");
         if (isPerfect)
         {
-            pointsAwarded += dotPerfectFlatBonus;
+            if (isHealthDot)
+            {
+                pointsAwarded += dot.MinorPerfectPoints;
+            }
+            else
+            {
+                pointsAwarded += dotPerfectFlatBonus;
+            }
+
             CoreDirection direction = GetCoreDirectionForCollision(dot.transform.position);
             fx?.TriggerPerfectPostFX(direction);
             fx?.DepositPop(true); // big shake immediately for perfect
@@ -324,14 +334,34 @@ public class CoreController : MonoBehaviour
         }
         fx?.PlayDepositSfx(isPerfect);
 
-        fx?.PlayDepositSfx(isPerfect);
+        bool shouldDespawn = true;
+        if (isHealthDot)
+        {
+            shouldDespawn = false;
+
+            if (isPerfect)
+            {
+                bool broke = dot.ApplyPerfectHealthHit();
+                if (broke)
+                {
+                    pointsAwarded += dot.MassiveBreakPoints;
+                    shouldDespawn = true;
+                }
+            }
+            else
+            {
+                pointsAwarded = 0;
+            }
+        }
 
         gm?.AddScore(pointsAwarded);
 
-        fill += dotFillAmount;
-        UpdateFillUI();
-
-        dot.DespawnSelf();
+        if (shouldDespawn)
+        {
+            fill += dotFillAmount;
+            UpdateFillUI();
+            dot.DespawnSelf();
+        }
 
         if (fill >= fillMax)
         {

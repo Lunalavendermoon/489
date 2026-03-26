@@ -36,7 +36,7 @@ public class Tutorial : MonoBehaviour
     private bool supermodeHappened = false;
 
     // Pause/resume behavior for tutorial text
-    private bool isPausedForTutorial = false;
+    public bool isPausedForTutorial = false;
     private string lastTutorialText = "";
     private int resumeFrameCount = -999;
 

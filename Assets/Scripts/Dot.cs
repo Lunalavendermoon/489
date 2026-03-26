@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Dot : PooledObject
 {
@@ -11,8 +12,27 @@ public class Dot : PooledObject
     [Tooltip("Optional: tint special dots to stand out.")]
     public Color specialTint = new Color(1f, 0.8f, 0.25f, 1f);
 
+    [Tooltip("Optional: tint health dots to stand out.")]
+    public Color healthTint = new Color(0.45f, 1f, 0.55f, 1f);
+
     [Tooltip("Optional: slightly larger special dots.")]
     public float specialScaleMult = 1.10f;
+
+    [Header("Health Dot")]
+    [Tooltip("If true, this dot has health and can be deposited multiple times.")]
+    [SerializeField] private bool isHealthDot = false;
+
+    [Tooltip("Starting health for health dots.")]
+    [Min(1)] public int startingHealth = 3;
+
+    [Tooltip("Minor score granted when this health dot is deposited with PERFECT.")]
+    public int healthDotMinorPerfectPoints = 80;
+
+    [Tooltip("Massive score granted when this health dot reaches 0 health on deposit.")]
+    public int healthDotMassiveBreakPoints = 1200;
+
+    [Tooltip("Optional text used to show current health above the dot.")]
+    public TMP_Text healthText;
     [Header("Special Dot Overrides")]
     [Tooltip("If true, special dots override motion/lifetime values below.")]
     public bool useSpecialOverrides = true;
@@ -20,6 +40,13 @@ public class Dot : PooledObject
     public float specialGuaranteedOnScreenTime = 8.0f;
     public float specialMaxLifetime = 14.0f;
     public float specialDriftSpeed = 1.6f;
+
+    [Header("Health Dot Overrides")]
+    [Tooltip("If true, health dots override guaranteed on-screen time and max lifetime below.")]
+    public bool useHealthOverrides = true;
+
+    public float healthGuaranteedOnScreenTime = 5.0f;
+    public float healthMaxLifetime = 10.0f;
 
     [Tooltip("If assigned, tint will be applied here.")]
     public SpriteRenderer spriteRenderer;
@@ -64,6 +91,12 @@ public class Dot : PooledObject
 
     [SerializeField] private bool isSpecial = false;
     public bool IsSpecial => isSpecial;
+    public bool IsHealthDot => isHealthDot;
+    public int CurrentHealth => currentHealth;
+    public int MinorPerfectPoints => Mathf.Max(0, healthDotMinorPerfectPoints);
+    public int MassiveBreakPoints => Mathf.Max(0, healthDotMassiveBreakPoints);
+
+    private int currentHealth;
 
 
     // ✅ Allow pickup even if special; special logic happens at deposit time
@@ -77,8 +110,11 @@ public class Dot : PooledObject
         defaultDriftSpeed = driftSpeed;
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (healthText == null)
+            healthText = GetComponentInChildren<TMP_Text>(true);
 
         ApplyVisual();
+        ResetHealth();
     }
 
     public override void OnSpawn()
@@ -97,9 +133,8 @@ public class Dot : PooledObject
 
         // IMPORTANT: pooling safety — reset special flag by default.
         // The spawner should call SetSpecial(true) after spawning special dots.
-        SetSpecial(false); // important: pooling reset
-        isSpecial = false;
-        ApplyVisual();
+        SetSpecial(false);
+        ConfigureHealthDot(false);
 
         if (cam == null) cam = Camera.main;
         PickNewWanderTarget();
@@ -116,33 +151,87 @@ public class Dot : PooledObject
     public void SetSpecial(bool v)
     {
         isSpecial = v;
-        if (!useSpecialOverrides)
-            return;
+        ApplyTypeMotionOverrides();
+        ApplyVisual();
+    }
 
-        if (isSpecial)
+    public void ConfigureHealthDot(bool enabled, int startHealthOverride = -1)
+    {
+        isHealthDot = enabled;
+
+        if (startHealthOverride > 0)
+            startingHealth = startHealthOverride;
+
+        ApplyTypeMotionOverrides();
+        ResetHealth();
+        ApplyVisual();
+    }
+
+    private void ApplyTypeMotionOverrides()
+    {
+        if (isSpecial && useSpecialOverrides)
         {
             guaranteedOnScreenTime = specialGuaranteedOnScreenTime;
             maxLifetime = specialMaxLifetime;
             driftSpeed = specialDriftSpeed;
+            return;
         }
-        else
+
+        if (isHealthDot && useHealthOverrides)
         {
-            guaranteedOnScreenTime = defaultGuaranteedOnScreenTime;
-            maxLifetime = defaultMaxLifetime;
+            guaranteedOnScreenTime = healthGuaranteedOnScreenTime;
+            maxLifetime = healthMaxLifetime;
             driftSpeed = defaultDriftSpeed;
+            return;
         }
-        ApplyVisual();
+
+        guaranteedOnScreenTime = defaultGuaranteedOnScreenTime;
+        maxLifetime = defaultMaxLifetime;
+        driftSpeed = defaultDriftSpeed;
     }
 
     private void ApplyVisual()
     {
         // Tint
         if (spriteRenderer != null)
-            spriteRenderer.color = isSpecial ? specialTint : normalTint;
+        {
+            if (isSpecial) spriteRenderer.color = specialTint;
+            else if (isHealthDot) spriteRenderer.color = healthTint;
+            else spriteRenderer.color = normalTint;
+        }
 
         // Size (only when not carried; carried scaling is applied in SetCarried)
         if (!carried)
             transform.localScale = defaultScale * (isSpecial ? specialScaleMult : 1f);
+
+        RefreshHealthVisual();
+    }
+
+    private void ResetHealth()
+    {
+        currentHealth = Mathf.Max(1, startingHealth);
+        RefreshHealthVisual();
+    }
+
+    private void RefreshHealthVisual()
+    {
+        if (healthText == null) return;
+
+        bool show = isHealthDot && IsActive;
+        healthText.gameObject.SetActive(show);
+
+        if (show)
+            healthText.text = Mathf.Max(0, currentHealth).ToString();
+    }
+
+    public bool ApplyPerfectHealthHit()
+    {
+        if (!isHealthDot)
+            return false;
+
+        currentHealth = Mathf.Max(0, currentHealth - 1);
+        RefreshHealthVisual();
+        return currentHealth <= 0;
     }
 
     private void Update()
