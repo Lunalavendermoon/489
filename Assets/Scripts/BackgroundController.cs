@@ -1,6 +1,6 @@
+using Yarn.Unity;
 using UnityEngine;
 using UnityEngine.UI; 
-using Yarn.Unity;
 
 public class BackgroundController : MonoBehaviour
 {
