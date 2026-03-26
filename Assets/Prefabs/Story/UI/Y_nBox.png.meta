@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 40cb49c885a8d2548bc0eb182f95cb1e
+guid: eb4fd5ec96f6a86458beda072139018a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1816771299003249846
-    second: Story_ConvoLog_0
+      213: -5545405849214431750
+    second: Y_nBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Story_ConvoLog_0
+      name: Y_nBox_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4800
-        height: 2700
+        x: 477
+        y: 191
+        width: 3807
+        height: 629
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4b49c4112889c6e0800000000000000
-      internalID: -1816771299003249846
+      spriteID: afd433ec2c2ca03b0800000000000000
+      internalID: -5545405849214431750
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Story_ConvoLog_0: -1816771299003249846
+      Y_nBox_0: -5545405849214431750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

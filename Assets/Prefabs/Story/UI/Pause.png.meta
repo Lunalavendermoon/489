@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f89cca7687c471345a7dff43a0034b3c
+guid: b0325af7a70cec244828fe3771aed7a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6102164579927537807
-    second: Character_Reaction_Sadge_0
+      213: -7762350047352875558
+    second: Pause_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_Reaction_Sadge_0
+      name: Pause_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4800
-        height: 2700
+        x: 133
+        y: 2292
+        width: 378
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f883d83da5e3fa450800000000000000
-      internalID: 6102164579927537807
+      spriteID: ad59b4532c7964490800000000000000
+      internalID: -7762350047352875558
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Character_Reaction_Sadge_0: 6102164579927537807
+      Pause_0: -7762350047352875558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a1e418a97f496945a6f4250caa40fcc
+guid: c2e621a941e747c4b897b839e2038a3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4835928078411854063
-    second: Story_whatever_0
+      213: -8788312889950769325
+    second: NarrBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Story_whatever_0
+      name: NarrBox_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4800
-        height: 2700
+        x: 477
+        y: 191
+        width: 3807
+        height: 629
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe0731927faac1340800000000000000
-      internalID: 4835928078411854063
+      spriteID: 35f6f733df3a90680800000000000000
+      internalID: -8788312889950769325
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Story_whatever_0: 4835928078411854063
+      NarrBox_0: -8788312889950769325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

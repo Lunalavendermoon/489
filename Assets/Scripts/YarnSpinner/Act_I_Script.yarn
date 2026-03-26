@@ -1,9 +1,17 @@
 ﻿title: start
 ---
 <<background  introduction_0>>
+
 <<hide eugene>>
 <<hide  y/n>>
 <<fade_in player 2.0>>
+
+<<hide bb_dream>>
+<<hide  bb_job>>
+
+<<hide  y/nbox>>
+<<fade_in narratorbox 2.0>>
+
 Narrator: Welcome.
 Narrator: Welcome! Pure, innocent soul.  
 Narrator: I am the narrator. 
