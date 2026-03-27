@@ -192,7 +192,7 @@ MonoBehaviour:
   bullets: {fileID: 1266486693}
   core: {fileID: 1821561328}
   fx: {fileID: 2126955627}
-  tutorial: {fileID: 0}
+  tutorial: {fileID: 52717958}
 --- !u!114 &52717958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   tutorialText: {fileID: 1924280484}
   fx: {fileID: 2126955627}
   enableTutorial: 1
+  isPausedForTutorial: 0
 --- !u!1 &61730787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2150,9 @@ MonoBehaviour:
   dotSpawnMinRadius: 1.6
   dotSpawnMaxRadius: 4.8
   spawnSpecialDots: 1
+  spawnHealthDots: 1
+  healthDotChance: 0
+  healthDotStartingHealth: 3
   specialBatchCount: 5
   specialRespawnDelay: 3
   enforceFullSpecialBatch: 1

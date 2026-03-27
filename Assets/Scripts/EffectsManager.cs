@@ -225,19 +225,31 @@ public class EffectsManager : MonoBehaviour
 
     public void PickupPop() { /* stub */ }
     public void TraceStartPop() { /* stub */ }
-    public void CapturePop() { shake?.Shake(smallShake, 0.08f); }
-    public void FailPop() { shake?.Shake(smallShake, 0.06f); }
+    public void CapturePop() { TryShake(smallShake, 0.08f); }
+    public void FailPop() { TryShake(smallShake, 0.06f); }
 
     public void DepositPop(bool perfect)
     {
-        Debug.Log($"[EffectsManager] DepositPop called. perfect={perfect} shakeNull={(shake == null)}");
-        if (perfect) shake?.Shake(bigShake, 0.12f);
-        else shake?.Shake(smallShake, 0.08f);
+        if (perfect) TryShake(bigShake, 0.12f);
+        else TryShake(smallShake, 0.08f);
     }
 
-    public void ShakeSmall() => shake?.Shake(smallShake, 0.08f);
-    public void SuperStartBurst() => shake?.Shake(bigShake, 0.18f);
+    public void ShakeSmall() => TryShake(smallShake, 0.08f);
+    public void SuperStartBurst() => TryShake(bigShake, 0.18f);
     public void PulseClickPop() { /* stub */ }
+
+    private void TryShake(float strength, float duration)
+    {
+        if (shake == null) return;
+
+        if (Time.timeScale == 0f)
+        {
+            shake.ResetShake();
+            return;
+        }
+
+        shake.Shake(strength, duration);
+    }
 
     /// <summary>
     /// Triggers perfect post FX + core sprite swap for the same duration as the flash.

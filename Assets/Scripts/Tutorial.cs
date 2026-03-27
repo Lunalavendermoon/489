@@ -38,7 +38,9 @@ public class Tutorial : MonoBehaviour
     // Pause/resume behavior for tutorial text
     public bool isPausedForTutorial = false;
     private string lastTutorialText = "";
+    private bool lastTutorialTextBlocks = false;
     private int resumeFrameCount = -999;
+    private bool tutorialPausedBeatAudio = false;
 
     private void Start()
     {
@@ -143,7 +145,7 @@ public class Tutorial : MonoBehaviour
     {
         if (stateTimer <= 0f)
         {
-            UpdateTutorialText("Collect all special(green) Rumors on-screen (there's 5!) and deposit them all together to score massive points.");
+            UpdateTutorialText("Collect all special(green) Rumors on-screen (there's 5!) to deposit them. Do this to score massive points!");
             // Enable special dot spawns when we move into the special dots tutorial
             if (gm != null && gm.spawns != null)
             {
@@ -202,7 +204,7 @@ public class Tutorial : MonoBehaviour
         // updates the text a little further.
         if (gm != null && gm.state == GameManager.GameState.CountdownToSuper)
         {
-            UpdateTutorialText("Countdown active! When super mode begins you'll be invulnerable. Smack him repeatedly to earn massive points!");
+            UpdateTutorialText("Countdown active! When super mode begins you'll be invulnerable. Smack him repeatedly to earn massive points!", false);
             AdvanceState(TutorialState.SuperModeHappening, 0f);
         }
     }
@@ -217,7 +219,7 @@ public class Tutorial : MonoBehaviour
         if (gm.state == GameManager.GameState.Super)
         {
             // super is live
-            UpdateTutorialText("Super mode is active! Smack him as many times as possible!!!");
+            UpdateTutorialText("Super mode is active! Smack him as many times as possible!!!", false);
         }
         else if (gm.state != GameManager.GameState.CountdownToSuper)
         {
@@ -252,32 +254,25 @@ public class Tutorial : MonoBehaviour
         timeSinceLastDamage = 0f;
     }
 
-    // Called from GameManager when a countdown to super begins.  We want
-    // to explain the mechanic while the countdown UI is visible.
+    // Called from GameManager when a countdown to super begins.
+    // Super-mode tutorial text is driven by the state machine in Update.
     public void OnSuperCountdownStart()
     {
         if (!enableTutorial) return;
-        UpdateTutorialText("Super mode is coming! You'll be invincible and earn a big score bonus. Get ready to smash everything!");
     }
 
-    // Called when the game actually enters super mode.  Give the player a
-    // brief reminder while it is active.
+    // Called when the game actually enters super mode.
+    // Super-mode tutorial text is driven by the state machine in Update.
     public void OnSuperModeStart()
     {
         if (!enableTutorial) return;
-        UpdateTutorialText("Super mode active! Collect dots and avoid damage to keep it going.");
     }
 
-    // Optionally clear any lingering text when super mode ends.
+    // Called when super mode ends.
+    // Cleanup is handled by the tutorial state machine in Update.
     public void OnSuperModeEnd()
     {
         if (!enableTutorial) return;
-        // only clear if we're not in another tutorial sequence
-        if (currentState == TutorialState.SuperModeHappening ||
-            currentState == TutorialState.ExplainSuperMode)
-        {
-            UpdateTutorialText("");
-        }
     }
 
     private void AdvanceState(TutorialState nextState, float delay)
@@ -286,12 +281,15 @@ public class Tutorial : MonoBehaviour
         stateTimer = delay;
     }
 
-    private void UpdateTutorialText(string text)
+    private void UpdateTutorialText(string text, bool pauseGameplay = true)
     {
-        // If new tutorial content appears, pause gameplay until player click/tap.
-        if (text != lastTutorialText)
+        bool textChanged = text != lastTutorialText;
+        bool blockingChanged = pauseGameplay != lastTutorialTextBlocks;
+
+        // If tutorial content or its blocking behavior changed, update pause state.
+        if (textChanged || blockingChanged)
         {
-            if (!string.IsNullOrEmpty(text))
+            if (!string.IsNullOrEmpty(text) && pauseGameplay)
             {
                 PauseForTutorial();
             }
@@ -303,7 +301,9 @@ public class Tutorial : MonoBehaviour
                     ResumeFromTutorialPause();
                 }
             }
+
             lastTutorialText = text;
+            lastTutorialTextBlocks = pauseGameplay;
         }
 
         if (tutorialText != null)
@@ -328,7 +328,11 @@ public class Tutorial : MonoBehaviour
         // Pause audio so pulse doesn't advance independently
         if (gm != null && gm.beat != null && gm.beat.audioSource != null)
         {
-            gm.beat.audioSource.Pause();
+            tutorialPausedBeatAudio = gm.beat.audioSource.isPlaying;
+            if (tutorialPausedBeatAudio)
+            {
+                gm.beat.audioSource.Pause();
+            }
         }
     }
 
@@ -338,11 +342,12 @@ public class Tutorial : MonoBehaviour
         resumeFrameCount = Time.frameCount;
         Time.timeScale = 1f;
 
-        // Resume audio
-        if (gm != null && gm.beat != null && gm.beat.audioSource != null)
+        // Resume audio only if the tutorial was the system that paused it.
+        if (tutorialPausedBeatAudio && gm != null && gm.beat != null && gm.beat.audioSource != null)
         {
             gm.beat.audioSource.Play();
         }
+        tutorialPausedBeatAudio = false;
 
         // Reset any lingering camera shake to prevent jitter
         if (fx != null && fx.shake != null)

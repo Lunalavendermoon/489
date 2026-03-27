@@ -31,6 +31,7 @@ public class BeatManager : MonoBehaviour
     public event Action OnPeak;   // fired once per beat near peak
 
     private float lastBeatIndex = -1f;
+    private bool hasObservedPlaybackStart = false;
     
     public float CurrentTime
     {
@@ -96,8 +97,11 @@ public class BeatManager : MonoBehaviour
     {
         if (endOnSongFinish && audioSource != null && audioSource.clip != null)
         {
-            // Wait for audio to naturally finish playing
-            if (!audioSource.isPlaying)
+            if (audioSource.isPlaying)
+            {
+                hasObservedPlaybackStart = true;
+            }
+            else if (hasObservedPlaybackStart && HasAudioReachedClipEnd())
             {
                 gm?.EndSongRun();
                 endOnSongFinish = false; // Prevent triggering multiple times
@@ -117,6 +121,17 @@ public class BeatManager : MonoBehaviour
             lastBeatIndex = beatIndex;
             OnPeak?.Invoke();
         }
+    }
+
+    private bool HasAudioReachedClipEnd()
+    {
+        if (audioSource == null || audioSource.clip == null)
+            return false;
+
+        if (audioSource.timeSamples > 0)
+            return audioSource.timeSamples >= audioSource.clip.samples - 1;
+
+        return audioSource.time >= audioSource.clip.length - 0.05f;
     }
 
    private void AnimatePulse()
