@@ -35,12 +35,8 @@ public class Tutorial : MonoBehaviour
     private float timeSinceLastDamage = 0f;
     private bool supermodeHappened = false;
 
-    // Pause/resume behavior for tutorial text
-    public bool isPausedForTutorial = false;
+    // Tutorial text tracking
     private string lastTutorialText = "";
-    private bool lastTutorialTextBlocks = false;
-    private int resumeFrameCount = -999;
-    private bool tutorialPausedBeatAudio = false;
 
     private void Start()
     {
@@ -64,16 +60,6 @@ public class Tutorial : MonoBehaviour
     {
         if (!enableTutorial || gm == null) return;
         if (currentState == TutorialState.Complete) return;
-
-        if (isPausedForTutorial)
-        {
-            // wait until user clicks/taps to resume
-            if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
-            {
-                ResumeFromTutorialPause();
-            }
-            return;
-        }
 
         stateTimer -= Time.deltaTime;
 
@@ -281,90 +267,15 @@ public class Tutorial : MonoBehaviour
         stateTimer = delay;
     }
 
-    private void UpdateTutorialText(string text, bool pauseGameplay = true)
+    private void UpdateTutorialText(string text, bool pauseGameplay = false)
     {
-        bool textChanged = text != lastTutorialText;
-        bool blockingChanged = pauseGameplay != lastTutorialTextBlocks;
-
-        // If tutorial content or its blocking behavior changed, update pause state.
-        if (textChanged || blockingChanged)
-        {
-            if (!string.IsNullOrEmpty(text) && pauseGameplay)
-            {
-                PauseForTutorial();
-            }
-            else
-            {
-                // no text means tutorial is not blocking and may resume if still paused
-                if (isPausedForTutorial)
-                {
-                    ResumeFromTutorialPause();
-                }
-            }
-
-            lastTutorialText = text;
-            lastTutorialTextBlocks = pauseGameplay;
-        }
+        if (text == lastTutorialText) return;
+        lastTutorialText = text;
 
         if (tutorialText != null)
         {
             tutorialText.text = text;
         }
-    }
-
-    private void PauseForTutorial()
-    {
-        if (isPausedForTutorial) return;
-
-        isPausedForTutorial = true;
-        Time.timeScale = 0f;
-
-        // Reset camera shake immediately when pausing
-        if (fx != null && fx.shake != null)
-        {
-            fx.shake.ResetShake();
-        }
-
-        // Pause audio so pulse doesn't advance independently
-        if (gm != null && gm.beat != null && gm.beat.audioSource != null)
-        {
-            tutorialPausedBeatAudio = gm.beat.audioSource.isPlaying;
-            if (tutorialPausedBeatAudio)
-            {
-                gm.beat.audioSource.Pause();
-            }
-        }
-    }
-
-    private void ResumeFromTutorialPause()
-    {
-        isPausedForTutorial = false;
-        resumeFrameCount = Time.frameCount;
-        Time.timeScale = 1f;
-
-        // Resume audio only if the tutorial was the system that paused it.
-        if (tutorialPausedBeatAudio && gm != null && gm.beat != null && gm.beat.audioSource != null)
-        {
-            gm.beat.audioSource.Play();
-        }
-        tutorialPausedBeatAudio = false;
-
-        // Reset any lingering camera shake to prevent jitter
-        if (fx != null && fx.shake != null)
-        {
-            fx.shake.ResetShake();
-        }
-
-        // Reset GameManager timers to prevent accumulated state triggering unintended transitions
-        if (gm != null)
-        {
-            gm.ResetPauseAccumulatedTime();
-        }
-    }
-
-    public bool WasJustResumedFromPause()
-    {
-        return Time.frameCount == resumeFrameCount;
     }
 
     private void CompleteTutorial()

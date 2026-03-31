@@ -105,15 +105,11 @@ public class GameManager : MonoBehaviour
         {
             if (state == GameState.CountdownToSuper)
             {
-                // Don't advance countdown if tutorial is paused
-                if (tutorial == null || !tutorial.isPausedForTutorial)
-                {
-                    superCountdownTimer -= Time.deltaTime;
-                    ui?.SetSuperCountdown(superCountdownTimer);
+                superCountdownTimer -= Time.deltaTime;
+                ui?.SetSuperCountdown(superCountdownTimer);
 
-                    if (superCountdownTimer <= 0f)
-                        EnterSuperMode();
-                }
+                if (superCountdownTimer <= 0f)
+                    EnterSuperMode();
             }
             else if (state == GameState.Super)
             {
