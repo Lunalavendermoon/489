@@ -192,7 +192,7 @@ MonoBehaviour:
   bullets: {fileID: 1266486693}
   core: {fileID: 1821561328}
   fx: {fileID: 2126955627}
-  tutorial: {fileID: 52717958}
+  tutorial: {fileID: 0}
 --- !u!114 &52717958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   ui: {fileID: 1780796840}
   tutorialText: {fileID: 1924280484}
   fx: {fileID: 2126955627}
-  enableTutorial: 1
+  enableTutorial: 0
 --- !u!1 &61730787
 GameObject:
   m_ObjectHideFlags: 0
