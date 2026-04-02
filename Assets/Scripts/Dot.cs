@@ -41,13 +41,6 @@ public class Dot : PooledObject
     public float specialMaxLifetime = 14.0f;
     public float specialDriftSpeed = 1.6f;
 
-    [Header("Health Dot Overrides")]
-    [Tooltip("If true, health dots override guaranteed on-screen time and max lifetime below.")]
-    public bool useHealthOverrides = true;
-
-    public float healthGuaranteedOnScreenTime = 5.0f;
-    public float healthMaxLifetime = 10.0f;
-
     [Tooltip("If assigned, tint will be applied here.")]
     public SpriteRenderer spriteRenderer;
 
@@ -177,10 +170,10 @@ public class Dot : PooledObject
             return;
         }
 
-        if (isHealthDot && useHealthOverrides)
+        if (isHealthDot)
         {
-            guaranteedOnScreenTime = healthGuaranteedOnScreenTime;
-            maxLifetime = healthMaxLifetime;
+            guaranteedOnScreenTime = defaultGuaranteedOnScreenTime;
+            maxLifetime = defaultMaxLifetime;
             driftSpeed = defaultDriftSpeed;
             return;
         }
@@ -243,7 +236,7 @@ public class Dot : PooledObject
         life += Time.deltaTime;
         keepTimer += Time.deltaTime;
 
-        if (life >= maxLifetime)
+        if (!isHealthDot && life >= maxLifetime)
         {
             DespawnSelf();
             return;
@@ -257,7 +250,7 @@ public class Dot : PooledObject
             // Phase 1: wander but remain guaranteed on-screen
             WanderInsideBounds();
 
-            if (keepTimer >= guaranteedOnScreenTime)
+            if (!isHealthDot && keepTimer >= guaranteedOnScreenTime)
                 BeginDriftOff();
         }
         else

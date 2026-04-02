@@ -21,12 +21,11 @@ public class SpawnManager : MonoBehaviour
     public bool spawnSpecialDots = true;
 
     [Header("Health Dots")]
-    [Tooltip("If true, some normal dots can spawn as health dots.")]
+    [Tooltip("If true, health dots are maintained on screen at all times.")]
     public bool spawnHealthDots = true;
 
-    [Range(0f, 1f)]
-    [Tooltip("Chance that a spawned NORMAL dot becomes a health dot.")]
-    public float healthDotChance = 0.15f;
+    [Tooltip("Maximum number of health dots active at once.")]
+    public int maxHealthDots = 5;
 
     [Tooltip("Starting health assigned to spawned health dots.")]
     [Min(1)] public int healthDotStartingHealth = 3;
@@ -62,6 +61,7 @@ public class SpawnManager : MonoBehaviour
     private bool paused;
 
     private readonly HashSet<Dot> activeSpecialDots = new HashSet<Dot>();
+    private readonly HashSet<Dot> activeHealthDots = new HashSet<Dot>();
     private float specialRespawnTimer = 0f;
 
     // Guards
@@ -94,6 +94,14 @@ public class SpawnManager : MonoBehaviour
                 dotAcc -= 1f;
                 SpawnDot(isSpecial: false);
             }
+        }
+
+        // Health dot pool management
+        if (spawnHealthDots)
+        {
+            CleanupHealthSet();
+            while (activeHealthDots.Count < maxHealthDots)
+                SpawnHealthDot();
         }
 
         // Special batch logic + watchdog
@@ -135,9 +143,7 @@ public class SpawnManager : MonoBehaviour
         var d = dotPool.Spawn(pos, Quaternion.identity);
         d.Init(cam);
         d.SetSpecial(isSpecial);
-
-        bool makeHealthDot = !isSpecial && spawnHealthDots && Random.value <= healthDotChance;
-        d.ConfigureHealthDot(makeHealthDot, healthDotStartingHealth);
+        d.ConfigureHealthDot(false);
 
         // Pool hook
         var pr = d.GetComponent<PoolRef>() ?? d.gameObject.AddComponent<PoolRef>();
@@ -154,6 +160,42 @@ public class SpawnManager : MonoBehaviour
 
         if (isSpecial)
             activeSpecialDots.Add(d);
+    }
+
+    private void SpawnHealthDot()
+    {
+        if (dotPool == null) return;
+
+        Vector2 pos = RandomPointInScreenBounds(screenPadding);
+
+        var d = dotPool.Spawn(pos, Quaternion.identity);
+        d.Init(cam);
+        d.SetSpecial(false);
+        d.ConfigureHealthDot(true, healthDotStartingHealth);
+
+        var pr = d.GetComponent<PoolRef>() ?? d.gameObject.AddComponent<PoolRef>();
+        pr.despawnAction = () =>
+        {
+            if (d != null) activeHealthDots.Remove(d);
+            dotPool.Despawn(d);
+        };
+
+        activeHealthDots.Add(d);
+    }
+
+    private void CleanupHealthSet()
+    {
+        if (activeHealthDots.Count == 0) return;
+
+        Dot[] arr = new Dot[activeHealthDots.Count];
+        activeHealthDots.CopyTo(arr);
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Dot d = arr[i];
+            if (d == null || !d.gameObject.activeInHierarchy || !d.IsHealthDot)
+                activeHealthDots.Remove(d);
+        }
     }
 
     private void SpawnSpecialBatch()
@@ -273,6 +315,7 @@ public class SpawnManager : MonoBehaviour
         dotAcc = 0f;
 
         activeSpecialDots.Clear();
+        activeHealthDots.Clear();
         specialRespawnTimer = 0f;
 
         isClearingSpecials = false;
