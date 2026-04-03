@@ -17,10 +17,47 @@
 <<show narratorbox>>
 
 Narrator: Welcome.
-Narrator: Welcome! Pure, innocent soul.  
-Narrator: I am the narrator. 
-Narrator: Trust me, we will soon be best pals. But before that, you will have to listen and believe in whatever I say. 
-Narrator: Sounds pretty easy, right?
+Narrator: Welcome! Pure, innocent soul.
+Narrator: I am the narrator. Look at your face in the reflection, say cheese!
+Narrator: Alright. First of all, you're broke.
+    -> "im not"
+        Narrator: ok think again. 
+        <<jump start2>>
+    -> "lol how did u know"
+        Narrator: There you go! 
+        Narrator: Being alive is so costly, isn't? Everything costs $ MONEY $.
+        Narrator: Why can't we just have happiness or fullfillment without spending?
+        Narrator: Why do we always have to EXCHANGE (ex. our time, effort, soul, etc.) for what we want? 
+        Narrator: Good question.
+        <<jump start3>>
+===
+
+title: start2
+---
+Narrator: Now, you're broke.
+    -> "but im not"
+        Narrator: Alright FINE m'royal highness maybe you're actually not broke you rich mf
+        Narrator: but let's just pretend that you're like the rest of us, for the sake of the story
+        Narrator: Okay we'll try again 
+        <<jump start2>>
+    -> "how did u know"
+        Narrator: There you go! 
+        Narrator: Being alive is so costly, isn't? Everything costs $ MONEY $.
+        Narrator: Why can't we just have happiness or fullfillment without spending?
+        Narrator: Why do we always have to EXCHANGE (ex. our time, effort, soul, etc.) for what we want? 
+        Narrator: Good question. (i know you didnt ask)
+        <<jump start3>>
+===
+
+title: start3
+---
+Narrator: As a game designer, you know its called a "REWARD SYSTEM",
+Narrator: its what keeps players going, keeping them on the grind longerrrrrr
+Narrator: So when u bankrupted, u know *exactly* what is wrong with this messy-ahh world. 
+<<show bb_dream>>
+Narrator: Its 2 am, but u're rearranging your room and doing hand-back pushups
+Narrator: ITS ALL CLEAR TO YOU NOW--- you DON'T NEED the reward system
+Narrator: You (ziya: i havent finished writing from this point on)
 	-> alright
 		Narrator: Well, whether you like it or not, it’s the rule. 
         Narrator: Now, let’s get to the point.
@@ -36,7 +73,7 @@ Narrator: Sounds pretty easy, right?
         <<show bb_job>>
         Narrator: Its shocking how the their Villa is recruiting for human security guards, instead of some fancy super AI.
         Narrator: But you are so over of the "rich people's game", cuz that's exactly what has gotten you to this point.
-        Narrator: You plan to settle down, start by doing part-time jobs at your local supermarket...
+        Narrator: You plan to settle down, start by doing p  art-time jobs at your local supermarket...
         <<hide bb_dream>>
         <<hide bb_job>>
         <<show bb_email>>
@@ -108,7 +145,7 @@ Narrator: Sounds pretty easy, right?
                         <<show bb_revenge>>
                         Narrator: So let it be! u submitted ur application for the security guard.
                         Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<jump IntoVilla>>
+                        <<load_scene Level 1>>
                     -> "omg thanks"
                         AnonymousCaviar: excellent choice
                         AnonymousCaviar: as long as we work together u never have to worry abt money
@@ -118,12 +155,15 @@ Narrator: Sounds pretty easy, right?
                         Narrator: You might just got urself involved in some shady business, but hey its 5k! why not lol
                         <<show bb_revenge>>
                         Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<jump IntoVilla>>
+                        <<load_scene Level 1>>
 ===
 
 title: IntoVilla
 ---
-
+<<background Villa>>
 Narrator: You are standing in front of the Gallinaceus Villa, a mansion that is so big it can fit a small village inside.
+
+
+
 
 ===
