@@ -37,7 +37,7 @@ title: start2
 Narrator: Now, you're broke.
     -> "but im not"
         Narrator: Alright FINE m'royal highness maybe you're actually not broke you rich mf
-        Narrator: but let's just pretend that you're like the rest of us, for the sake of the story
+        Narrator: but let's just pretend that you're like the rest of us for the sake of the story
         Narrator: Okay we'll try again 
         <<jump start2>>
     -> "how did u know"
@@ -45,19 +45,40 @@ Narrator: Now, you're broke.
         Narrator: Being alive is so costly, isn't? Everything costs $ MONEY $.
         Narrator: Why can't we just have happiness or fullfillment without spending?
         Narrator: Why do we always have to EXCHANGE (ex. our time, effort, soul, etc.) for what we want? 
-        Narrator: Good question. (i know you didnt ask)
+        Narrator: Well, good question. (i know you didnt ask)
         <<jump start3>>
 ===
 
 title: start3
 ---
-Narrator: As a game designer, you know its called a "REWARD SYSTEM",
-Narrator: its what keeps players going, keeping them on the grind longerrrrrr
-Narrator: So when u bankrupted, u know *exactly* what is wrong with this messy-ahh world. 
+Narrator: As a game designer, you know bc its called the "REWARD SYSTEM",
+Narrator: its what keeps players going, keeping them on the grind longer
+Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong with this world. 
 <<show bb_dream>>
-Narrator: Its 2 am, but u're rearranging your room and doing hand-back pushups
-Narrator: ITS ALL CLEAR TO YOU NOW--- you DON'T NEED the reward system
-Narrator: You (ziya: i havent finished writing from this point on)
+Narrator: Its 2 am, u're rearranging your room and doing backhand pushups
+Narrator: ITS ALL CLEAR TO YOU NOW. 
+Narrator: you DON'T NEED the reward system, you dont have to collect "coupons" for the life you want
+Narrator: you can just BECOME whatever u want to be!
+    -> "that's not true"
+        Narrator: hang on, let me cook
+        <<detour start4>>
+
+    -> "is this some sort of motivational speech in the end"
+        Narrator: hang on, let me cook
+        <<detour start4>>
+===
+
+title: start4
+---
+Narrator:
+
+
+
+
+
+
+Narrator: Yo
+
 	-> alright
 		Narrator: Well, whether you like it or not, it’s the rule. 
         Narrator: Now, let’s get to the point.
