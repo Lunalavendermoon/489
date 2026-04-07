@@ -58,7 +58,7 @@ Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong wit
 Narrator: Its 2 am, u're rearranging your room and doing backhand pushups
 Narrator: ITS ALL CLEAR TO YOU NOW. 
 Narrator: you DON'T NEED the reward system, you dont have to collect "coupons" for the life you want
-Narrator: you can just GET whatever u want
+Narrator: you can just BECOME whoever you want to be, if you just change your mindset
     -> "that's not true"
         Narrator: hang on, let me cook
         <<detour start4>>
@@ -137,12 +137,10 @@ title: start5
 <<hide debt>>
 <<show narratorbox>>
 
-Narrator: and so, you went and applied to be a Security Guard for the Gallinaceous villa.
+Narrator: So, you went and applied to be a Security Guard for the Gallinaceous villa.
 Narrator: you have never heard of them before, honestly, neither have I.
-Narrator: but when you stood in front of the Gallinaceus Villa, a mansion that is so big it can fit a small village inside.
-
-Narrator: And just like that, at such a young age, you successfully moved into one of the most extravagant mansions in the world. Better yet, the richest CEO in the galaxy, Mr. Gallinaceous, is paying out of his own pocket for you to stay there. You’ve officially beaten 90% of your peers.
-
+Narrator: And just like that, at such a young age, you successfully moved into one of the most extravagant mansions in the world. 
+Narrator:Better yet, the richest CEO in the galaxy, Mr. Gallinaceous, is paying out of his own pocket for you to stay there. 
 	-> alright
 		Narrator: Well, whether you like it or not, it’s the rule. 
         Narrator: Now, let’s get to the point.
