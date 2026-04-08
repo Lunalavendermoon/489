@@ -63,7 +63,7 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
         Narrator: hang on, let me cook
         <<detour start4>>
         Narrator: These are too easy. Next.
-            -> "what if i want to move in to a mansion right now"
+            -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
                 Narrator: lol what's that face? isn't that exactly what you wanted?
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
@@ -75,11 +75,11 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
-    -> "is this some kind of motivational speech in the end"
+    -> "so its a motivational speech afterall"
         Narrator: hang on, let me cook
         <<detour start4>>
         Narrator: These are too easy. Next.
-            -> "what if i want to move in to a mansion right now"
+            -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
                 Narrator: lol what's that face? isn't that exactly what you wanted?
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
@@ -101,7 +101,6 @@ Narrator: Say whatevers on your mind. What do you want? I'll show u the path
         Narrator: Next, keep them coming
             -> "what if i wanna be jeff bezos"
                 Narrator: Just change your name.
-                Narrator: These are too easy. Next.
             -> "what if i want to have unspendable money"
                 Narrator: Just go to jail.
                 Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
@@ -111,11 +110,9 @@ Narrator: Say whatevers on your mind. What do you want? I'll show u the path
         Narrator: Next, keep them coming
             -> "what if i wanna be jeff bezos"
                 Narrator: Just change your name.
-                Narrator: These are too easy. Next.
             -> "what if i want to have unspendable money"
                 Narrator: Just go to jail.
                 Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
-                Narrator: These are too easy. Next.
                 Narrator: How's that? changing your mindset changes EVERYTHING. 
 ===
 
