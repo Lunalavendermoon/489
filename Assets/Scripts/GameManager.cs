@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Toggle to enable/disable special (batch) notes.")]
     public bool enableSpecialDots = true;
 
+    [Tooltip("Toggle to enable/disable Beat Targets mode.")]
+    public bool enableBeats = true;
+
     [Header("Scoring")]
     public int score;
     public int combo;
@@ -58,6 +61,8 @@ public class GameManager : MonoBehaviour
     public BeatManager beat;
     public UIManager ui;
     public SpawnManager spawns;
+    public TimedDotSpawnManager timedDotSpawns;
+    public BeatTargetsManager beatTargets;
     public BulletManager bullets;
     public CoreController core;
     public EffectsManager fx;
@@ -144,6 +149,13 @@ public class GameManager : MonoBehaviour
         combo = combo + 1;
         ui?.SetCombo(combo, GetComboMultiplier());
         tutorial?.OnPerfectDeposit(isSpecial);
+    }
+
+    public void RegisterNormalPerfectDeposit()
+    {
+        if (!enableBeats) return;
+        if (state != GameState.Normal) return;
+        beatTargets?.RegisterNormalPerfectDeposit();
     }
 
     // Reset combo to zero when a non-perfect deposit occurs.
@@ -274,6 +286,7 @@ public class GameManager : MonoBehaviour
     {
         state = GameState.GameOver;
         spawns?.SetPaused(true);
+        beatTargets?.ResetBeatsState();
         bullets?.SetPaused(true);
         bullets?.DespawnAllBullets();
 
@@ -287,6 +300,8 @@ public class GameManager : MonoBehaviour
         combo = 0;
 
         spawns?.ResetAll();
+        timedDotSpawns?.ResetTimeline();
+        beatTargets?.ResetBeatsState();
         bullets?.DespawnAllBullets();
         core?.ResetFill();
 

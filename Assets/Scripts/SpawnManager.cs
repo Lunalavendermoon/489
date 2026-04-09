@@ -60,9 +60,18 @@ public class SpawnManager : MonoBehaviour
     private float dotAcc;
     private bool paused;
 
+    private readonly HashSet<Dot> activeNormalDots = new HashSet<Dot>();
     private readonly HashSet<Dot> activeSpecialDots = new HashSet<Dot>();
     private readonly HashSet<Dot> activeHealthDots = new HashSet<Dot>();
     private float specialRespawnTimer = 0f;
+
+    private bool timedAllowNormalDots = true;
+    private bool timedAllowSpecialDots = true;
+    private bool timedAllowHealthDots = true;
+    private bool timedOverrideDotSpawnRate = false;
+    private float timedDotSpawnPerSecond = 0f;
+    private bool timedOverrideMaxHealthDots = false;
+    private int timedMaxHealthDots = 0;
 
     // Guards
     private bool isClearingSpecials = false;
@@ -86,9 +95,9 @@ public class SpawnManager : MonoBehaviour
             return;
 
         // Normal dots
-        if (spawnDots)
+        if (ShouldSpawnNormalDots())
         {
-            dotAcc += Time.deltaTime * dotSpawnPerSecond;
+            dotAcc += Time.deltaTime * GetEffectiveDotSpawnPerSecond();
             while (dotAcc >= 1f)
             {
                 dotAcc -= 1f;
@@ -97,15 +106,15 @@ public class SpawnManager : MonoBehaviour
         }
 
         // Health dot pool management
-        if (spawnHealthDots)
+        if (ShouldSpawnHealthDots())
         {
             CleanupHealthSet();
-            while (activeHealthDots.Count < maxHealthDots)
+            while (activeHealthDots.Count < GetEffectiveMaxHealthDots())
                 SpawnHealthDot();
         }
 
         // Special batch logic + watchdog
-        if (spawnSpecialDots)
+        if (ShouldSpawnSpecialDots())
         {
             // Watchdog: periodically validate batch consistency
             watchdogTimer -= Time.deltaTime;
@@ -149,8 +158,8 @@ public class SpawnManager : MonoBehaviour
         var pr = d.GetComponent<PoolRef>() ?? d.gameObject.AddComponent<PoolRef>();
         pr.despawnAction = () =>
         {
-            // Remove first (safe even if already removed)
-            if (d != null) activeSpecialDots.Remove(d);
+            if (d != null)
+                UntrackDot(d);
 
             dotPool.Despawn(d);
 
@@ -160,6 +169,8 @@ public class SpawnManager : MonoBehaviour
 
         if (isSpecial)
             activeSpecialDots.Add(d);
+        else
+            activeNormalDots.Add(d);
     }
 
     private void SpawnHealthDot()
@@ -176,26 +187,56 @@ public class SpawnManager : MonoBehaviour
         var pr = d.GetComponent<PoolRef>() ?? d.gameObject.AddComponent<PoolRef>();
         pr.despawnAction = () =>
         {
-            if (d != null) activeHealthDots.Remove(d);
+            if (d != null)
+                UntrackDot(d);
+
             dotPool.Despawn(d);
         };
 
         activeHealthDots.Add(d);
     }
 
+    public void SetTimedSpawnRules(bool allowNormalDots, bool allowSpecialDots, bool allowHealthDots)
+    {
+        timedAllowNormalDots = allowNormalDots;
+        timedAllowSpecialDots = allowSpecialDots;
+        timedAllowHealthDots = allowHealthDots;
+    }
+
+    public void SetTimedOverrides(bool overrideDotSpawnRate, float dotSpawnRate, bool overrideHealthDotCount, int healthDotCount)
+    {
+        timedOverrideDotSpawnRate = overrideDotSpawnRate;
+        timedDotSpawnPerSecond = Mathf.Max(0f, dotSpawnRate);
+        timedOverrideMaxHealthDots = overrideHealthDotCount;
+        timedMaxHealthDots = Mathf.Max(0, healthDotCount);
+    }
+
+    public void ResetTimedSpawnRules()
+    {
+        timedAllowNormalDots = true;
+        timedAllowSpecialDots = true;
+        timedAllowHealthDots = true;
+        timedOverrideDotSpawnRate = false;
+        timedDotSpawnPerSecond = 0f;
+        timedOverrideMaxHealthDots = false;
+        timedMaxHealthDots = 0;
+    }
+
+    public void ClearDisallowedFreeDots(bool allowNormalDots, bool allowSpecialDots, bool allowHealthDots)
+    {
+        if (!allowNormalDots)
+            DespawnFreeDots(activeNormalDots);
+
+        if (!allowSpecialDots)
+            DespawnFreeDots(activeSpecialDots);
+
+        if (!allowHealthDots)
+            DespawnFreeDots(activeHealthDots);
+    }
+
     private void CleanupHealthSet()
     {
-        if (activeHealthDots.Count == 0) return;
-
-        Dot[] arr = new Dot[activeHealthDots.Count];
-        activeHealthDots.CopyTo(arr);
-
-        for (int i = 0; i < arr.Length; i++)
-        {
-            Dot d = arr[i];
-            if (d == null || !d.gameObject.activeInHierarchy || !d.IsHealthDot)
-                activeHealthDots.Remove(d);
-        }
+        CleanupDotSet(activeHealthDots, dot => dot.IsHealthDot);
     }
 
     private void SpawnSpecialBatch()
@@ -251,34 +292,7 @@ public class SpawnManager : MonoBehaviour
 
     private void CleanupSpecialSet()
     {
-        // Remove null / inactive / non-special from the set (pool edge cases)
-        if (activeSpecialDots.Count == 0) return;
-
-        // Copy to avoid modifying during iteration
-        Dot[] arr = new Dot[activeSpecialDots.Count];
-        activeSpecialDots.CopyTo(arr);
-
-        for (int i = 0; i < arr.Length; i++)
-        {
-            Dot d = arr[i];
-            if (d == null)
-            {
-                activeSpecialDots.Remove(d);
-                continue;
-            }
-
-            if (!d.gameObject.activeInHierarchy)
-            {
-                activeSpecialDots.Remove(d);
-                continue;
-            }
-
-            if (!d.IsSpecial)
-            {
-                activeSpecialDots.Remove(d);
-                continue;
-            }
-        }
+        CleanupDotSet(activeSpecialDots, dot => dot.IsSpecial);
     }
 
     private void DespawnAllSpecialDots()
@@ -314,6 +328,7 @@ public class SpawnManager : MonoBehaviour
         dotPool?.DespawnAllActive();
         dotAcc = 0f;
 
+        activeNormalDots.Clear();
         activeSpecialDots.Clear();
         activeHealthDots.Clear();
         specialRespawnTimer = 0f;
@@ -322,6 +337,87 @@ public class SpawnManager : MonoBehaviour
         suppressSpecialLossClear = false;
 
         watchdogTimer = 0f;
+    }
+
+    private bool ShouldSpawnNormalDots()
+    {
+        return spawnDots && timedAllowNormalDots;
+    }
+
+    private bool ShouldSpawnSpecialDots()
+    {
+        return spawnSpecialDots && timedAllowSpecialDots;
+    }
+
+    private bool ShouldSpawnHealthDots()
+    {
+        return spawnHealthDots && timedAllowHealthDots;
+    }
+
+    private float GetEffectiveDotSpawnPerSecond()
+    {
+        return timedOverrideDotSpawnRate ? timedDotSpawnPerSecond : dotSpawnPerSecond;
+    }
+
+    private int GetEffectiveMaxHealthDots()
+    {
+        return timedOverrideMaxHealthDots ? timedMaxHealthDots : maxHealthDots;
+    }
+
+    private void CleanupNormalSet()
+    {
+        CleanupDotSet(activeNormalDots, dot => !dot.IsSpecial && !dot.IsHealthDot);
+    }
+
+    private void CleanupDotSet(HashSet<Dot> trackedDots, System.Predicate<Dot> isExpectedType)
+    {
+        if (trackedDots.Count == 0) return;
+
+        Dot[] arr = new Dot[trackedDots.Count];
+        trackedDots.CopyTo(arr);
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Dot d = arr[i];
+            if (d == null || !d.gameObject.activeInHierarchy || !isExpectedType(d))
+                trackedDots.Remove(d);
+        }
+    }
+
+    private void DespawnFreeDots(HashSet<Dot> trackedDots)
+    {
+        if (trackedDots.Count == 0) return;
+
+        Dot[] arr = new Dot[trackedDots.Count];
+        trackedDots.CopyTo(arr);
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Dot d = arr[i];
+            if (d == null)
+            {
+                trackedDots.Remove(d);
+                continue;
+            }
+
+            if (!d.gameObject.activeInHierarchy)
+            {
+                trackedDots.Remove(d);
+                continue;
+            }
+
+            if (d.IsCarried)
+                continue;
+
+            d.DespawnSelf();
+        }
+    }
+
+    private void UntrackDot(Dot dot)
+    {
+        activeNormalDots.Remove(dot);
+        activeSpecialDots.Remove(dot);
+        activeHealthDots.Remove(dot);
     }
 
     private Vector2 RandomPointInAnnulus(float rMin, float rMax)

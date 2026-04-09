@@ -85,6 +85,7 @@ public class Dot : PooledObject
     [SerializeField] private bool isSpecial = false;
     public bool IsSpecial => isSpecial;
     public bool IsHealthDot => isHealthDot;
+    public bool IsCarried => carried;
     public int CurrentHealth => currentHealth;
     public int MinorPerfectPoints => Mathf.Max(0, healthDotMinorPerfectPoints);
     public int MassiveBreakPoints => Mathf.Max(0, healthDotMassiveBreakPoints);

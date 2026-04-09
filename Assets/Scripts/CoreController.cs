@@ -324,6 +324,7 @@ public class CoreController : MonoBehaviour
 
             // Combo: increment then apply multiplier to this dot's points
             gm?.OnPerfectDeposit(false);
+            gm?.RegisterNormalPerfectDeposit();
             float mul = gm != null ? gm.GetComboMultiplier() : 1f;
             pointsAwarded = Mathf.RoundToInt(pointsAwarded * mul);
         }
