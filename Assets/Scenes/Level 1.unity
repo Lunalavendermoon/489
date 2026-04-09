@@ -168,6 +168,7 @@ MonoBehaviour:
   enableSuperMode: 1
   enableBullets: 1
   enableSpecialDots: 1
+  enableBeats: 1
   score: 0
   combo: 0
   comboBreakPenalty: 1
@@ -189,6 +190,8 @@ MonoBehaviour:
   beat: {fileID: 546797609}
   ui: {fileID: 1780796840}
   spawns: {fileID: 616545438}
+  timedDotSpawns: {fileID: 0}
+  beatTargets: {fileID: 0}
   bullets: {fileID: 1266486693}
   core: {fileID: 1821561328}
   fx: {fileID: 2126955627}
@@ -1955,6 +1958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616545437}
+  - component: {fileID: 616545439}
   - component: {fileID: 616545438}
   m_Layer: 0
   m_Name: SpawnManager
@@ -2000,7 +2004,7 @@ MonoBehaviour:
   dotSpawnMaxRadius: 4.8
   spawnSpecialDots: 1
   spawnHealthDots: 1
-  healthDotChance: 0
+  maxHealthDots: 5
   healthDotStartingHealth: 3
   specialBatchCount: 5
   specialRespawnDelay: 3
@@ -2010,6 +2014,48 @@ MonoBehaviour:
   core: {fileID: 1821561328}
   centerExclusionRadius: 3
   exclusionMaxAttempts: 12
+--- !u!114 &616545439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616545436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab7882a57a68c740a55b5d0ab022712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawns: {fileID: 616545438}
+  gm: {fileID: 52717957}
+  enableTimedPhases: 1
+  clearDisallowedDotsContinuously: 1
+  phases:
+  - phaseName: start
+    startTimeSeconds: 0
+    hasEndTime: 1
+    endTimeSeconds: 10
+    allowNormalDots: 1
+    allowSpecialDots: 0
+    allowHealthDots: 0
+    overrideNormalSpawnRate: 0
+    normalSpawnPerSecond: 2
+    overrideMaxHealthDots: 0
+    maxHealthDots: 0
+  - phaseName: next
+    startTimeSeconds: 10
+    hasEndTime: 0
+    endTimeSeconds: 10
+    allowNormalDots: 0
+    allowSpecialDots: 1
+    allowHealthDots: 1
+    overrideNormalSpawnRate: 0
+    normalSpawnPerSecond: 2
+    overrideMaxHealthDots: 0
+    maxHealthDots: 0
+  currentPhaseIndex: -1
+  currentPhaseName: None
+  timelineStartTime: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
