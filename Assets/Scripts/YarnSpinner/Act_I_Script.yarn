@@ -139,9 +139,10 @@ Narrator: you have never heard of them before, honestly neither have I
 Narrator: BUT just like that, at such a young age, you have moved into an extravagant mansion. 
 Narrator: Better yet, the richest CEO in the galaxy, sir Gallinaceous, is paying out of his own pocket for you to stay!
 Narrator: as a security guard, ofc
-	-> "nice"
-        Narrator: You honestly thought this is a scam, but the mansion is REAL
+    -> "thats kinda not what i wanted"
+        Narrator: Well TOO LATE cuz we're already here
         <<background Villa>>
+        Narrator: You honestly thought this is a scam, but the mansion is REAL
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         <<show bb_job>>
         Narrator: But now, you're here
@@ -151,16 +152,14 @@ Narrator: as a security guard, ofc
                 <<jump IntoVilla>>
             -> *wander around*
                 <<jump IntoVilla>>
-        <<hide >>
-	-> "thats kinda not what i wanted"
-        Narrator: Well TOO LATE cuz we're already here
-        <<background Villa>>
+    -> "nice"
         Narrator: You honestly thought this is a scam, but the mansion is REAL
+        <<background Villa>>
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         <<show bb_job>>
         Narrator: But now, you're here
         <<hide bb_job>>
-        Narrator: whats the life like being that top 10%? we're gonna find out. Excited?
+        Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
             -> *go stand infront of the gates*
                 <<jump IntoVilla>>
             -> *wander around*
