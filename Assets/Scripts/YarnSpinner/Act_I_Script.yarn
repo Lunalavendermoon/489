@@ -81,13 +81,13 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
         Narrator: These are too easy. Next.
             -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
+                Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
             -> "what if i to drive a lambo right now"
                 Narrator: Then go be a luxury mansion private driver.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
+                Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
@@ -134,116 +134,78 @@ title: start5
 <<hide debt>>
 <<show narratorbox>>
 
-Narrator: So, you went and applied to be a Security Guard for the Gallinaceous villa.
-Narrator: you have never heard of them before, honestly, neither have I.
-Narrator: And just like that, at such a young age, you successfully moved into one of the most extravagant mansions in the world. 
-Narrator:Better yet, the richest CEO in the galaxy, Mr. Gallinaceous, is paying out of his own pocket for you to stay there. 
-	-> alright
-		Narrator: Well, whether you like it or not, it’s the rule. 
-        Narrator: Now, let’s get to the point.
-        Narrator: You were once a successful game developer, and you had a dream of making the game that will make you remembered.
-        Narrator: You poured all your ambition, heart, and soul into building the game of your life…
-        Narrator: …until an anonymous Corporation bought it out, and now you’re officially bankrupt. 
-        <<show bb_dream>>
-        Narrator: ...Not just bankrupt, but also HEAVILY in debt.
-        <<show debt>>
-        Narrator: lmao
-        Narrator: You pretty much lost everything overnight. You were forced to give up on your dream, find a living, and get a REAL job. 
-        Narrator: You have heard of the *Gallinaceus family* — the richest and the most prominent family on this planet.
+Narrator: So, you went and applied to be a Security Guard for the *Gallinaceous villa.*
+Narrator: you have never heard of them before, honestly neither have I
+Narrator: BUT just like that, at such a young age, you have moved into an extravagant mansion. 
+Narrator: Better yet, the richest CEO in the galaxy, sir Gallinaceous, is paying out of his own pocket for you to stay!
+Narrator: as a security guard, ofc
+	-> "nice"
+        Narrator: You honestly thought this is a scam, but the mansion is REAL
+        <<background Villa>>
+        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         <<show bb_job>>
-        Narrator: Its shocking how the their Villa is recruiting for human security guards, instead of some fancy super AI.
-        Narrator: But you are so over of the "rich people's game", cuz that's exactly what has gotten you to this point.
-        Narrator: You plan to settle down, start by doing p  art-time jobs at your local supermarket...
-        <<hide bb_dream>>
+        Narrator: But now, you're here
         <<hide bb_job>>
-        <<show bb_email>>
-        Narrator: But that one email changed it all. 
-        <<hide player>>
-        Narrator: Apparently, the very corporation that took your game is registered under the name of *Eugene Aurelius K. Arthur Gallinaceus*.
-        Narrator: It was HIM who made you bankrupt and took everything from you.
-        Narrator: Sender of the email, "AnonymousCaviar", invites you to a collaboration that seems to... benefit you both?
-        <<show y/nbox>>
-        AnonymousCaviar: i know you must be confused but i can assure you that this is a genuine offer
-        AnonymousCaviar: i will help u get into the villa as a security guard and i will pay u for the work
-        AnonymousCaviar: in return u will help me gather information about the villa and its owner
-        AnonymousCaviar: u will be able to pay off ur debt in no time and i will be able to get the info i need
-        AnonymousCaviar: together we will take down the Gallinaceus family and get revenge
-        AnonymousCaviar: so what do u say? are u in?
-            -> "k"
-                AnonymousCaviar: *sinister laughter*
-                <<hide y/nbox>>
-                Narrator: no they actually typed that out
-                <<show y/nbox>>
-                AnonymousCaviar: i can feel the burning desire for revenge in u and trust me i can help u achieve it
-                AnonymousCaviar: consider this as a little gift 
-                <<hide y/nbox>>
-                Narrator: Before you can even ask any questions, a $5,000 check is already sent to your bank account!
-                    -> "how did u find me"
-                        <<show y/nbox>>
-                        AnonymousCaviar: i have my ways
-                        AnonymousCaviar: i can find anyone i want and i can find u too
-                        AnonymousCaviar: so dont ask too much questions 
-                        AnonymousCaviar: as long as we work together u never have to worry abt ur safty and money
-                        <<hide y/nbox>>
-                        Narrator: You might just got urself involved in some shady business, but hey its 5k! why not lol
-                        Narrator: So let it be! you submitted your application for the security guard. and you got it.
-                        <<show bb_revenge>>
-                        Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<jump IntoVilla>>
-                    -> "why do u have my bank account"
-                        <<show y/nbox>>
-                        AnonymousCaviar: i have my ways
-                        AnonymousCaviar: i can find anything i want and i can find ur bank account too
-                        AnonymousCaviar: so dont ask too much questions 
-                        AnonymousCaviar: as long as we work together u never have to worry abt money
-                        <<hide y/nbox>>
-                        Narrator: You might just got urself involved in some shady business, but hey its 5k! why not lol
-                        Narrator: So let it be! you submitted your application for the security guard. and you got it.
-                        <<show bb_revenge>>
-                        Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<jump IntoVilla>>
-            -> "who da f are u"
-                AnonymousCaviar: u dont need to know who i am, all u need to know is that i can help u get revenge
-                AnonymousCaviar: *sinister laughter*
-                <<hide y/nbox>>
-                Narrator: no they actually typed that out
-                <<show y/nbox>>
-                AnonymousCaviar: i can feel the burning desire for revenge in u and trust me i can help u achieve it
-                AnonymousCaviar: consider this as a little gift 
-                <<hide y/nbox>>
-                Narrator: Before you can even ask any questions, a $5,000 check is already sent to your bank account!
-                    -> "i need nothing from u"
-                        <<show y/nbox>>
-                        AnonymousCaviar: wow how humble of u
-                        AnonymousCaviar: feel free to use it for whatever u want but i suggest u use it for ur debt
-                        AnonymousCaviar: and if u dont want it i can always take it back
-                        AnonymousCaviar: u have nothing to lose and everything to gain
-                        <<hide y/nbox>>
-                        Narrator: He does have a point, right?
-                        Narrator: You might just got urself involved in some shady business...
-                        Narrator: but ur shaken by the fact that u actually do need this money
-                        <<show bb_revenge>>
-                        Narrator: So let it be! u submitted ur application for the security guard.
-                        Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<load_scene Level 1>>
-                    -> "omg thanks"
-                        AnonymousCaviar: excellent choice
-                        AnonymousCaviar: as long as we work together u never have to worry abt money
-                        AnonymousCaviar: together we will make Eugene Gallinaceus pay
-                        AnonymousCaviar: looking forward to working with u
-                        <<hide y/nbox>>
-                        Narrator: You might just got urself involved in some shady business, but hey its 5k! why not lol
-                        <<show bb_revenge>>
-                        Narrator: If life is a game, then you will watch the Gallinaceus Villa burn.
-                        <<load_scene Level 1>>
+        Narrator: whats the life like being that top 10%? we're gonna find out. Excited?
+            -> *go stand infront of the gates*
+                <<jump IntoVilla>>
+            -> *wander around*
+                <<jump IntoVilla>>
+        <<hide >>
+	-> "thats kinda not what i wanted"
+        Narrator: Well TOO LATE cuz we're already here
+        <<background Villa>>
+        Narrator: You honestly thought this is a scam, but the mansion is REAL
+        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
+        <<show bb_job>>
+        Narrator: But now, you're here
+        <<hide bb_job>>
+        Narrator: whats the life like being that top 10%? we're gonna find out. Excited?
+            -> *go stand infront of the gates*
+                <<jump IntoVilla>>
+            -> *wander around*
+                <<jump IntoVilla>>
 ===
 
 title: IntoVilla
 ---
+
+<<background introduction_0>>
+
+<<hide eugene>>
+<<hide y/n>>
+<<hide player>>
+
+<<hide bb_dream>>
+<<hide bb_job>>
+<<hide bb_revenge>>
+<<hide bb_email>>
+<<hide bb_thatsit>>
+
+<<hide y/nbox>>
+<<hide debt>>
+<<show narratorbox>>
+
 <<background Villa>>
-Narrator: You are standing in front of the Gallinaceus Villa, a mansion that is so big it can fit a small village inside.
-
-
-
+<<show eugene>>
+Narrator: DANGGGGG whos that
+Narrator: seems like its no other than *Eugene Arthur K. Windsar A. Percival Gallinaceus* himself!
+Narrator: Hopping off the private jet and walking towards the gate like that wide putin meme
+<<hide narratorbox>>
+<<show y/nbox>>
+Eugene: ASSEMBLE ALL TO THE CONFERENCE ROOM IN 30 SECONDS!
+Secretary: M'lord, you just fired everyone yesterday
+Eugene: Am I hearing... an EXCUSE? 
+Eugene: Get everyone here in 60 seconds then!
+Eugene: Including that one on maternity leave, NOW.
+Secretary: M'lord, she just gave birth this morning
+Eugene: Brilliant——then her leave can come to an end right now.
+Eugene: NOW GET MOVING! I want everyone in the room IMMEDIATELY.
+<<show narratorbox>>
+Narrator: The alpha walked straight pass you, and threw his black Armani coat on your head.
+    -> "?"
+        <<load_scene Level 1>>
+    -> "da fak i just got here"
+        <<load_scene Level 1>>
 
 ===
