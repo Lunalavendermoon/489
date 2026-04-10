@@ -2034,7 +2034,7 @@ MonoBehaviour:
   - phaseName: start
     startTimeSeconds: 0
     hasEndTime: 1
-    endTimeSeconds: 10
+    endTimeSeconds: 20
     allowNormalDots: 1
     allowSpecialDots: 0
     allowHealthDots: 0
@@ -2043,12 +2043,12 @@ MonoBehaviour:
     overrideMaxHealthDots: 0
     maxHealthDots: 0
   - phaseName: next
-    startTimeSeconds: 10
+    startTimeSeconds: 20
     hasEndTime: 0
-    endTimeSeconds: 10
-    allowNormalDots: 0
+    endTimeSeconds: 20
+    allowNormalDots: 1
     allowSpecialDots: 1
-    allowHealthDots: 1
+    allowHealthDots: 0
     overrideNormalSpawnRate: 0
     normalSpawnPerSecond: 2
     overrideMaxHealthDots: 0
