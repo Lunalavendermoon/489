@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: 8fb7435e42dbbe44a7601e198fdf90c3
     GuidInternal: 
-    m_lastTime: -8584256589511984736
+    m_lastTime: -8584255850318858979
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584638529584775808
+    m_lastTime: -8584255850318477129
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 1c83c00b93e14d46bf99a963f3262275
     GuidInternal: 
-    m_lastTime: -8584256589512387778
+    m_lastTime: -8584255850319247306
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -331,8 +331,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: f0ba40fa663d804ebd62c84aede4aa7e
     GuidInternal: 
-    m_lastTime: -8584256589512270834
-    List: []
+    m_lastTime: -8584255850319046257
+    List:
+    - name: GGGG_Soundbank
+      guid: 73099d8a19c3564db936dc45fcdd5075
+      id: 1232654019
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f0ba40fa663d804ebd62c84aede4aa7e
+      - ElementName: GGGG_Soundbank
+        ObjectType: 7
+        guid: 73099d8a19c3564db936dc45fcdd5075
+      Path: SoundBanks/Default Work Unit/GGGG_Soundbank
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -345,7 +359,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 483e542009910e4e86052c19d5868422
     GuidInternal: 
-    m_lastTime: -8584256539634230274
+    m_lastTime: -8584255850319026682
     List:
     - name: SetMusicGameOver
       guid: 583bfc681827d442b606e50a5b42888c
@@ -362,8 +376,8 @@ MonoBehaviour:
         guid: 583bfc681827d442b606e50a5b42888c
       Path: Events/Default Work Unit/SetMusicGameOver
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToCasualTheme
       guid: b5d80fd1a4b8784c89856f2a44f560a7
       id: 2770684787
@@ -379,8 +393,8 @@ MonoBehaviour:
         guid: b5d80fd1a4b8784c89856f2a44f560a7
       Path: Events/Default Work Unit/SetMusicToCasualTheme
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToDiesIrae
       guid: e4ace05a9d644c45a5f9451096dff6e3
       id: 49138649
@@ -396,8 +410,8 @@ MonoBehaviour:
         guid: e4ace05a9d644c45a5f9451096dff6e3
       Path: Events/Default Work Unit/SetMusicToDiesIrae
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToDramaTheme
       guid: 7fb97cb73ca1394f95851c44131b75d9
       id: 814886303
@@ -413,8 +427,8 @@ MonoBehaviour:
         guid: 7fb97cb73ca1394f95851c44131b75d9
       Path: Events/Default Work Unit/SetMusicToDramaTheme
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToMainTheme
       guid: 56da7e975a3a8b40940e4d4b84458ced
       id: 4209449687
@@ -430,8 +444,8 @@ MonoBehaviour:
         guid: 56da7e975a3a8b40940e4d4b84458ced
       Path: Events/Default Work Unit/SetMusicToMainTheme
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToMoonlight3
       guid: b1e6a3c5aa07254b945a2ce4f6f176dd
       id: 3872583903
@@ -447,8 +461,8 @@ MonoBehaviour:
         guid: b1e6a3c5aa07254b945a2ce4f6f176dd
       Path: Events/Default Work Unit/SetMusicToMoonlight3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToTragicTheme
       guid: 5a631a2d41a5e1418a781315a8fa94a9
       id: 2996985392
@@ -464,8 +478,8 @@ MonoBehaviour:
         guid: 5a631a2d41a5e1418a781315a8fa94a9
       Path: Events/Default Work Unit/SetMusicToTragicTheme
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToUpbeatTheme
       guid: c6218a91a18ba74e9209c1b0297aa47f
       id: 1515763
@@ -481,8 +495,8 @@ MonoBehaviour:
         guid: c6218a91a18ba74e9209c1b0297aa47f
       Path: Events/Default Work Unit/SetMusicToUpbeatTheme
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicToWinter
       guid: c0bc43727a5bc04baee8d8bb1ac5872d
       id: 1958764012
@@ -498,8 +512,8 @@ MonoBehaviour:
         guid: c0bc43727a5bc04baee8d8bb1ac5872d
       Path: Events/Default Work Unit/SetMusicToWinter
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: StartGameAudio
       guid: 8c96ce791fe29a499bf0a97f74096029
       id: 667805585
@@ -532,8 +546,8 @@ MonoBehaviour:
         guid: dc19108aa6429e49b64d0eafee7cbb0f
       Path: Events/Default Work Unit/TurnOffMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -546,7 +560,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: b1ca852d8a8694489230f1a836abd399
     GuidInternal: 
-    m_lastTime: -8584256589512248996
+    m_lastTime: -8584255850318989423
     List: []
   - PhysicalPath: Game Parameters/Factory Soundseed Air Game Syncs.wwu
     PathAndIcons:
@@ -559,7 +573,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Factory Soundseed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8584638528164775808
+    m_lastTime: -8584255850318970960
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -713,7 +727,7 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: fb1b91ee16bf22489016a81ca1caea2e
     GuidInternal: 
-    m_lastTime: -8584256570007058469
+    m_lastTime: -8584255850319109123
     List:
     - name: GGGG_Music_States
       guid: d5ad2f31189098408c605ceeb6b35073
@@ -905,7 +919,7 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: aec19340f4c8e742b42f3ffd6e429c9e
     GuidInternal: 
-    m_lastTime: -8584256589512316410
+    m_lastTime: -8584255850319068681
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
@@ -919,10 +933,10 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: 202ab2d244778647aa0f70e188d2d0a4
     GuidInternal: 
-    m_lastTime: -8584256589512124710
+    m_lastTime: -8584255850318457741
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000001500000016000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

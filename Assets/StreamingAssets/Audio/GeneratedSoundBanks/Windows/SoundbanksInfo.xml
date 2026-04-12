@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../../../../GGGG Wwise Project/GGGG-Wwise-Project</ProjectRoot>
+		<SourceFilesRoot>../../../../../../../GGGG Wwise Project/GGGG-Wwise-Project/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../../../GGGG Wwise Project/GGGG-Wwise-Project/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{2ED70216-8C75-0B57-4977-5390DAEE8F12}">
+			<ShortName>GGGG_Soundbank</ShortName>
+			<Path>GGGG_Soundbank.bnk</Path>
+			<Media>
+				<File Id="139325359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SILENCE.wav</ShortName>
+					<CachePath>SFX/SILENCE_56CEF360.wem</CachePath>
+				</File>
+				<File Id="354105497" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="431644092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Drama-Theme_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="491007725" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track_56CEF360.wem</CachePath>
+				</File>
+				<File Id="516056618" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Main-Theme_ROUGH-v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Main-Theme_ROUGH-v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="533251736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Game-Over_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Game-Over_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="608798980" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Upbeat-Theme_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Upbeat-Theme_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="647185346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Moonlight-3-Remix_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="936722572" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Casual-Theme_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1057349562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Dies-Irae-Remix_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Dies-Irae-Remix_v01_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1613597420" Name="SetMusicGameOver" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
+						<ActionSetStateEntry GroupId="4178467550" Id="4158285989" Name="GameOver"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2770684787" Name="SetMusicToCasualTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="824977647" Name="DefaultTheme"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="49138649" Name="SetMusicToDiesIrae" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="3699353111" Name="DiesIrae"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="814886303" Name="SetMusicToDramaTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="1844532073" Name="DramaTheme"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4209449687" Name="SetMusicToMainTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="824317709" Name="MainTheme"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3872583903" Name="SetMusicToMoonlight3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="2394330185" Name="Moonlight3"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2996985392" Name="SetMusicToTragicTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="1810055758" Name="TragicTheme"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1515763" Name="SetMusicToUpbeatTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="3694417201" Name="UpbeatTheme"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1958764012" Name="SetMusicToWinter" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="2965343494" Name="Winter"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="667805585" Name="StartGameAudio" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="824977647"/>
+							<MediaRefs>
+								<MediaRef Id="936722572"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="3699353111"/>
+							<MediaRefs>
+								<MediaRef Id="1057349562"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="2394330185"/>
+							<MediaRefs>
+								<MediaRef Id="647185346"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="2965343494"/>
+							<MediaRefs>
+								<MediaRef Id="491007725"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="1844532073"/>
+							<MediaRefs>
+								<MediaRef Id="431644092"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="4158285989"/>
+							<MediaRefs>
+								<MediaRef Id="533251736"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="824317709"/>
+							<MediaRefs>
+								<MediaRef Id="516056618"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="1810055758"/>
+							<MediaRefs>
+								<MediaRef Id="354105497"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="3694417201"/>
+							<MediaRefs>
+								<MediaRef Id="608798980"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="748895195"/>
+							<MediaRefs>
+								<MediaRef Id="139325359"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1657091384" Name="TurnOffMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
+					</ActionSetState>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="4178467550" Name="GGGG_Music_States">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="824317709" Name="MainTheme"/>
+						<State Id="824977647" Name="DefaultTheme"/>
+						<State Id="1810055758" Name="TragicTheme"/>
+						<State Id="1844532073" Name="DramaTheme"/>
+						<State Id="2394330185" Name="Moonlight3"/>
+						<State Id="2965343494" Name="Winter"/>
+						<State Id="3694417201" Name="UpbeatTheme"/>
+						<State Id="3699353111" Name="DiesIrae"/>
+						<State Id="4158285989" Name="GameOver"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{476F0467-FC96-AD55-1FE8-08551B618630}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="4178467550" Name="GGGG_Music_States">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="824317709" Name="MainTheme"/>
+						<State Id="824977647" Name="DefaultTheme"/>
+						<State Id="1810055758" Name="TragicTheme"/>
+						<State Id="1844532073" Name="DramaTheme"/>
+						<State Id="2394330185" Name="Moonlight3"/>
+						<State Id="2965343494" Name="Winter"/>
+						<State Id="3694417201" Name="UpbeatTheme"/>
+						<State Id="3699353111" Name="DiesIrae"/>
+						<State Id="4158285989" Name="GameOver"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{72BEC5CD-5D0E-BD63-96FE-860CD0BAB660}</FileHash>
+</SoundBanksInfo>
