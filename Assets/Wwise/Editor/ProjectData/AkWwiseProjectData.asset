@@ -303,8 +303,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 1c83c00b93e14d46bf99a963f3262275
     GuidInternal: 
-    m_lastTime: -8584255850319247306
+    m_lastTime: -8584255804702623896
     List:
+    - name: DuckedSFX
+      guid: 446cddadfc6e92429ade5189d0e194a1
+      id: 4064326618
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1c83c00b93e14d46bf99a963f3262275
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 1fdd95b36ae3e24cb8af8ed20b0c4dcb
+      - ElementName: DuckedSFX
+        ObjectType: 2
+        guid: 446cddadfc6e92429ade5189d0e194a1
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX Bus/DuckedSFX
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -319,6 +339,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+    - name: MX Bus
+      guid: 9547f1d7363da547a50b00c3a91936c8
+      id: 3027868960
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1c83c00b93e14d46bf99a963f3262275
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MX Bus
+        ObjectType: 2
+        guid: 9547f1d7363da547a50b00c3a91936c8
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/MX Bus
+    - name: SFX Bus
+      guid: 1fdd95b36ae3e24cb8af8ed20b0c4dcb
+      id: 1502772432
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1c83c00b93e14d46bf99a963f3262275
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 1fdd95b36ae3e24cb8af8ed20b0c4dcb
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX Bus
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -331,7 +385,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: f0ba40fa663d804ebd62c84aede4aa7e
     GuidInternal: 
-    m_lastTime: -8584255850319046257
+    m_lastTime: -8584255801112928002
     List:
     - name: GGGG_Soundbank
       guid: 73099d8a19c3564db936dc45fcdd5075
@@ -359,8 +413,45 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 483e542009910e4e86052c19d5868422
     GuidInternal: 
-    m_lastTime: -8584255850319026682
+    m_lastTime: -8584255804702518535
     List:
+    - name: Music Events
+      guid: a114ce1d532b8245acd51da1faac75d9
+      id: 3264800193
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
+      Path: Events/Default Work Unit/Music Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlaySFXSlap
+      guid: d4266a36c5c6964e9f9ee565962083eb
+      id: 1133927134
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: PlaySFXSlap
+        ObjectType: 3
+        guid: d4266a36c5c6964e9f9ee565962083eb
+      Path: Events/Default Work Unit/SFX Events/PlaySFXSlap
+      maxAttenuation: 0
+      maxDuration: 1.1341205
+      minDuration: 0.8019443
     - name: SetMusicGameOver
       guid: 583bfc681827d442b606e50a5b42888c
       id: 1613597420
@@ -371,10 +462,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicGameOver
         ObjectType: 3
         guid: 583bfc681827d442b606e50a5b42888c
-      Path: Events/Default Work Unit/SetMusicGameOver
+      Path: Events/Default Work Unit/Music Events/SetMusicGameOver
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -388,10 +482,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToCasualTheme
         ObjectType: 3
         guid: b5d80fd1a4b8784c89856f2a44f560a7
-      Path: Events/Default Work Unit/SetMusicToCasualTheme
+      Path: Events/Default Work Unit/Music Events/SetMusicToCasualTheme
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -405,10 +502,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToDiesIrae
         ObjectType: 3
         guid: e4ace05a9d644c45a5f9451096dff6e3
-      Path: Events/Default Work Unit/SetMusicToDiesIrae
+      Path: Events/Default Work Unit/Music Events/SetMusicToDiesIrae
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -422,10 +522,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToDramaTheme
         ObjectType: 3
         guid: 7fb97cb73ca1394f95851c44131b75d9
-      Path: Events/Default Work Unit/SetMusicToDramaTheme
+      Path: Events/Default Work Unit/Music Events/SetMusicToDramaTheme
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -439,10 +542,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToMainTheme
         ObjectType: 3
         guid: 56da7e975a3a8b40940e4d4b84458ced
-      Path: Events/Default Work Unit/SetMusicToMainTheme
+      Path: Events/Default Work Unit/Music Events/SetMusicToMainTheme
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -456,10 +562,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToMoonlight3
         ObjectType: 3
         guid: b1e6a3c5aa07254b945a2ce4f6f176dd
-      Path: Events/Default Work Unit/SetMusicToMoonlight3
+      Path: Events/Default Work Unit/Music Events/SetMusicToMoonlight3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -473,10 +582,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToTragicTheme
         ObjectType: 3
         guid: 5a631a2d41a5e1418a781315a8fa94a9
-      Path: Events/Default Work Unit/SetMusicToTragicTheme
+      Path: Events/Default Work Unit/Music Events/SetMusicToTragicTheme
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -490,10 +602,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToUpbeatTheme
         ObjectType: 3
         guid: c6218a91a18ba74e9209c1b0297aa47f
-      Path: Events/Default Work Unit/SetMusicToUpbeatTheme
+      Path: Events/Default Work Unit/Music Events/SetMusicToUpbeatTheme
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -507,13 +622,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: SetMusicToWinter
         ObjectType: 3
         guid: c0bc43727a5bc04baee8d8bb1ac5872d
-      Path: Events/Default Work Unit/SetMusicToWinter
+      Path: Events/Default Work Unit/Music Events/SetMusicToWinter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: SFX Events
+      guid: d7dabcc051bebf4d906ce19f0f137f61
+      id: 3754878377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      Path: Events/Default Work Unit/SFX Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: StartGameAudio
       guid: 8c96ce791fe29a499bf0a97f74096029
       id: 667805585
@@ -524,10 +659,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: StartGameAudio
         ObjectType: 3
         guid: 8c96ce791fe29a499bf0a97f74096029
-      Path: Events/Default Work Unit/StartGameAudio
+      Path: Events/Default Work Unit/Music Events/StartGameAudio
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -541,10 +679,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: TurnOffMusic
         ObjectType: 3
         guid: dc19108aa6429e49b64d0eafee7cbb0f
-      Path: Events/Default Work Unit/TurnOffMusic
+      Path: Events/Default Work Unit/Music Events/TurnOffMusic
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

@@ -1,15 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1515763	SetMusicToUpbeatTheme			\Default Work Unit\SetMusicToUpbeatTheme	
-	49138649	SetMusicToDiesIrae			\Default Work Unit\SetMusicToDiesIrae	
-	667805585	StartGameAudio			\Default Work Unit\StartGameAudio	
-	814886303	SetMusicToDramaTheme			\Default Work Unit\SetMusicToDramaTheme	
-	1613597420	SetMusicGameOver			\Default Work Unit\SetMusicGameOver	
-	1657091384	TurnOffMusic			\Default Work Unit\TurnOffMusic	
-	1958764012	SetMusicToWinter			\Default Work Unit\SetMusicToWinter	
-	2770684787	SetMusicToCasualTheme			\Default Work Unit\SetMusicToCasualTheme	
-	2996985392	SetMusicToTragicTheme			\Default Work Unit\SetMusicToTragicTheme	
-	3872583903	SetMusicToMoonlight3			\Default Work Unit\SetMusicToMoonlight3	
-	4209449687	SetMusicToMainTheme			\Default Work Unit\SetMusicToMainTheme	
+	1515763	SetMusicToUpbeatTheme			\Default Work Unit\Music Events\SetMusicToUpbeatTheme	
+	49138649	SetMusicToDiesIrae			\Default Work Unit\Music Events\SetMusicToDiesIrae	
+	667805585	StartGameAudio			\Default Work Unit\Music Events\StartGameAudio	
+	814886303	SetMusicToDramaTheme			\Default Work Unit\Music Events\SetMusicToDramaTheme	
+	1133927134	PlaySFXSlap			\Default Work Unit\SFX Events\PlaySFXSlap	
+	1613597420	SetMusicGameOver			\Default Work Unit\Music Events\SetMusicGameOver	
+	1657091384	TurnOffMusic			\Default Work Unit\Music Events\TurnOffMusic	
+	1958764012	SetMusicToWinter			\Default Work Unit\Music Events\SetMusicToWinter	
+	2770684787	SetMusicToCasualTheme			\Default Work Unit\Music Events\SetMusicToCasualTheme	
+	2996985392	SetMusicToTragicTheme			\Default Work Unit\Music Events\SetMusicToTragicTheme	
+	3872583903	SetMusicToMoonlight3			\Default Work Unit\Music Events\SetMusicToMoonlight3	
+	4209449687	SetMusicToMainTheme			\Default Work Unit\Music Events\SetMusicToMainTheme	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4178467550	GGGG_Music_States			\Default Work Unit\GGGG_Music_States	
@@ -35,6 +36,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	533251736	Matuska-Logan_GGGG-Game-Over_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Game-Over_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Game Over Stinger\Matuska-Logan_GGGG-Game-Over_v01		182692
 	608798980	Matuska-Logan_GGGG-Upbeat-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Upbeat-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Upbeat Theme\Upbeat Theme\Matuska-Logan_GGGG-Upbeat-Theme_v01		2427566
 	647185346	Matuska-Logan_Moonlight-3-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Moonlight 3 Remix\Matuska-Logan_Moonlight-3-Remix_v01		2172381
+	718187133	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx-slap_34DF115D.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-slap		13906
 	936722572	Matuska-Logan_GGGG-Casual-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Casual Theme\Casual Theme\Matuska-Logan_GGGG-Casual-Theme_v01		2168884
 	1057349562	Matuska-Logan_Dies-Irae-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_Dies-Irae-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Dies Irae Remix\Matuska-Logan_Dies-Irae-Remix_v01		1885370
 

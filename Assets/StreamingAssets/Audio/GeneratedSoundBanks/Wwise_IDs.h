@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAYSFXSLAP = 1133927134U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;
         static const AkUniqueID SETMUSICTODIESIRAE = 49138649U;
@@ -71,7 +72,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID DUCKEDSFX = 4064326618U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MX_BUS = 3027868960U;
+        static const AkUniqueID SFX_BUS = 1502772432U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

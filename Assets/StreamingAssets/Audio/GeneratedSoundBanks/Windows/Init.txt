@@ -30,7 +30,10 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	
+	3027868960	MX Bus			\Default Work Unit\Master Audio Bus\MX Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4064326618	DuckedSFX			\Default Work Unit\Master Audio Bus\SFX Bus\DuckedSFX	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

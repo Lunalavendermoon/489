@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{70BE5C26-BC20-E4AF-40C2-07D2F90E6263}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{51874D86-3BD0-95BF-D6FA-53D7F5F5DFC4}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
@@ -45,6 +45,10 @@
 					<ShortName>Matuska-Logan_Moonlight-3-Remix_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="718187133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx-slap.wav</ShortName>
+					<CachePath>SFX/sfx-slap_34DF115D.wem</CachePath>
+				</File>
 				<File Id="936722572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Casual-Theme_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem</CachePath>
@@ -55,6 +59,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1133927134" Name="PlaySFXSlap" DurationType="OneShot" DurationMin="0.8019443" DurationMax="1.1341205">
+					<MediaRefs>
+						<MediaRef Id="718187133"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1613597420" Name="SetMusicGameOver" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
@@ -191,7 +200,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D3056907-4EA1-6B33-718F-48E3D0CC97A5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F7F1F20C-3077-2433-49B7-A049AB53876C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -201,7 +210,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1502772432" Name="SFX Bus"/>
+				<Bus Id="3027868960" Name="MX Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4064326618" Name="DuckedSFX"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
@@ -361,5 +373,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{52A3916C-91EB-B79C-D89C-4E78E30FA797}</FileHash>
+	<FileHash>{FAB3786D-9D3E-260C-046A-83D17412AD5E}</FileHash>
 </SoundBanksInfo>
