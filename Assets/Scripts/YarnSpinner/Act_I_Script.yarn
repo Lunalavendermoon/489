@@ -8,17 +8,15 @@
 
 <<hide bb_dream>>
 <<hide bb_job>>
-<<hide bb_revenge>>
-<<hide bb_email>>
 <<hide bb_thatsit>>
 
 <<hide y/nbox>>
-<<hide debt>>
 <<show narratorbox>>
 
 Narrator: Welcome.
 Narrator: Welcome! Pure, innocent soul.
 Narrator: I am the narrator. Look at your face in the reflection, say cheese!
+//insert the pointing asset
 Narrator: Alright. First of all, you're broke.
     -> "im not"
         Narrator: ok think again. 
@@ -26,6 +24,7 @@ Narrator: Alright. First of all, you're broke.
     -> "lol how did u know"
         Narrator: There you go! 
         Narrator: Being alive is so costly, isn't? Everything costs $ MONEY $.
+        //insert money
         Narrator: Why can't we just have happiness or fullfillment without spending?
         Narrator: Why do we always have to EXCHANGE (ex. our time, effort, soul, etc.) for what we want? 
         Narrator: Good question.
@@ -43,6 +42,7 @@ Narrator: Now, you're broke.
     -> "how did u know"
         Narrator: There you go! 
         Narrator: Being alive is so costly, isn't? Everything costs $ MONEY $.
+        //insert money
         Narrator: Why can't we just have happiness or fullfillment without spending?
         Narrator: Why do we always have to EXCHANGE (ex. our time, effort, soul, etc.) for what we want? 
         Narrator: Well, good question. (i know you didnt ask)
@@ -52,10 +52,12 @@ Narrator: Now, you're broke.
 title: start3
 ---
 Narrator: As a game designer, you know bc its called the "REWARD SYSTEM",
-Narrator: its what keeps players going, keeping them on the grind longer
-Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong with this world. 
+Narrator: its what keeps players going, keeping them on the grind longer.
 <<show bb_dream>>
+Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong with this world. 
+<<hide bb_dream>>
 Narrator: Its 2 am, u're rearranging your room and doing backhand pushups
+//insert cutscene asset of player being 2am sigma
 Narrator: ITS ALL CLEAR TO YOU NOW. 
 Narrator: you DON'T NEED the reward system, you dont have to collect "coupons" for the life you want
 Narrator: you can just BECOME whoever you want to be, if you just change your mindset
@@ -65,15 +67,19 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
         Narrator: These are too easy. Next.
             -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
+                //insert recruitment flyer 
+                Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
+                //hide recruitment flyer
                 <<jump start5>>
             -> "what if i to drive a lambo right now"
                 Narrator: Then go be a luxury mansion private driver.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
+                //insert recruitment flyer
+                Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
+                //hide recruitment flyer
                 <<jump start5>>
     -> "so its a motivational speech afterall"
         Narrator: hang on, let me cook
@@ -81,21 +87,26 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
         Narrator: These are too easy. Next.
             -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
+                //insert recruitment flyer
                 Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
+                //hide recruitment flyer
                 <<jump start5>>
             -> "what if i to drive a lambo right now"
                 Narrator: Then go be a luxury mansion private driver.
+                //insert recruitment flyer
                 Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
+                //hide recruitment flyer
                 <<jump start5>>
 ===
 
 title: start4
 ---
 Narrator: Say whatevers on your mind. What do you want? I'll show u the path
+//insert exchange meme
     -> "what if i wanna be a trust fund kid"
         Narrator: Easy. Just give all your money to your parents.
         Narrator: Next, keep them coming
@@ -105,6 +116,7 @@ Narrator: Say whatevers on your mind. What do you want? I'll show u the path
                 Narrator: Just go to jail.
                 Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
                 Narrator: How's that? changing your mindset changes EVERYTHING. 
+                //hide exchange meme
     -> "what if i don't wanna work anymore"
         Narrator: Easy. Just clock out.
         Narrator: Next, keep them coming
@@ -113,7 +125,8 @@ Narrator: Say whatevers on your mind. What do you want? I'll show u the path
             -> "what if i want to have unspendable money"
                 Narrator: Just go to jail.
                 Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
-                Narrator: How's that? changing your mindset changes EVERYTHING. 
+                Narrator: How's that? changing your mindset changes EVERYTHING.
+                //hide exchange meme 
 ===
 
 title: start5
@@ -201,6 +214,7 @@ Secretary: M'lord, she just gave birth this morning
 Eugene: Brilliant——then her leave can come to an end right now.
 Eugene: NOW GET MOVING! I want everyone in the room IMMEDIATELY.
 <<show narratorbox>>
+//insert throwhead
 Narrator: The alpha walked straight pass you, and threw his black Armani coat on your head.
     -> "?"
         <<load_scene Level 1>>
