@@ -1,0 +1,42 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1515763	SetMusicToUpbeatTheme			\Default Work Unit\Music Events\SetMusicToUpbeatTheme	
+	49138649	SetMusicToDiesIrae			\Default Work Unit\Music Events\SetMusicToDiesIrae	
+	667805585	StartGameAudio			\Default Work Unit\Music Events\StartGameAudio	
+	814886303	SetMusicToDramaTheme			\Default Work Unit\Music Events\SetMusicToDramaTheme	
+	1133927134	PlaySFXSlap			\Default Work Unit\SFX Events\PlaySFXSlap	
+	1613597420	SetMusicGameOver			\Default Work Unit\Music Events\SetMusicGameOver	
+	1657091384	TurnOffMusic			\Default Work Unit\Music Events\TurnOffMusic	
+	1958764012	SetMusicToWinter			\Default Work Unit\Music Events\SetMusicToWinter	
+	2770684787	SetMusicToCasualTheme			\Default Work Unit\Music Events\SetMusicToCasualTheme	
+	2996985392	SetMusicToTragicTheme			\Default Work Unit\Music Events\SetMusicToTragicTheme	
+	3872583903	SetMusicToMoonlight3			\Default Work Unit\Music Events\SetMusicToMoonlight3	
+	4209449687	SetMusicToMainTheme			\Default Work Unit\Music Events\SetMusicToMainTheme	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4178467550	GGGG_Music_States			\Default Work Unit\GGGG_Music_States	
+
+State	ID	Name	State Group			Notes
+	748895195	None	GGGG_Music_States			
+	824317709	MainTheme	GGGG_Music_States			
+	824977647	DefaultTheme	GGGG_Music_States			
+	1810055758	TragicTheme	GGGG_Music_States			
+	1844532073	DramaTheme	GGGG_Music_States			
+	2394330185	Moonlight3	GGGG_Music_States			
+	2965343494	Winter	GGGG_Music_States			
+	3694417201	UpbeatTheme	GGGG_Music_States			
+	3699353111	DiesIrae	GGGG_Music_States			
+	4158285989	GameOver	GGGG_Music_States			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	139325359	SILENCE	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\SILENCE_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Silence\SILENCE\SILENCE		643
+	354105497	Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Tragic Theme\Tragic Theme\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01		1569871
+	431644092	Matuska-Logan_GGGG-Drama-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Drama Theme\Drama Theme\Matuska-Logan_GGGG-Drama-Theme_v01		1690421
+	491007725	Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Winter Remix\Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track		2529875
+	516056618	Matuska-Logan_GGGG-Main-Theme_ROUGH-v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Main-Theme_ROUGH-v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Main Theme\Main Theme\Matuska-Logan_GGGG-Main-Theme_ROUGH-v01		2048288
+	533251736	Matuska-Logan_GGGG-Game-Over_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Game-Over_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Game Over Stinger\Matuska-Logan_GGGG-Game-Over_v01		182692
+	608798980	Matuska-Logan_GGGG-Upbeat-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Upbeat-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Upbeat Theme\Upbeat Theme\Matuska-Logan_GGGG-Upbeat-Theme_v01		2427566
+	647185346	Matuska-Logan_Moonlight-3-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Moonlight 3 Remix\Matuska-Logan_Moonlight-3-Remix_v01		2172381
+	718187133	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx-slap_34DF115D.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-slap		13906
+	936722572	Matuska-Logan_GGGG-Casual-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Casual Theme\Casual Theme\Matuska-Logan_GGGG-Casual-Theme_v01		2168884
+	1057349562	Matuska-Logan_Dies-Irae-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Dies-Irae-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Dies Irae Remix\Matuska-Logan_Dies-Irae-Remix_v01		1885370
+

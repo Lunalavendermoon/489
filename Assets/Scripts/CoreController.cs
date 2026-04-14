@@ -261,7 +261,8 @@ public class CoreController : MonoBehaviour
             gm?.ResetCombo();
         }
 
-        fx?.PlayDepositSfx(isPerfect);
+        //fx?.PlayDepositSfx(isPerfect);
+        AudioManager.Instance.PlayEvent("PlaySFXSlap");
 
         gm?.AddScore(totalPoints);
 
@@ -333,7 +334,8 @@ public class CoreController : MonoBehaviour
             // Non-perfect resets combo
             gm?.ResetCombo();
         }
-        fx?.PlayDepositSfx(isPerfect);
+        //fx?.PlayDepositSfx(isPerfect);
+        AudioManager.Instance.PlayEvent("PlaySFXSlap");
 
         bool shouldDespawn = true;
         if (isHealthDot)
