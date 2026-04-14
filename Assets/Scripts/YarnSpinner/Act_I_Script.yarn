@@ -4,16 +4,12 @@
 
 <<hide eugene>>
 <<hide  y/n>>
-<<fade_in player 2.0>>
+<<show player>>
 
 <<hide bb_dream>>
 <<hide bb_job>>
-<<hide bb_revenge>>
-<<hide bb_email>>
-<<hide bb_thatsit>>
 
 <<hide y/nbox>>
-<<hide debt>>
 <<show narratorbox>>
 
 Narrator: Welcome.
@@ -53,25 +49,24 @@ title: start3
 ---
 Narrator: As a game designer, you know bc its called the "REWARD SYSTEM",
 Narrator: its what keeps players going, keeping them on the grind longer
-Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong with this world. 
 <<show bb_dream>>
+Narrator: So when u got fired and bankrupted, u know *exactly* what is wrong with this world. 
+<<hide bb_dream>>
 Narrator: Its 2 am, u're rearranging your room and doing backhand pushups
 Narrator: ITS ALL CLEAR TO YOU NOW. 
 Narrator: you DON'T NEED the reward system, you dont have to collect "coupons" for the life you want
-Narrator: you can just BECOME whoever you want to be, if you just change your mindset
-    -> "that's not true"
+Narrator: you can just BECOME whoever you want to be, if you just CHANGE your MINDSET.
+    -> "? that's not true"
         Narrator: hang on, let me cook
         <<detour start4>>
         Narrator: These are too easy. Next.
             -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
             -> "what if i to drive a lambo right now"
-                Narrator: Then go be a luxury mansion private driver.
-                Narrator: lol what's that face? isn't that exactly what you wanted?
+                Narrator: Then go be a luxury mansion security guard.
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
@@ -81,13 +76,11 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
         Narrator: These are too easy. Next.
             -> "what if i want to live in a mansion"
                 Narrator: Then go be a luxury mansion security guard.
-                Narrator: lol what's that face? its a smooth callback
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
             -> "what if i to drive a lambo right now"
-                Narrator: Then go be a luxury mansion private driver.
-                Narrator: lol what's that face? its a smooth callback
+                Narrator: Then go be a luxury mansion security guard.
                 Narrator: look, you asked the questions, I gave you the answers. You get the logic by now.
                 Narrator: its NEVER about how hard you work or how much you sacrifice, its about how you THINK.
                 <<jump start5>>
@@ -95,24 +88,24 @@ Narrator: you can just BECOME whoever you want to be, if you just change your mi
 
 title: start4
 ---
-Narrator: Say whatevers on your mind. What do you want? I'll show u the path
+Narrator: Say whatevers on your mind. What do you want? I'll show u the path.
     -> "what if i wanna be a trust fund kid"
         Narrator: Easy. Just give all your money to your parents.
         Narrator: Next, keep them coming
             -> "what if i wanna be jeff bezos"
-                Narrator: Just change your name.
+                Narrator: Just change your name to jeff bezos.
             -> "what if i want to have unspendable money"
                 Narrator: Just go to jail.
-                Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
+                Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing.
                 Narrator: How's that? changing your mindset changes EVERYTHING. 
     -> "what if i don't wanna work anymore"
         Narrator: Easy. Just clock out.
         Narrator: Next, keep them coming
             -> "what if i wanna be jeff bezos"
-                Narrator: Just change your name.
+                Narrator: Just change your name to jeff bezos.
             -> "what if i want to have unspendable money"
                 Narrator: Just go to jail.
-                Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing
+                Narrator: Free food, free housing, zero expenses, and you don't have to do ANY thing.
                 Narrator: How's that? changing your mindset changes EVERYTHING. 
 ===
 
@@ -122,16 +115,12 @@ title: start5
 
 <<hide eugene>>
 <<hide  y/n>>
-<<fade_in player 2.0>>
+<<show player>>
 
 <<hide bb_dream>>
 <<hide bb_job>>
-<<hide bb_revenge>>
-<<hide bb_email>>
-<<hide bb_thatsit>>
 
 <<hide y/nbox>>
-<<hide debt>>
 <<show narratorbox>>
 
 Narrator: So, you went and applied to be a Security Guard for the *Gallinaceous villa.*
@@ -139,15 +128,15 @@ Narrator: you have never heard of them before, honestly neither have I
 Narrator: BUT just like that, at such a young age, you have moved into an extravagant mansion. 
 Narrator: Better yet, the richest CEO in the galaxy, sir Gallinaceous, is paying out of his own pocket for you to stay!
 Narrator: as a security guard, ofc
-    -> "thats kinda not what i wanted"
+    -> "nah i dont want to be a security guard"
         Narrator: Well TOO LATE cuz we're already here
         <<background Villa>>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
-        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         <<show bb_job>>
+        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
         <<hide bb_job>>
-        Narrator: whats the life like being that top 10%? we're gonna find out. Excited?
+        Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
             -> *go stand infront of the gates*
                 <<jump IntoVilla>>
             -> *wander around*
@@ -155,8 +144,8 @@ Narrator: as a security guard, ofc
     -> "nice"
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         <<background Villa>>
-        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         <<show bb_job>>
+        Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
         <<hide bb_job>>
         Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
@@ -169,42 +158,227 @@ Narrator: as a security guard, ofc
 title: IntoVilla
 ---
 
-<<background introduction_0>>
+<<background Outside>>
 
-<<hide eugene>>
-<<hide y/n>>
+<<show eugene>>
+<<hide  y/n>>
 <<hide player>>
 
 <<hide bb_dream>>
 <<hide bb_job>>
-<<hide bb_revenge>>
-<<hide bb_email>>
-<<hide bb_thatsit>>
 
 <<hide y/nbox>>
-<<hide debt>>
 <<show narratorbox>>
 
-<<background Villa>>
-<<show eugene>>
 Narrator: DANGGGGG whos that
 Narrator: seems like its no other than *Eugene Arthur K. Windsar A. Percival Gallinaceus* himself!
-Narrator: Hopping off the private jet and walking towards the gate like that wide putin meme
+Narrator: Hopping off the private jet and walking towards the gate like wide putin meme
 <<hide narratorbox>>
 <<show y/nbox>>
 Eugene: ASSEMBLE ALL TO THE CONFERENCE ROOM IN 30 SECONDS!
-Secretary: M'lord, you just fired everyone yesterday
-Eugene: Am I hearing... an EXCUSE? 
-Eugene: Get everyone here in 60 seconds then!
+Secretary: Boss, you just fired everyone yesterday...
+Eugene: Am I hearing... an EXCUSE? //need a vineboom here honestly
+Eugene: Get everyone here in 60 seconds!
 Eugene: Including that one on maternity leave, NOW.
-Secretary: M'lord, she just gave birth this morning
-Eugene: Brilliant——her leave ends right now.
+Secretary: Boss, Emily just gave birth to a baby boy this morning...
+Eugene: Brilliant timing——bring her son too. Get him up to speed on his mom's business.
 Eugene: NOW GET MOVING! I want everyone in the room IMMEDIATELY!
 <<show narratorbox>>
 Narrator: The alpha walked straight pass you, and threw his black Armani coat on your head.
     -> "?"
+        <<hide narratorbox>>
+        Eugene: Who's this?
+        Secretary: Probably the new security guard, Boss.
+        <<show narratorbox>>
+        Narrator: Eugene narrows his eyes, he is staring at you. 
+            -> "hi"
+                <<detour IntoVilla_FirstDirec>>
+                Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
+                <<jump IntoVilla_YN>>
+            -> "where to put your coat m'boss"
+                <<detour IntoVilla_FirstDirec>>
+                Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
+                <<jump IntoVilla_YN>>
+===
 
-    -> "da fak i just got here"
+title: IntoVilla_FirstDirec
+---
+<<hide narratorbox>>
+Eugene: What a twig——who does the hiring around here? Where's that old guy who used to watch the gate?
+Secretary: Sir, you fired him five years ago.
+Eugene: Oh. 
+Eugene: Well, tell him to get back to his post right now, or I'll fire him AGAIN.
+<<show narratorbox>>
+Narrator: Suddenly, he stops dead in his tracks, then takes a deep, wolf-like sniff of the air.  //"WOLF" -> scandal collection
+<<hide narratorbox>>
+Eugene: She's here. She's coming for me... I can SMELL it.
+Secretary: Shall I cancel the meeting, boss?
+Eugene: No. MOVE IT UP! And keep her out at all costs.
+Eugene: You——security guard!
+    -> "AYE my boss"
+        Eugene: I cannot let her waltz her way into my heart ever again. 
+        Eugene: I have buried my love, my everything in the grave of her name. 
+        Eugene: Whatever she said, DO NOT let her in!
+        Eugene: DO NOT let her in. Or else, I will fire you too. 
+    -> "u just called me a twig"
+        Eugene: Is everyone outside the villa too broke to buy a mirror nowadays?
+        Eugene: Now LISTEN. I cannot let her waltz her way into my heart ever again. 
+        Eugene: I have buried my love, my everything in the grave of her name. 
+        Eugene: Whatever she said, DO NOT let her in!
+        Eugene: DO NOT let her in. Or else, I will fire you too. 
+===
 
+title: IntoVilla_YN
+---
+
+<<background Outside>>
+
+<<hide eugene>>
+<<show  y/n>>
+<<hide player>>
+
+<<hide bb_dream>>
+<<hide bb_job>>
+
+<<show y/nbox>>
+<<hide narratorbox>>
+y/n: Eugene... please, we need to talk...!
+y/n: We've been through so much. You will never shut doors in front of me...!
+<<show narratorbox>>
+Narrator: Oh I see how this is.
+<<hide narratorbox>>
+y/n: Please let me in!! LET ME IN!! LET ME IN!!
+    -> "aye AYE no unauthorized personnel zone"
+        y/n: Please, I'm Eugene's lover. He must have mentioned me...!
+        y/n: I NEVER CHEATED on him, I swear to god. //"No cheating" -> scandal collection
+        y/n: Let me in... I need to explain everything!
+            -> *Let her in* 
+                <<jump IntoVilla_Confrontation>>
+            -> "nahh sorry"
+                <<jump BadEnding1>>
+    -> "what happened?"
+        y/n: Please, I'm Eugene's lover. He must have mentioned me...!
+        y/n: I NEVER CHEATED on him, I swear to god. //"No cheating" -> scandal collection
+        y/n: Let me in... I need to explain everything!
+            -> *Let her in* 
+                <<jump IntoVilla_Confrontation>>
+            -> "nahh sorry"
+                <<jump BadEnding1>>
+
+===
+
+title: BadEnding1
+---
+<<show narratorbox>>
+Narrator: y/n collapsed to the ground and fainted.
+    -> "wait what"
+    <<show  eugene>>
+    <<hide narratorbox>>
+    Eugene: WHAT HAVE YOU DONE TO HER?! //we need vineboom here too LMAOOO
+    <<show narratorbox>>
+    Narrator: Eugene slides out of the mansion, gliding across the driveway and straight to the main gate.
+        -> "arent u in a meeting??"
+            <<hide narratorbox>>
+            y/n: Eugene... I'm sorry...
+            Eugene: You... you refused her entry? How could you?!
+            y/n: Do not blame them, my love... please...
+            Eugene: My kind-hearted fluffy marshmellow... I won't let anyone hurt you like this.
+            Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
+                -> "b*tch it was u who told me"
+                    <<show narratorbox>>
+                    Narrator: The alpha turns around, *PUNCHED* you right in the face! //punching sfx
+                    Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
+                    Eugene: You are FIRED! Get out of my sight, you incompetent FOOL!
+                    <<jump BadEnding2>>
+                -> "lmao oops"
+                    Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
+                    Eugene: You are FIRED! Get out of my sight, you incompetent FOOL!
+
+===
+
+title: BadEnding2
+---
+
+<<background introduction_0>>
+//special game-over screen
+
+<<hide eugene>>
+<<hide y/n>>
+<<show player>>
+
+<<hide bb_dream>>
+<<hide bb_job>>
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+//insert gameover music
+
+Narrator: You got fired right there and then, while Eugene carried Y/N into the mansion. 
+<<hide eugene>>
+<<hide y/n>>
+Narrator: So that's how you lost your first job after. 
+Narrator: Well, game over.
+    -> "so 'mindset-changing' huh"
+        Narrator: ofc! it still applies.
+        Narrator: What I'm trynna say is, this world is not AS serious as u might think.
+        Narrator: Because the whole world is just one GIGANTIC amateur hour, i mean it.
+        Narrator: Turns out even the so-called most high-end places on earth aren't all they're cracked up to be. 
+        Narrator: Good thing you saw through it early on——this world is FAR MORE ABSURD than we were told growing up. 
+        Narrator: Who knows? maybe all those ppl you thought had their lives figured out, are a total mess behind the scene.
+        Narrator: Wouldn't it be nice to know? Arent u curicous?
+            -> "but im fired"
+                <<hide narratorbox>>
+                <<hide player>>
+                <<background Outside>>
+                Secretary: Hey, you. Come back.
+                Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
+                Secretary: Now go inside the villa.
+                <<show narratorbox>>
+                Narrator: See? 
+                Narrator: So, don't sweat it. Just go wild and HAVE FUN. 
+                Narrator: This game really isn't all that serious anyway.
+                <<jump IntoVilla_Confrontation>>
+            -> "nope not interested"
+                Narrator: Great! ur not that bothered by other ppl's life. 
+                Narrator: 
+                <<hide narratorbox>>
+                <<hide player>>
+                <<background Outside>>
+                Secretary: Hey, you. Come back.
+                Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
+                Secretary: Now go inside the villa. 
+                <<show narratorbox>>
+                Narrator: See? 
+
+                Narrator: This game really isn't all that serious anyway.
+    -> "revive me rn imma beat the sh*t out of"
+        Narrator: woah daddy chill
+        Narrator: 
+
+
+
+
+
+===
+
+
+
+title: IntoVilla_Confrontation
+---
+
+<<background Villa>>
+
+<<show eugene>>
+<<show y/n>>
+<<hide player>>
+
+<<hide bb_dream>>
+<<hide bb_job>>
+
+<<show y/nbox>>
+<<show narratorbox>>
 
 ===
