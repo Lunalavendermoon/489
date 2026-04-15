@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2014993065660186911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129478473521835989}
+  - component: {fileID: 8791253291955830252}
+  - component: {fileID: 2551458235978031232}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129478473521835989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014993065660186911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8791253291955830252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014993065660186911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab7882a57a68c740a55b5d0ab022712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawns: {fileID: 2551458235978031232}
+  gm: {fileID: 0}
+  enableTimedPhases: 1
+  clearDisallowedDotsContinuously: 1
+  phases:
+  - phaseName: start
+    startTimeSeconds: 0
+    hasEndTime: 1
+    endTimeSeconds: 20
+    allowNormalDots: 1
+    allowSpecialDots: 0
+    allowHealthDots: 0
+    overrideNormalSpawnRate: 0
+    normalSpawnPerSecond: 2
+    overrideMaxHealthDots: 0
+    maxHealthDots: 0
+  - phaseName: next
+    startTimeSeconds: 20
+    hasEndTime: 0
+    endTimeSeconds: 20
+    allowNormalDots: 1
+    allowSpecialDots: 1
+    allowHealthDots: 0
+    overrideNormalSpawnRate: 0
+    normalSpawnPerSecond: 2
+    overrideMaxHealthDots: 0
+    maxHealthDots: 0
+  currentPhaseIndex: -1
+  currentPhaseName: None
+  timelineStartTime: 0
+--- !u!114 &2551458235978031232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014993065660186911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcefc26413b37a45b3f6ddce4f917b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  gm: {fileID: 0}
+  dotPrefab: {fileID: 2773475539011024399, guid: a1e0f86b2bd01644eb77afd10c8b40eb, type: 3}
+  dotPrewarm: 24
+  spawnDots: 1
+  dotSpawnPerSecond: 2
+  dotSpawnMinRadius: 1.6
+  dotSpawnMaxRadius: 4.8
+  spawnSpecialDots: 1
+  spawnHealthDots: 1
+  maxHealthDots: 5
+  healthDotStartingHealth: 3
+  specialBatchCount: 5
+  specialRespawnDelay: 3
+  enforceFullSpecialBatch: 1
+  specialWatchdogInterval: 0.15
+  screenPadding: 0.6
+  core: {fileID: 0}
+  centerExclusionRadius: 3
+  exclusionMaxAttempts: 12

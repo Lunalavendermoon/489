@@ -188,9 +188,9 @@ MonoBehaviour:
   state: 0
   beat: {fileID: 546797609}
   ui: {fileID: 1780796840}
-  spawns: {fileID: 616545438}
-  timedDotSpawns: {fileID: 0}
-  beatTargets: {fileID: 0}
+  spawns: {fileID: 102556775}
+  timedDotSpawns: {fileID: 102556776}
+  beatTargets: {fileID: 546797610}
   bullets: {fileID: 1266486693}
   core: {fileID: 1821561328}
   fx: {fileID: 2126955627}
@@ -486,6 +486,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91109601}
   m_CullTransparentMesh: 1
+--- !u!114 &102556775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2551458235978031232, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+  m_PrefabInstance: {fileID: 1234700368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcefc26413b37a45b3f6ddce4f917b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &102556776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8791253291955830252, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+  m_PrefabInstance: {fileID: 1234700368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab7882a57a68c740a55b5d0ab022712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &192433391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546797608}
   - component: {fileID: 546797609}
+  - component: {fileID: 546797610}
   m_Layer: 0
   m_Name: BeatManager
   m_TagString: Untagged
@@ -2037,70 +2060,37 @@ MonoBehaviour:
   coreTransform: {fileID: 1795166335}
   endOnSongFinish: 1
   gm: {fileID: 52717957}
---- !u!1 &616545436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 616545437}
-  - component: {fileID: 616545438}
-  m_Layer: 0
-  m_Name: SpawnManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &616545437
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616545436}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616545438
+--- !u!114 &546797610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616545436}
+  m_GameObject: {fileID: 546797607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dcefc26413b37a45b3f6ddce4f917b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 604f59ffdb63c044784cc6f3b7da34f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   gm: {fileID: 52717957}
-  dotPrefab: {fileID: 2773475539011024399, guid: a1e0f86b2bd01644eb77afd10c8b40eb, type: 3}
-  dotPrewarm: 24
-  spawnDots: 1
-  dotSpawnPerSecond: 2
-  dotSpawnMinRadius: 1.6
-  dotSpawnMaxRadius: 4.8
-  spawnSpecialDots: 1
-  spawnHealthDots: 1
-  maxHealthDots: 5
-  healthDotStartingHealth: 3
-  specialBatchCount: 5
-  specialRespawnDelay: 3
-  enforceFullSpecialBatch: 1
-  specialWatchdogInterval: 0.15
-  screenPadding: 0.6
-  core: {fileID: 1821561328}
-  centerExclusionRadius: 3
-  exclusionMaxAttempts: 12
+  beat: {fileID: 546797609}
+  cursor: {fileID: 2134034279}
+  ui: {fileID: 1780796840}
+  fx: {fileID: 2126955627}
+  beatTargetPrefab: {fileID: 0}
+  prewarm: 8
+  perfectsToTrigger: 5
+  beatsPerSequence: 5
+  spawnEveryNBeats: 1
+  spawnPadding: 0.8
+  beatPerfectPoints: 450
+  beatGreatPoints: 250
+  successOnGreatOrPerfect: 1
+  sequenceActive: 0
+  perfectsTowardTrigger: 0
+  beatsSpawned: 0
+  beatsResolved: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +2981,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143902698}
   m_CullTransparentMesh: 1
+--- !u!1001 &1234700368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129478473521835989, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014993065660186911, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: m_Name
+      value: SpawnManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551458235978031232, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 52717957}
+    - target: {fileID: 2551458235978031232, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 2551458235978031232, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: core
+      value: 
+      objectReference: {fileID: 1821561328}
+    - target: {fileID: 8791253291955830252, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 52717957}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0eb5ef5acd2d6e6459016765a028afc1, type: 3}
 --- !u!1 &1266486691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,7 +4025,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -4214,7 +4277,7 @@ MonoBehaviour:
   cursor: {fileID: 2134034279}
   ui: {fileID: 1780796840}
   fx: {fileID: 2126955627}
-  spawns: {fileID: 616545438}
+  spawns: {fileID: 102556775}
 --- !u!1 &1841864028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,7 +4995,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: aafed11bdbfb7a04ab69219341554325, type: 3}
   m_Resource: {fileID: 8300000, guid: aafed11bdbfb7a04ab69219341554325, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.186
@@ -5309,7 +5372,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 52717956}
   - {fileID: 546797608}
-  - {fileID: 616545437}
   - {fileID: 1266486692}
   - {fileID: 1780796839}
   - {fileID: 2126955626}
@@ -5326,3 +5388,4 @@ SceneRoots:
   - {fileID: 523038301}
   - {fileID: 403867140}
   - {fileID: 651986446}
+  - {fileID: 1234700368}

@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     public BulletManager bullets;
     public CoreController core;
     public EffectsManager fx;
-    public Tutorial tutorial;
+    public MediaWaveSpawner mediaWaveSpawner;
 
     private float superCountdownTimer;
     private float superTimer;
@@ -148,7 +148,6 @@ public class GameManager : MonoBehaviour
     {
         combo = combo + 1;
         ui?.SetCombo(combo, GetComboMultiplier());
-        tutorial?.OnPerfectDeposit(isSpecial);
     }
 
     public void RegisterNormalPerfectDeposit()
@@ -189,7 +188,6 @@ public class GameManager : MonoBehaviour
         fx?.PlayHitSfx();
         fx?.ShakeSmall();
         ui?.FlashDamage();
-        tutorial?.OnPlayerHit();
     }
 
     public void RequestSuperCountdown()
@@ -217,8 +215,6 @@ public class GameManager : MonoBehaviour
         ui?.ShowSuperCountdown(true);
         ui?.SetSuperCountdown(superCountdownTimer);
 
-        // let the tutorial system know that a super countdown has started
-        tutorial?.OnSuperCountdownStart();
     }
 
     private void EnterSuperMode()
@@ -234,8 +230,6 @@ public class GameManager : MonoBehaviour
 
         fx?.SuperStartBurst();
 
-        // notify tutorial that super mode actually began
-        tutorial?.OnSuperModeStart();
     }
 
     private void ExitSuperMode() 
@@ -268,8 +262,6 @@ public class GameManager : MonoBehaviour
             }
 
             state = GameState.Normal;
-            // inform the tutorial that super mode ended so it can clear text
-            tutorial?.OnSuperModeEnd();
             ui?.ShowSuperUI(false);
             ui?.ClearJudgment();
             core?.ResetFill();
@@ -304,6 +296,7 @@ public class GameManager : MonoBehaviour
         beatTargets?.ResetBeatsState();
         bullets?.DespawnAllBullets();
         core?.ResetFill();
+        mediaWaveSpawner.ResetSpawner();
 
         ui?.ShowGameOver(false, 0);
         ui?.ShowSuperUI(false);
