@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{9BDE4223-FEDC-F2B6-DA01-CB00A264E5E2}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{A236F396-8454-3F48-220E-D53D66848AF2}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
@@ -19,11 +19,11 @@
 				</File>
 				<File Id="312482483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx-slap.wav</ShortName>
-					<CachePath>SFX/sfx-slap_C5F96F9D.wem</CachePath>
+					<CachePath>SFX/sfx-slap_ABE4DED5.wem</CachePath>
 				</File>
 				<File Id="351717463" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_perfect-slap.wav</ShortName>
-					<CachePath>SFX/sfx_perfect-slap_B833B380.wem</CachePath>
+					<CachePath>SFX/sfx_perfect-slap_74BC34FD.wem</CachePath>
 				</File>
 				<File Id="354105497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01.wav</ShortName>
@@ -59,11 +59,11 @@
 				</File>
 				<File Id="660248666" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_bonus-slap.wav</ShortName>
-					<CachePath>SFX/sfx_bonus-slap_F37004B4.wem</CachePath>
+					<CachePath>SFX/sfx_bonus-slap_6CC118BE.wem</CachePath>
 				</File>
 				<File Id="756565802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_special-enemy.wav</ShortName>
-					<CachePath>SFX/sfx_special-enemy_7B669AB1.wem</CachePath>
+					<CachePath>SFX/sfx_special-enemy_59EC7613.wem</CachePath>
 				</File>
 				<File Id="855988282" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemy-1.wav</ShortName>
@@ -251,7 +251,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F7F1F20C-3077-2433-49B7-A049AB53876C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{593EAB03-CA34-780C-F9D1-815AAD0C2F5A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -262,6 +262,7 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="1502772432" Name="SFX Bus"/>
+				<Bus Id="1806361253" Name="NotDuckedSFX"/>
 				<Bus Id="3027868960" Name="MX Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="4064326618" Name="DuckedSFX"/>
@@ -424,5 +425,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{39BF6DC6-40CD-A597-C29B-9E8B81CB32DC}</FileHash>
+	<FileHash>{4705E94D-2AFD-9722-C613-AD0635FB2A06}</FileHash>
 </SoundBanksInfo>
