@@ -2,8 +2,13 @@
 ---
 <<background introduction_0>>
 
-<<hide eugene>>
-<<hide  y/n>>
+<<hide eugene_calm>>
+<<hide eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
 <<show player>>
 
 <<hide cc_life>>
@@ -129,12 +134,21 @@ title: start5
 ---
 <<background introduction_0>>
 
-<<hide eugene>>
-<<hide  y/n>>
+<<hide eugene_calm>>
+<<hide eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
 <<show player>>
 
-<<hide bb_dream>>
-<<hide bb_job>>
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<show cc_flyer>>
+<<hide cc_you>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -146,12 +160,11 @@ Narrator: Better yet, the richest CEO in the galaxy, sir Gallinaceous, is paying
 Narrator: as a security guard, ofc
     -> "nah i dont want to be a security guard"
         Narrator: Well TOO LATE cuz we're already here
+        <<hide cc_flyer>>
         <<background Villa>>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
-        <<show bb_job>>
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
-        <<hide bb_job>>
         Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
             -> *go stand infront of the gates*
                 <<jump IntoVilla>>
@@ -159,11 +172,10 @@ Narrator: as a security guard, ofc
                 <<jump IntoVilla>>
     -> "nice"
         Narrator: You honestly thought this is a scam, but the mansion is REAL
+        <<hide cc_flyer>>
         <<background Villa>>
-        <<show bb_job>>
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
-        <<hide bb_job>>
         Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
             -> *go stand infront of the gates*
                 <<jump IntoVilla>>
@@ -176,12 +188,21 @@ title: IntoVilla
 
 <<background Outside>>
 
-<<show eugene>>
-<<hide  y/n>>
+<<show eugene_calm>>
+<<hide eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
 <<hide player>>
 
-<<hide bb_dream>>
-<<hide bb_job>>
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<show cc_flyer>>
+<<hide cc_you>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -191,15 +212,24 @@ Narrator: seems like its no other than *Eugene Arthur K. Windsar A. Percival Gal
 Narrator: Hopping off the private jet and walking towards the gate like wide putin meme
 <<hide narratorbox>>
 <<show y/nbox>>
+<<hide eugene_calm>>
+<<show eugene_alpha>>
 Eugene: ASSEMBLE ALL TO THE CONFERENCE ROOM IN 30 SECONDS!
+<<show secretary_anxious>>
 Secretary: Boss, you just fired everyone yesterday...
 Eugene: Am I hearing... an EXCUSE? //need a vineboom here honestly
 Eugene: Get everyone here in 60 seconds!
+<<hide eugene_alpha>>
+<<show eugene_sas>>
 Eugene: Including that one on maternity leave, NOW.
 Secretary: Boss, Emily just gave birth to a baby boy this morning...
 Eugene: Brilliant timing——bring her son too. Get him up to speed on his mom's business.
+<<hide eugene_sas>>
+<<show eugene_alpha>>
 Eugene: NOW GET MOVING! I want everyone in the room IMMEDIATELY!
 <<show narratorbox>>
+<<hide eugene_alpha>>
+<<show eugene_calm>>
 Narrator: The alpha walked straight pass you, and threw his black Armani coat on your head.
     -> "?"
         <<hide narratorbox>>
@@ -209,10 +239,14 @@ Narrator: The alpha walked straight pass you, and threw his black Armani coat on
         Narrator: Eugene narrows his eyes, he is staring at you. 
             -> "hi"
                 <<detour IntoVilla_FirstDirec>>
+                <<hide eugene_sas>>
+                <<show eugene_alpha>>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
                 <<jump IntoVilla_YN>>
-            -> "where to put your coat m'boss"
+            -> "where to put your coat m'boss?"
                 <<detour IntoVilla_FirstDirec>>
+                <<hide eugene_sas>>
+                <<show eugene_alpha>>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
                 <<jump IntoVilla_YN>>
 ===
@@ -220,13 +254,19 @@ Narrator: The alpha walked straight pass you, and threw his black Armani coat on
 title: IntoVilla_FirstDirec
 ---
 <<hide narratorbox>>
+<<hide eugene_calm>>
+<<show eugene_sas>>
 Eugene: What a twig——who does the hiring around here? Where's that old guy who used to watch the gate?
 Secretary: Sir, you fired him five years ago.
 Eugene: Oh. 
 Eugene: Well, tell him to get back to his post right now, or I'll fire him AGAIN.
 <<show narratorbox>>
+<<hide eugene_sas>>
+<<show eugene_alpha>>
 Narrator: Suddenly, he stops dead in his tracks, then takes a deep, wolf-like sniff of the air.  //"WOLF" -> scandal collection
 <<hide narratorbox>>
+<<hide eugene_alpha>>
+<<show eugene_calm>>
 Eugene: She's here. She's coming for me... I can SMELL it.
 Secretary: Shall I cancel the meeting, boss?
 Eugene: No. MOVE IT UP! And keep her out at all costs.
@@ -235,12 +275,16 @@ Eugene: You——security guard!
         Eugene: I cannot let her waltz her way into my heart ever again. 
         Eugene: I have buried my love, my everything in the grave of her name. 
         Eugene: Whatever she said, DO NOT let her in!
+        <<hide eugene_alpha>>
+        <<show eugene_sas>>
         Eugene: DO NOT let her in. Or else, I will fire you too. 
     -> "u just called me a twig"
         Eugene: Is everyone outside the villa too broke to buy a mirror nowadays?
         Eugene: Now LISTEN. I cannot let her waltz her way into my heart ever again. 
         Eugene: I have buried my love, my everything in the grave of her name. 
         Eugene: Whatever she said, DO NOT let her in!
+        <<hide eugene_alpha>>
+        <<show eugene_sas>>
         Eugene: DO NOT let her in. Or else, I will fire you too. 
 ===
 
