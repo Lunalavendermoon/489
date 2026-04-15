@@ -13,7 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAYSFXBONUS = 1355982377U;
+        static const AkUniqueID PLAYSFXENEMY = 4004607848U;
+        static const AkUniqueID PLAYSFXPERFECTSLAP = 3898042413U;
         static const AkUniqueID PLAYSFXSLAP = 1133927134U;
+        static const AkUniqueID PLAYSFXSPECIALENEMY = 1584450231U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;
         static const AkUniqueID SETMUSICTODIESIRAE = 49138649U;

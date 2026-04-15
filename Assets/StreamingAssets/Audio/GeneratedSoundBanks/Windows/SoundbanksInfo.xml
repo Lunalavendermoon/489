@@ -9,13 +9,21 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{641F428C-AAE4-59A6-9E47-D2D2D0C6E9B7}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{9BDE4223-FEDC-F2B6-DA01-CB00A264E5E2}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
 				<File Id="139325359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SILENCE.wav</ShortName>
 					<CachePath>SFX/SILENCE_56CEF360.wem</CachePath>
+				</File>
+				<File Id="312482483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx-slap.wav</ShortName>
+					<CachePath>SFX/sfx-slap_C5F96F9D.wem</CachePath>
+				</File>
+				<File Id="351717463" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_perfect-slap.wav</ShortName>
+					<CachePath>SFX/sfx_perfect-slap_B833B380.wem</CachePath>
 				</File>
 				<File Id="354105497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01.wav</ShortName>
@@ -24,6 +32,10 @@
 				<File Id="431644092" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Drama-Theme_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="445551067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemy-4.wav</ShortName>
+					<CachePath>SFX/sfx_enemy-4_8E324C96.wem</CachePath>
 				</File>
 				<File Id="491007725" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track.wav</ShortName>
@@ -45,9 +57,25 @@
 					<ShortName>Matuska-Logan_Moonlight-3-Remix_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem</CachePath>
 				</File>
-				<File Id="718187133" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx-slap.wav</ShortName>
-					<CachePath>SFX/sfx-slap_34DF115D.wem</CachePath>
+				<File Id="660248666" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_bonus-slap.wav</ShortName>
+					<CachePath>SFX/sfx_bonus-slap_F37004B4.wem</CachePath>
+				</File>
+				<File Id="756565802" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_special-enemy.wav</ShortName>
+					<CachePath>SFX/sfx_special-enemy_7B669AB1.wem</CachePath>
+				</File>
+				<File Id="855988282" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemy-1.wav</ShortName>
+					<CachePath>SFX/sfx_enemy-1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="866710893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemy-3.wav</ShortName>
+					<CachePath>SFX/sfx_enemy-3_8E324C96.wem</CachePath>
+				</File>
+				<File Id="911778575" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemy-2.wav</ShortName>
+					<CachePath>SFX/sfx_enemy-2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="936722572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Casual-Theme_v01.wav</ShortName>
@@ -59,9 +87,32 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1133927134" Name="PlaySFXSlap" DurationType="OneShot" DurationMin="0.8019443" DurationMax="1.1341205">
+				<Event Id="1355982377" Name="PlaySFXBonus" DurationType="OneShot" DurationMin="1.5045365" DurationMax="1.5045365">
 					<MediaRefs>
-						<MediaRef Id="718187133"/>
+						<MediaRef Id="660248666"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4004607848" Name="PlaySFXEnemy" DurationType="OneShot" DurationMin="0.3153537" DurationMax="0.44597742">
+					<MediaRefs>
+						<MediaRef Id="445551067"/>
+						<MediaRef Id="855988282"/>
+						<MediaRef Id="866710893"/>
+						<MediaRef Id="911778575"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3898042413" Name="PlaySFXPerfectSlap" DurationType="OneShot" DurationMin="0.9519108" DurationMax="1.3462051">
+					<MediaRefs>
+						<MediaRef Id="351717463"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1133927134" Name="PlaySFXSlap" DurationType="OneShot" DurationMin="0.77855957" DurationMax="1.1010494">
+					<MediaRefs>
+						<MediaRef Id="312482483"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1584450231" Name="PlaySFXSpecialEnemy" DurationType="OneShot" DurationMin="0.85444224" DurationMax="0.85444224">
+					<MediaRefs>
+						<MediaRef Id="756565802"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1613597420" Name="SetMusicGameOver" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -373,5 +424,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ED0A77D3-93FA-C8C7-74BE-D3E2B441CB03}</FileHash>
+	<FileHash>{5E21DCDD-159F-4506-563B-509179B97FFC}</FileHash>
 </SoundBanksInfo>

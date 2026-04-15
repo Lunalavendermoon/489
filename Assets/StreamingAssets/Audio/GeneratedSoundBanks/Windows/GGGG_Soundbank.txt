@@ -4,12 +4,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	667805585	StartGameAudio			\Default Work Unit\Music Events\StartGameAudio	
 	814886303	SetMusicToDramaTheme			\Default Work Unit\Music Events\SetMusicToDramaTheme	
 	1133927134	PlaySFXSlap			\Default Work Unit\SFX Events\PlaySFXSlap	
+	1355982377	PlaySFXBonus			\Default Work Unit\SFX Events\PlaySFXBonus	
+	1584450231	PlaySFXSpecialEnemy			\Default Work Unit\SFX Events\PlaySFXSpecialEnemy	
 	1613597420	SetMusicGameOver			\Default Work Unit\Music Events\SetMusicGameOver	
 	1657091384	TurnOffMusic			\Default Work Unit\Music Events\TurnOffMusic	
 	1958764012	SetMusicToWinter			\Default Work Unit\Music Events\SetMusicToWinter	
 	2770684787	SetMusicToCasualTheme			\Default Work Unit\Music Events\SetMusicToCasualTheme	
 	2996985392	SetMusicToTragicTheme			\Default Work Unit\Music Events\SetMusicToTragicTheme	
 	3872583903	SetMusicToMoonlight3			\Default Work Unit\Music Events\SetMusicToMoonlight3	
+	3898042413	PlaySFXPerfectSlap			\Default Work Unit\SFX Events\PlaySFXPerfectSlap	
+	4004607848	PlaySFXEnemy			\Default Work Unit\SFX Events\PlaySFXEnemy	
 	4209449687	SetMusicToMainTheme			\Default Work Unit\Music Events\SetMusicToMainTheme	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -29,14 +33,21 @@ State	ID	Name	State Group			Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	139325359	SILENCE	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\SILENCE_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Silence\SILENCE\SILENCE		643
+	312482483	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx-slap_C5F96F9D.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-slap		14111
+	351717463	sfx-perfect-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_perfect-slap_B833B380.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-perfect-slap		16239
 	354105497	Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Tragic Theme\Tragic Theme\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01		1569871
 	431644092	Matuska-Logan_GGGG-Drama-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Drama Theme\Drama Theme\Matuska-Logan_GGGG-Drama-Theme_v01		1690421
+	445551067	sfx_enemy-4	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_enemy-4_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-enemy\sfx_enemy-4		6795
 	491007725	Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Winter Remix\Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track		2529875
 	516056618	Matuska-Logan_GGGG-Main-Theme_ROUGH-v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Main-Theme_ROUGH-v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Main Theme\Main Theme\Matuska-Logan_GGGG-Main-Theme_ROUGH-v01		2048288
 	533251736	Matuska-Logan_GGGG-Game-Over_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Game-Over_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Game Over Stinger\Matuska-Logan_GGGG-Game-Over_v01		182692
 	608798980	Matuska-Logan_GGGG-Upbeat-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Upbeat-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Upbeat Theme\Upbeat Theme\Matuska-Logan_GGGG-Upbeat-Theme_v01		2427566
 	647185346	Matuska-Logan_Moonlight-3-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Moonlight-3-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Moonlight 3 Remix\Matuska-Logan_Moonlight-3-Remix_v01		2172381
-	718187133	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx-slap_34DF115D.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-slap		13906
+	660248666	sfx_bonus-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_bonus-slap_F37004B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_bonus-slap		24423
+	756565802	sfx_special-enemy	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_special-enemy_7B669AB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_special-enemy		12395
+	855988282	sfx_enemy-1	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_enemy-1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-enemy\sfx_enemy-1		7021
+	866710893	sfx_enemy-3	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_enemy-3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-enemy\sfx_enemy-3		7338
+	911778575	sfx_enemy-2	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_enemy-2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx-enemy\sfx_enemy-2		7360
 	936722572	Matuska-Logan_GGGG-Casual-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Casual Theme\Casual Theme\Matuska-Logan_GGGG-Casual-Theme_v01		2168884
 	1057349562	Matuska-Logan_Dies-Irae-Remix_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\Matuska-Logan_Dies-Irae-Remix_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Dies Irae Remix\Matuska-Logan_Dies-Irae-Remix_v01		1885370
 
