@@ -290,7 +290,7 @@ public class GameManager : MonoBehaviour
         state = GameState.Normal;
         score = 0;
         combo = 0;
-
+        beat?.ResetSongClock();
         spawns?.ResetAll();
         timedDotSpawns?.ResetTimeline();
         beatTargets?.ResetBeatsState();

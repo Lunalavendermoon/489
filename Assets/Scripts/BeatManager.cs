@@ -1,14 +1,29 @@
-// BeatManager.cs
 using System;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BeatManager : MonoBehaviour
 {
+    [System.Serializable]
+    public class PulseSpriteTarget
+    {
+        public Transform target;
+
+        [Tooltip("Scale multiplier at the start of the beat.")]
+        public float minScaleMultiplier = 1f;
+
+        [Tooltip("Scale multiplier near the beat peak.")]
+        public float maxScaleMultiplier = 1.12f;
+
+        [NonSerialized] public Vector3 baseScale;
+        [NonSerialized] public bool initialized;
+    }
+
     [Header("Timing")]
     [Range(40f, 240f)] public float bpm = 120f;
-    public bool useAudioSourceTime = false;
-    public AudioSource audioSource;
+
+    [Tooltip("Manual song length in seconds, used when not relying on AudioSource clip length.")]
+    [Min(0.01f)] public float manualSongLengthSeconds = 120f;
 
     [Header("Windows (seconds)")]
     public float perfectWindow = 0.10f;
@@ -22,24 +37,27 @@ public class BeatManager : MonoBehaviour
     public float pulseRMax = 4.2f;
     public float peakFlashScale = 1.12f;
 
+    [Header("Sprite Pulse")]
+    public List<PulseSpriteTarget> pulseSprites = new List<PulseSpriteTarget>();
+
     [Header("Core Reference")]
     public Transform coreTransform;
-    public float BeatDuration => 60f / Mathf.Max(1f, bpm);
+
     [Header("Song End")]
-    public bool endOnSongFinish = true;
     public GameManager gm;
-    public event Action OnPeak;   // fired once per beat near peak
+
+    public event Action OnPeak;
+
+    public float BeatDuration => 60f / Mathf.Max(1f, bpm);
 
     private float lastBeatIndex = -1f;
-    private bool hasObservedPlaybackStart = false;
-    
+    private float songTimer = 0f;
+    private bool songStarted = false;
+    private bool songEndedTriggered = false;
+
     public float CurrentTime
     {
-        get
-        {
-            if (useAudioSourceTime && audioSource != null) return audioSource.time;
-            return Time.timeSinceLevelLoad;
-        }
+        get { return songTimer; }
     }
 
     public float BeatPhase01
@@ -60,7 +78,7 @@ public class BeatManager : MonoBehaviour
             float t = CurrentTime;
             float d = BeatDuration;
             float phase = t % d;
-            // Peak at end of interval (phase ~ d). Use nearest to 0/d
+
             float dist0 = Mathf.Abs(phase - 0f);
             float distD = Mathf.Abs(phase - d);
             return Mathf.Min(dist0, distD);
@@ -91,31 +109,47 @@ public class BeatManager : MonoBehaviour
             pulseLine.positionCount = pulseSegments + 1;
             pulseLine.useWorldSpace = true;
         }
+
+        CachePulseSpriteBaseScales();
+    }
+
+    private void OnEnable()
+    {
+        CachePulseSpriteBaseScales();
     }
 
     private void Update()
     {
-        if (endOnSongFinish && audioSource != null && audioSource.clip != null)
-        {
-            if (audioSource.isPlaying)
-            {
-                hasObservedPlaybackStart = true;
-            }
-            else if (hasObservedPlaybackStart && HasAudioReachedClipEnd())
-            {
-                gm?.EndSongRun();
-                endOnSongFinish = false; // Prevent triggering multiple times
-                return;
-            }
-        }
+        UpdateSongClock();
+        CheckSongEnd();
         AnimatePulse();
+        AnimatePulseSprites();
+        HandlePeakEvent();
+    }
 
-        // Peak event: once per beat index when phase is near 1 (end)
+    private void UpdateSongClock()
+    {
+        songTimer += Time.deltaTime;
+        songStarted = true;
+    }
+
+    private void CheckSongEnd()
+    {
+        if (songEndedTriggered) return;
+
+        if (songStarted && songTimer >= manualSongLengthSeconds)
+        {
+            songEndedTriggered = true;
+            gm?.EndSongRun();
+        }
+    }
+
+    private void HandlePeakEvent()
+    {
         float t = CurrentTime;
         float d = BeatDuration;
         float beatIndex = Mathf.Floor(t / d);
 
-        // Fire when entering last ~10% of beat and not fired this beat
         if (BeatPhase01 >= 0.92f && beatIndex != lastBeatIndex)
         {
             lastBeatIndex = beatIndex;
@@ -123,18 +157,7 @@ public class BeatManager : MonoBehaviour
         }
     }
 
-    private bool HasAudioReachedClipEnd()
-    {
-        if (audioSource == null || audioSource.clip == null)
-            return false;
-
-        if (audioSource.timeSamples > 0)
-            return audioSource.timeSamples >= audioSource.clip.samples - 1;
-
-        return audioSource.time >= audioSource.clip.length - 0.05f;
-    }
-
-   private void AnimatePulse()
+    private void AnimatePulse()
     {
         if (pulseLine == null) return;
 
@@ -144,7 +167,6 @@ public class BeatManager : MonoBehaviour
         float phase = BeatPhase01;
         float r = Mathf.Lerp(pulseRMin, pulseRMax, phase);
 
-        // tiny flash near peak
         float flash = (phase >= 0.97f) ? peakFlashScale : 1f;
         r *= flash;
 
@@ -154,5 +176,55 @@ public class BeatManager : MonoBehaviour
             Vector3 p = new Vector3(Mathf.Cos(a) * r, Mathf.Sin(a) * r, 0f);
             pulseLine.SetPosition(i, center + p);
         }
+    }
+
+    private void AnimatePulseSprites()
+    {
+        if (pulseSprites == null || pulseSprites.Count == 0)
+            return;
+
+        float phase = BeatPhase01;
+        float pulse01 = Mathf.Sin(phase * Mathf.PI);
+
+        for (int i = 0; i < pulseSprites.Count; i++)
+        {
+            PulseSpriteTarget entry = pulseSprites[i];
+            if (entry == null || entry.target == null)
+                continue;
+
+            if (!entry.initialized)
+            {
+                entry.baseScale = entry.target.localScale;
+                entry.initialized = true;
+            }
+
+            float scaleMul = Mathf.Lerp(entry.minScaleMultiplier, entry.maxScaleMultiplier, pulse01);
+            entry.target.localScale = entry.baseScale * scaleMul;
+        }
+    }
+
+    private void CachePulseSpriteBaseScales()
+    {
+        if (pulseSprites == null) return;
+
+        for (int i = 0; i < pulseSprites.Count; i++)
+        {
+            PulseSpriteTarget entry = pulseSprites[i];
+            if (entry == null || entry.target == null)
+                continue;
+
+            entry.baseScale = entry.target.localScale;
+            entry.initialized = true;
+        }
+    }
+
+    public void ResetSongClock()
+    {
+        songTimer = 0f;
+        songStarted = false;
+        songEndedTriggered = false;
+        lastBeatIndex = -1f;
+
+        CachePulseSpriteBaseScales();
     }
 }
