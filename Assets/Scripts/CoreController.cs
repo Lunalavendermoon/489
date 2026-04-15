@@ -248,6 +248,7 @@ public class CoreController : MonoBehaviour
             CoreDirection direction = GetCoreDirectionForCollision(GetCursorWorldPos());
             fx?.TriggerPerfectPostFX(direction);
             fx?.DepositPop(true);
+            AudioManager.Instance.PlayEvent("PlaySFXPerfectSlap");
 
             // Increment combo and apply combo multiplier to the batch score
             gm?.OnPerfectDeposit(true);
@@ -261,8 +262,7 @@ public class CoreController : MonoBehaviour
             gm?.ResetCombo();
         }
 
-        //fx?.PlayDepositSfx(isPerfect);
-        AudioManager.Instance.PlayEvent("PlaySFXSlap");
+        AudioManager.Instance.PlayEvent("PlaySFXBonus");
 
         gm?.AddScore(totalPoints);
 
@@ -334,8 +334,7 @@ public class CoreController : MonoBehaviour
             // Non-perfect resets combo
             gm?.ResetCombo();
         }
-        //fx?.PlayDepositSfx(isPerfect);
-        AudioManager.Instance.PlayEvent("PlaySFXSlap");
+        fx?.PlayDepositSfx(isPerfect);
 
         bool shouldDespawn = true;
         if (isHealthDot)

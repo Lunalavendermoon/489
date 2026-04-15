@@ -256,7 +256,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: -8862163080040580045, guid: b3bf63f412b18f14ca66bdf9c358dbb0, type: 3}
+  m_Sprite: {fileID: 8320905922921369571, guid: d738e65e3405d4f459a8072edfbbf695, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -343,8 +343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carriedScale: 1.15
+  normalSprite: {fileID: 8320905922921369571, guid: d738e65e3405d4f459a8072edfbbf695, type: 3}
+  specialSprite: {fileID: -3606908620425726059, guid: 80d696158df1f134c838443b6742a2b0, type: 3}
+  healthSprite: {fileID: 8320905922921369571, guid: d738e65e3405d4f459a8072edfbbf695, type: 3}
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  specialTint: {r: 0, g: 1, b: 0.9400835, a: 1}
   healthTint: {r: 0.45098042, g: 0.57870424, b: 1, a: 1}
   specialScaleMult: 1.1
   isHealthDot: 0
@@ -356,9 +358,6 @@ MonoBehaviour:
   specialGuaranteedOnScreenTime: 8
   specialMaxLifetime: 14
   specialDriftSpeed: 1.6
-  useHealthOverrides: 1
-  healthGuaranteedOnScreenTime: 10
-  healthMaxLifetime: 20
   spriteRenderer: {fileID: 0}
   enableAutonomousMotion: 1
   guaranteedOnScreenTime: 3.5

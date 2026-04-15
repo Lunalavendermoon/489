@@ -16,27 +16,6 @@ public enum CoreDirection
 
 public class EffectsManager : MonoBehaviour
 {
-    [Header("Audio Sources")]
-    [Tooltip("Used for normal deposit sounds.")]
-    public AudioSource normalSource;
-
-    [Tooltip("Used for PERFECT deposit sounds.")]
-    public AudioSource perfectSource;
-
-    [Tooltip("Used for negative/hit sounds (e.g. bullet hits). If null, normalSource is used.")]
-    public AudioSource negativeSource;
-
-    [Header("Deposit Clips")]
-    [Tooltip("Played when a deposit is NOT perfect.")]
-    public AudioClip depositClip;
-
-    [Tooltip("Played when a deposit IS perfect.")]
-    public AudioClip depositPerfectClip;
-
-    [Header("Negative/Hurt Clips")]
-    [Tooltip("Played when the player/cursor is hit by a bullet.")]
-    public AudioClip hitClip;
-
     [Header("Cooldowns")]
     [Tooltip("Cooldown between normal deposit sounds.")]
     public float normalCooldown = 0.08f;
@@ -93,42 +72,6 @@ public class EffectsManager : MonoBehaviour
 
     private void Awake()
     {
-        // If user didn't assign sources, try to find/create sensible defaults.
-        if (normalSource == null)
-            normalSource = GetComponent<AudioSource>();
-
-        if (perfectSource == null)
-        {
-            // Create a second AudioSource for perfect deposits if not provided
-            perfectSource = gameObject.AddComponent<AudioSource>();
-
-            // Copy key settings from normal source if available (keeps volume/mixer consistent)
-            if (normalSource != null)
-            {
-                perfectSource.outputAudioMixerGroup = normalSource.outputAudioMixerGroup;
-                perfectSource.spatialBlend = normalSource.spatialBlend; // 0 = 2D, 1 = 3D
-                perfectSource.volume = normalSource.volume;
-                perfectSource.pitch = normalSource.pitch;
-                perfectSource.loop = false;
-                perfectSource.playOnAwake = false;
-            }
-        }
-
-        // Setup negative/hit source if not assigned
-        if (negativeSource == null)
-        {
-            negativeSource = gameObject.AddComponent<AudioSource>();
-            if (normalSource != null)
-            {
-                negativeSource.outputAudioMixerGroup = normalSource.outputAudioMixerGroup;
-                negativeSource.spatialBlend = normalSource.spatialBlend;
-                negativeSource.volume = normalSource.volume;
-                negativeSource.pitch = normalSource.pitch;
-                negativeSource.loop = false;
-                negativeSource.playOnAwake = false;
-            }
-        }
-
         // Auto-find camera shake if not assigned
         if (shake == null)
         {
@@ -188,46 +131,19 @@ public class EffectsManager : MonoBehaviour
         if (perfect)
         {
             if (now - lastPerfectTime < perfectCooldown) return;
-            if (depositPerfectClip == null || perfectSource == null) return;
-
-            if (perfectStopsNormal && normalSource != null)
-                normalSource.Stop();
-
-            perfectSource.PlayOneShot(depositPerfectClip);
+            Debug.Log("Playing PERFECT deposit sound");
+            AudioManager.Instance.PlayEvent("PlaySFXPerfectSlap");
             lastPerfectTime = now;
         }
         else
         {
             if (now - lastNormalTime < normalCooldown) return;
-            if (depositClip == null || normalSource == null) return;
-
-            normalSource.PlayOneShot(depositClip);
+            Debug.Log("Playing normal deposit sound");
+            AudioManager.Instance.PlayEvent("PlaySFXSlap");
             lastNormalTime = now;
         }
     }
-
-    /// <summary>
-    /// Plays a negative/hurt sound when the player is hit by a bullet.
-    /// Throttled with hitCooldown to avoid spamming.
-    /// </summary>
-    public void PlayHitSfx()
-    {
-        float now = Time.unscaledTime;
-        if (now - lastHitTime < hitCooldown) return;
-        if (hitClip == null) return;
-
-        AudioSource src = negativeSource != null ? negativeSource : normalSource;
-        if (src == null) return;
-
-        src.PlayOneShot(hitClip);
-        lastHitTime = now;
-    }
-
     public void PickupPop() { /* stub */ }
-    public void TraceStartPop() { /* stub */ }
-    public void CapturePop() { TryShake(smallShake, 0.08f); }
-    public void FailPop() { TryShake(smallShake, 0.06f); }
-
     public void DepositPop(bool perfect)
     {
         if (perfect) TryShake(bigShake, 0.12f);

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc1669bfd8fcadd4d824fb3cb031f980
+guid: 80d696158df1f134c838443b6742a2b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8781654551238419360
-    second: Eugene_LeftRightSlappedFlip_0
+      213: -3606908620425726059
+    second: rumor_special_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eugene_LeftRightSlappedFlip_0
+      name: rumor_special_0
       rect:
         serializedVersion: 2
-        x: 1782
-        y: 955
-        width: 1772
-        height: 1230
+        x: 986
+        y: 863
+        width: 553
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a322c28944bed970800000000000000
-      internalID: 8781654551238419360
+      spriteID: 597fa3e48bfa1fdc0800000000000000
+      internalID: -3606908620425726059
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Eugene_LeftRightSlappedFlip_0: 8781654551238419360
+      rumor_special_0: -3606908620425726059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

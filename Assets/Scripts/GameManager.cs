@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
         if (state == GameState.GameOver) return;
 
         SubtractScore(scorePenaltyOnHit);
-        fx?.PlayHitSfx();
+        AudioManager.Instance.PlayEvent("PlaySFXEnemy");
         fx?.ShakeSmall();
         ui?.FlashDamage();
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b3bf63f412b18f14ca66bdf9c358dbb0
+guid: df6ea72b5f3018a4cba89d44e9fcf619
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8862163080040580045
-    second: Rumors_0
+      213: -5035438949178368487
+    second: enemy_yn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rumors_0
+      name: enemy_yn_0
       rect:
         serializedVersion: 2
-        x: 535
-        y: 865
-        width: 410
-        height: 322
+        x: 2158
+        y: 897
+        width: 344
+        height: 339
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33c7998e1a5430580800000000000000
-      internalID: -8862163080040580045
+      spriteID: 91e9e0264f68e1ab0800000000000000
+      internalID: -5035438949178368487
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rumors_0: -8862163080040580045
+      enemy_yn_0: -5035438949178368487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

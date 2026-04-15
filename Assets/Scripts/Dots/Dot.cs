@@ -6,11 +6,18 @@ public class Dot : PooledObject
     [Header("Feel")]
     public float carriedScale = 1.15f;
 
+    [Header("Sprite Variants")]
+    [Tooltip("Sprite used for normal dots.")]
+    public Sprite normalSprite;
+
+    [Tooltip("Sprite used for special dots.")]
+    public Sprite specialSprite;
+
+    [Tooltip("Optional sprite used for health dots. If null, normalSprite will be used.")]
+    public Sprite healthSprite;
+
     [Tooltip("Optional: tint normal dots.")]
     public Color normalTint = Color.white;
-
-    [Tooltip("Optional: tint special dots to stand out.")]
-    public Color specialTint = new Color(1f, 0.8f, 0.25f, 1f);
 
     [Tooltip("Optional: tint health dots to stand out.")]
     public Color healthTint = new Color(0.45f, 1f, 0.55f, 1f);
@@ -33,6 +40,7 @@ public class Dot : PooledObject
 
     [Tooltip("Optional text used to show current health above the dot.")]
     public TMP_Text healthText;
+
     [Header("Special Dot Overrides")]
     [Tooltip("If true, special dots override motion/lifetime values below.")]
     public bool useSpecialOverrides = true;
@@ -41,7 +49,7 @@ public class Dot : PooledObject
     public float specialMaxLifetime = 14.0f;
     public float specialDriftSpeed = 1.6f;
 
-    [Tooltip("If assigned, tint will be applied here.")]
+    [Tooltip("If assigned, sprite/tint will be applied here.")]
     public SpriteRenderer spriteRenderer;
 
     [Header("Autonomous Motion")]
@@ -83,6 +91,7 @@ public class Dot : PooledObject
     private float defaultDriftSpeed;
 
     [SerializeField] private bool isSpecial = false;
+
     public bool IsSpecial => isSpecial;
     public bool IsHealthDot => isHealthDot;
     public bool IsCarried => carried;
@@ -92,8 +101,7 @@ public class Dot : PooledObject
 
     private int currentHealth;
 
-
-    // ✅ Allow pickup even if special; special logic happens at deposit time
+    // Allow pickup even if special; special logic happens at deposit time
     public bool CanPickup => IsActive && !carried;
 
     private void Awake()
@@ -102,8 +110,10 @@ public class Dot : PooledObject
         defaultGuaranteedOnScreenTime = guaranteedOnScreenTime;
         defaultMaxLifetime = maxLifetime;
         defaultDriftSpeed = driftSpeed;
+
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
         if (healthText == null)
             healthText = GetComponentInChildren<TMP_Text>(true);
 
@@ -125,7 +135,7 @@ public class Dot : PooledObject
 
         velocity = Vector2.zero;
 
-        // IMPORTANT: pooling safety — reset special flag by default.
+        // Pooling safety — reset special flag by default.
         // The spawner should call SetSpecial(true) after spawning special dots.
         SetSpecial(false);
         ConfigureHealthDot(false);
@@ -186,12 +196,36 @@ public class Dot : PooledObject
 
     private void ApplyVisual()
     {
-        // Tint
         if (spriteRenderer != null)
         {
-            if (isSpecial) spriteRenderer.color = specialTint;
-            else if (isHealthDot) spriteRenderer.color = healthTint;
-            else spriteRenderer.color = normalTint;
+            // Choose sprite
+            if (isSpecial && specialSprite != null)
+            {
+                spriteRenderer.sprite = specialSprite;
+            }
+            else if (isHealthDot && healthSprite != null)
+            {
+                spriteRenderer.sprite = healthSprite;
+            }
+            else if (normalSprite != null)
+            {
+                spriteRenderer.sprite = normalSprite;
+            }
+
+            // Choose tint
+            if (isSpecial)
+            {
+                // Special dots stand out by sprite, not tint
+                spriteRenderer.color = Color.white;
+            }
+            else if (isHealthDot)
+            {
+                spriteRenderer.color = healthTint;
+            }
+            else
+            {
+                spriteRenderer.color = normalTint;
+            }
         }
 
         // Size (only when not carried; carried scaling is applied in SetCarried)

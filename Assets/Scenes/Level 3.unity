@@ -2317,7 +2317,7 @@ PrefabInstance:
       objectReference: {fileID: 1795166335}
     - target: {fileID: 2925545379332563280, guid: bebf6fadc69e74142b98b71c3c5e6f16, type: 3}
       propertyPath: perfectWindow
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2925545379332563280, guid: bebf6fadc69e74142b98b71c3c5e6f16, type: 3}
       propertyPath: manualSongLengthSeconds
@@ -4297,7 +4297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2126955626}
   - component: {fileID: 2126955627}
-  - component: {fileID: 2126955628}
   m_Layer: 0
   m_Name: EffectsManager
   m_TagString: Untagged
@@ -4334,12 +4333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64a2d2c291583f4db0cec5247328e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSource: {fileID: 2126955628}
-  perfectSource: {fileID: 71019687}
-  negativeSource: {fileID: 0}
-  depositClip: {fileID: 8300000, guid: b6d2dcecfae099440be4e6ddb46bb488, type: 3}
-  depositPerfectClip: {fileID: 8300000, guid: a2bce34723649684d9d74db3cb40a2b3, type: 3}
-  hitClip: {fileID: 8300000, guid: 8c31e438aecf6234c92d7537d4efb940, type: 3}
   normalCooldown: 0.08
   perfectCooldown: 0.3
   hitCooldown: 0.1
@@ -4351,110 +4344,13 @@ MonoBehaviour:
   perfectFlashCooldown: 0.08
   coreSpriteRenderer: {fileID: 785314991}
   coreNormalSprite: {fileID: 2584463399953633601, guid: 61fec07009fe2374682034a7f0846b2c, type: 3}
-  corePerfectSpriteUp: {fileID: -3590081523606094215, guid: aefdb6fe586fbe3468f5ef93ba2a5e33, type: 3}
-  corePerfectSpriteDown: {fileID: -970115822118849232, guid: 580fa5afc0abb154caf7f93c5bcea099, type: 3}
-  corePerfectSpriteLeft: {fileID: 8781654551238419360, guid: bc1669bfd8fcadd4d824fb3cb031f980, type: 3}
-  corePerfectSpriteRight: {fileID: 7783157929018882168, guid: 283a14c22d0b83d4fae5219b7074fb94, type: 3}
+  corePerfectSpriteUp: {fileID: 3980221568984097663, guid: 57a5c0549d3f94943b9c7a72f7cbd86f, type: 3}
+  corePerfectSpriteDown: {fileID: 1654319959812378679, guid: d295bc0c5fdb23c4582ae6225ea40eea, type: 3}
+  corePerfectSpriteLeft: {fileID: -6948438548514751368, guid: d2a948a7c5036044d9222cebf6b82d36, type: 3}
+  corePerfectSpriteRight: {fileID: -7317724975796642579, guid: cb84f03d82a42ef43b3e5c5715ada6e9, type: 3}
   shake: {fileID: 519420033}
   smallShake: 1
   bigShake: 55
---- !u!82 &2126955628
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126955625}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 3
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1.1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &2131076078
 GameObject:
   m_ObjectHideFlags: 0

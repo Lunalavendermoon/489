@@ -63,12 +63,14 @@ public class MediaDot : MonoBehaviour
 
         if (CheckCursorCollision())
         {
+            AudioManager.Instance.PlayEvent("PlaySFXSpecialEnemy");
             DestroyMedia();
             return;
         }
 
         if (CheckCarriedDotCollision())
         {
+            AudioManager.Instance.PlayEvent("PlaySFXSpecialEnemy");
             DestroyMedia();
             return;
         }
@@ -138,7 +140,7 @@ public class MediaDot : MonoBehaviour
     {
         if (reachedCore) return;
         reachedCore = true;
-
+        AudioManager.Instance.PlayEvent("PlaySFXEnemy");
         gm.SubtractScore(scorePenaltyOnCoreEnter);
         DestroyMedia();
     }
