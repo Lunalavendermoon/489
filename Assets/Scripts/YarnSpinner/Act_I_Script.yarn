@@ -341,8 +341,8 @@ Narrator: Well, game over.
                 Narrator: This game really isn't all that serious anyway.
                 <<jump IntoVilla_Confrontation>>
             -> "nope not interested"
-                Narrator: Great! ur not that bothered by other ppl's life. 
-                Narrator: 
+                Narrator: Im glad! ur not rlly bothered by other ppl's life. 
+                Narrator: great quality to have in times like this. 
                 <<hide narratorbox>>
                 <<hide player>>
                 <<background Outside>>
