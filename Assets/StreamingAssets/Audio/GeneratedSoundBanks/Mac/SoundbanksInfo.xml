@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{A236F396-8454-3F48-220E-D53D66848AF2}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{3D61F135-C316-D88D-73A6-2FD6E8B65A7F}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
@@ -425,5 +425,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4705E94D-2AFD-9722-C613-AD0635FB2A06}</FileHash>
+	<FileHash>{0BD51E42-A9EB-9DD4-E96E-4EBE26DC8ECC}</FileHash>
 </SoundBanksInfo>
