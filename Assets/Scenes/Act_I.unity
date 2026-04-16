@@ -149,9 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - {fileID: 841686955}
-  - {fileID: 1786936136}
   - {fileID: 1573253836}
+  - {fileID: 841686955}
+  - {fileID: 2000744889}
+  - {fileID: 1194206019}
+  - {fileID: 1786936136}
+  - {fileID: 405076648}
+  - {fileID: 591191436}
+  - {fileID: 1656380571}
   - {fileID: 1440715797}
   - {fileID: 801275446}
   - {fileID: 612864066}
@@ -166,6 +171,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9578556805a6c114199b2588efb48bc3, type: 3}
   - {fileID: 21300000, guid: 7b0dae2f303ad0344964ff5412bb2f2b, type: 3}
   - {fileID: -2054636611203485839, guid: 3420e66248e83d54fae4dade515ce4cc, type: 3}
+  - {fileID: 317010468468323505, guid: 11c8c01345b4cc5418f060f2da9e799e, type: 3}
   audioPlayer: {fileID: 0}
   soundEffects: []
   blackCurtain: {fileID: 0}
@@ -1748,7 +1754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182536766023941123, guid: a440b1c1bd813c64f9e7946cbff226c3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7184030999740291945, guid: a440b1c1bd813c64f9e7946cbff226c3, type: 3}
       propertyPath: m_SizeDelta.y
