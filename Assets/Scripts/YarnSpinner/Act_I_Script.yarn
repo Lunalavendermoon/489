@@ -161,6 +161,7 @@ Narrator: as a security guard, ofc
     -> nah i dont want to be a security guard
         Narrator: Well TOO LATE cuz we're already here
         <<hide cc_flyer>>
+        <<hide player>>
         <<background Outside>>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
@@ -173,6 +174,7 @@ Narrator: as a security guard, ofc
     -> nice
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         <<hide cc_flyer>>
+        <<hide player>>
         <<background Outside>>
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
@@ -312,14 +314,14 @@ title: IntoVilla_YN
 <<hide cc_flyer>>
 <<hide cc_you>>
 
-<<hide y/nbox>>
+<<show y/nbox>>
 <<show narratorbox>>
 
 y/n: Eugene... please, we need to talk...!
 y/n: We've been through so much. You will never shut doors in front of me...!
-<<show y/nbox>>
-Narrator: Oh I see how this is.
 <<hide y/nbox>>
+Narrator: Oh I see how this is.
+<<show y/nbox>>
 y/n: Please let me in!! LET ME IN!! LET ME IN!!
     -> aye AYE no unauthorized personnel zone
         y/n: Please, I'm Eugene's lover. He must have mentioned me...!
@@ -407,7 +409,6 @@ Narrator: Well, game over.
     -> so 'mindset' huh
         Narrator: ofc! it still applies.
         Narrator: What I'm trynna say is, this world is not AS serious as u might think.
-        Narrator: Because the whole world is just one GIGANTIC amateur hour, i mean it.
         Narrator: Turns out even the so-called most high-end places on earth aren't all they're cracked up to be. 
         Narrator: Good thing you saw through it early on——this world is FAR MORE ABSURD than we were told growing up. 
         Narrator: Who knows? maybe all those ppl you thought had their lives figured out, are a total mess behind the scene.
@@ -416,6 +417,7 @@ Narrator: Well, game over.
                 <<show y/nbox>>
                 <<background Outside>>
                 <<show secretary_calm>>
+                //itd be cool if we get a backtape sfx here
                 Secretary: Hey, you. Come back.
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
@@ -428,7 +430,44 @@ Narrator: Well, game over.
             -> nope not interested
                 Narrator: Im glad! ur not rlly bothered by other ppl's life. 
                 Narrator: great quality to have in times like this. 
-                Narrator: What I'm trynna say is, hardly anyone gets to pick the hand they're dealt.
+                Narrator: What I'm trynna say is, hardly anyone gets to pick the hand they're dealt---
+                <<hide y/box>>
+                <<background Outside>>
+                <<show secretary_calm>>
+                //itd be cool if we get a backtape sfx here
+                Secretary: Hey, you. Come back.
+                Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
+                Secretary: Now go inside the villa. 
+                <<show narratorbox>>
+                Narrator: ---but honestly, its okay.
+                Narrator: Life is just a terribly balanced game. 
+                Narrator: And it's exactly because it's so buggy that we actually have a shot at turning the tables.
+                Narrator: So, don't sweat it. Just go wild and HAVE FUN. 
+                Narrator: This game really isn't all that serious anyway.
+    -> revive me rn imma beat the sh*t out of
+        Narrator: daddy chill
+        Narrator: But now u know, even the so-called most high-end places on earth aren't all they're cracked up to be. 
+        Narrator: Good thing you saw through it——this world is FAR MORE ABSURD than we were told growing up. 
+        Narrator: All those ppl you thought had their lives figured out, are probably a total mess behind the scene.
+        Narrator: Isn't nice to know?
+            -> yeah yeah and revive me now
+                <<show y/nbox>>
+                <<background Outside>>
+                <<show secretary_calm>>
+                Secretary: Hey, you. Come back.
+                Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
+                Secretary: Now go inside the villa.
+                <<hide y/nbox>>
+                Narrator: Woah, that was quick.
+                Narrator: Alright, don't sweat it. LETS GO! Life is a sandbox.
+                Narrator: This game really isn't all that serious anyway.
+                <<jump IntoVilla_Confrontation>>
+            -> i guess?
+                Narrator: Well, seems like ur not that bothered by other ppl's life. 
+                Narrator: great quality to have in times like this. 
+                Narrator: What I'm trynna say is, hardly anyone gets to pick the hand they're dealt---
                 <<hide y/box>>
                 <<background Outside>>
                 <<show secretary_calm>>
@@ -437,17 +476,12 @@ Narrator: Well, game over.
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
                 Secretary: Now go inside the villa. 
                 <<show narratorbox>>
-                Narrator: ut honestly, whatever
-
+                Narrator: ---but honestly, its okay.
+                Narrator: Life is just a terribly balanced game. 
+                Narrator: And it's exactly because it's so buggy that we actually have a shot at turning the tables.
+                Narrator: So, don't sweat it. Just go wild and HAVE FUN. 
                 Narrator: This game really isn't all that serious anyway.
-    -> "revive me rn imma beat the sh*t out of"
-        Narrator: woah daddy chill
-        Narrator: 
-
-
-
-
-
+                <<jump IntoVilla_Confrontation>>
 ===
 
 
@@ -455,13 +489,13 @@ Narrator: Well, game over.
 title: IntoVilla_Confrontation
 ---
 
-<<background Outside>>
+<<background Villa>>
 
-<<show eugene_calm>>
-<<hide eugene_sas>>
+<<hide eugene_calm>>
+<<show eugene_sas>>
 <<hide eugene_alpha>>
 <<hide y/n_calm>>
-<<hide y/n_sob>>
+<<show y/n_sob>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
 <<hide player>>
@@ -473,7 +507,216 @@ title: IntoVilla_Confrontation
 <<hide cc_flyer>>
 <<hide cc_you>>
 
-<<hide y/nbox>>
+<<show y/nbox>>
+<<show narratorbox>>
+
+Eugene: Enough! You speak nothing but lies, kitten-whiskers.
+Eugene: It's you who betrayed me, you who abandoned me, you who left me in the cold hail of Paris. 
+y/n: But pookie, you know I could never leave you, I could never stop loving you...!
+Eugene: My little posioned apple...
+Eugene: You were never scared of anything when you were with *VINCENT*, were you? //need vineboom here too
+    -> f in the chat
+        y/n: I thought you were gone forever. I was lost in the dark, without your strong shoulders...
+        <<hide eugene_sas>>
+        <<show eugene_alpha>>
+        Eugene: Lies! All lies! You are a deceitful little minx, a treacherous little siren!
+        Eugene: SECURITY!!!
+            -> oh wait right
+                Eugene: YOU THERE! Stop standing around, COME HERE.
+                Eugene: Take her away...! lock her up! 
+                y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
+                <<hide eugene_alpha>>
+                <<show eugene_sas>>
+                Eugene: I will lock you up somewhere you can never leave me again! 
+                Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
+                <<hide y/nbox>>
+                Narrator: is this legal tho? dont copy this irl
+                <<show y/nbox>>
+                Eugene: The gatehouse! Lock her up in the gatehouse. 
+                Eugene: DO NOT LET HER OUT. You listening? 
+                <<show y/n_sob>>
+                y/n: Eugene... please... don't do this to me...
+                    -> ok grandma lets get u to bed
+                    <<jump theGatehouse>>
+            -> ...
+                <<hide eugene_alpha>>
+                <<show eugene_calm>>
+                <<hide y/nbox>>
+                Narrator: Wait, he actually didnt see you. 
+                <<show y/nbox>>
+                <<hide eugene_calm>>
+                <<show eugene_alpha>>
+                Eugene: ...SECRETARY!!!!!
+                <<hide y/n_sob>>
+                <<show secretary_anxious>>
+                Secretary: YES BOSS!
+                <<hide secretary_anxious>>
+                <<show secretary_calm>>
+                Eugene: Take her away...! lock her up! 
+                y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
+                <<hide eugene_alpha>>
+                <<show eugene_sas>>
+                Eugene: I will lock you up somewhere you can never leave me again! 
+                <<hide y/nbox>>
+                Narrator: is this legal tho? dont copy this irl
+                <<show y/nbox>>
+                Eugene: The gatehouse! Lock her up in the gatehouse. 
+                Eugene: DO NOT LET HER OUT. You listening?
+                <<hide secretary_calm>>
+                <<show secretary_anxious>>
+                Secretary: YES BOSS!!
+                <<hide secretary_anxious>>
+                y/n: Eugene... please... don't do this to me...
+                <<hide eugene_alpha>>
+                <<show eugene_calm>>
+                Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
+                <<jump theStudy>>
+    -> what da hell r they talkin abt
+        y/n: Vincent... the name is like a shard of glass, slicing through my dainty ears!
+        y/n: I thought you were gone forever. I was lost in the dark, without your strong shoulders...
+        Eugene: You chose Vincent over me. You chose to run away with him, to hide in his weak arms!
+        <<hide eugene_sas>>
+        <<show eugene_alpha>>
+        Eugene: Lies! All lies! You are a deceitful little minx, a treacherous little siren!
+        Eugene: SECURITY!!!
+            -> oh wait right
+                Eugene: YOU THERE! Stop standing around, COME HERE.
+                Eugene: Take her away...! lock her up! 
+                y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
+                <<hide eugene_alpha>>
+                <<show eugene_sas>>
+                Eugene: I will lock you up somewhere you can never leave me again! 
+                Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
+                <<hide y/nbox>>
+                Narrator: is this legal tho? dont copy this irl
+                <<show y/nbox>>
+                Eugene: The gatehouse! Lock her up in the gatehouse. 
+                Eugene: DO NOT LET HER OUT. You listening? 
+                <<show y/n_sob>>
+                y/n: Eugene... please... don't do this to me...
+                    -> ok grandma lets get u to bed
+                    <<jump theGatehouse>>
+            -> ...
+                <<hide eugene_alpha>>
+                <<show eugene_calm>>
+                <<hide y/nbox>>
+                Narrator: Wait, he actually didnt see you. 
+                <<show y/nbox>>
+                <<hide eugene_calm>>
+                <<show eugene_alpha>>
+                Eugene: ...SECRETARY!!!!!
+                <<hide y/n_sob>>
+                <<show secretary_anxious>>
+                Secretary: YES BOSS!
+                <<hide secretary_anxious>>
+                <<show secretary_calm>>
+                Eugene: Take her away...! lock her up! 
+                y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
+                <<hide eugene_alpha>>
+                <<show eugene_sas>>
+                Eugene: I will lock you up somewhere you can never leave me again! 
+                <<hide y/nbox>>
+                Narrator: is this legal tho? dont copy this irl
+                <<show y/nbox>>
+                Eugene: The gatehouse! Lock her up in the gatehouse. 
+                Eugene: DO NOT LET HER OUT. You listening?
+                <<hide secretary_calm>>
+                <<show secretary_anxious>>
+                Secretary: YES BOSS!!
+                <<hide secretary_anxious>>
+                y/n: Eugene... please... don't do this to me...
+                <<hide eugene_alpha>>
+                <<show eugene_calm>>
+                Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
+                <<jump theStudy>>
+===
+
+title: theGatehouse
+---
+<<background StaffRoom_0>>
+
+<<hide eugene_calm>>
+<<hide eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<show y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide player>>
+
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<hide cc_flyer>>
+<<hide cc_you>>
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+y/n: Please... you don't understand... I need Eugene... I cannot live without him...
+y/n: This isn't right... you have no rights to lock me up like this...!
+y/n: You don't know how much he needs me. He'll become a monster without me, I swear... //"monster" -> scandal
+    -> so what's ur plan
+        y/n: ...plan? 
+        y/n: I... I don't need a plan, because i have TRUE LOVE between me and Eugene! 
+        y/n: If you let me talk to him, he will realize my love for him...!
+        y/n: And I MUST be right next to him under times like this...
+        y/n: ...because I'm PREGNANT. //vineboom here, "y/n's pregnancy" -> MAJOR CENTRAL CONFLICT
+            -> girl WHAT
+                <<hide y/n_sob>>
+                <<show y/n_calm>>
+                y/n: It's Eugene's flesh and blood, I'm sure of it! I have never betrayed him...! 
+                y/n: What Vincent and I had was just a fleeting fling——My heart has always belonged to Eugene alone! 
+                y/n: That will never change, not in this lifetime or the next...!!
+                    -> does he know????
+                        <<hide y/n_calm>>
+                        <<show y/n_sob>>
+                        y/n: He doesn't know...!
+                        y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE!
+                        y/n: This baby——the fruit of our love——is the ultimate proof of my true devotion to Eugene...!
+                    -> who else knows abt this??
+                        <<hide y/n_calm>>
+                        <<show y/n_sob>>
+                        y/n: Nobody except for you... not even Eugene...!
+                        y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE!
+                        y/n: This baby——the fruit of our love——is the ultimate proof of my true devotion to Eugene...!
+    -> did you actually cheat
+        y/n: I WOULD NEVER CHEAT ON EUGENE!
+        y/n: We have made sacred promises... he is my TRUE LOVE, my one and only.
+        y/n: What Vincent and I had was just a fleeting fling——My heart has always belonged to Eugene alone! 
+        y/n: That will never change, not in this lifetime or the next...!!
+
+
+
+
+
+
+
+===
+
+
+title: theStudy
+---
+<<background StaffRoom_0>>
+
+<<hide eugene_calm>>
+<<show eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<show y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide player>>
+
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<hide cc_flyer>>
+<<hide cc_you>>
+
+<<show y/nbox>>
 <<show narratorbox>>
 
 ===
