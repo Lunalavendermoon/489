@@ -933,11 +933,11 @@ Narrator: In no time u will be shoved down the drain and forever be silenced
         Narrator: Why so serious? LMAOOO go SLAP him with what you just learned!
         Narrator: Never underestimate the power of SCANDALS. 
         Narrator: Now, RANDOM BULLSH*T GO!
-        <<LoadScene Tutorial>>
+        <<LoadScene "Tutorial">>
     -> *roll up sleeves*
         Narrator: AYYYYYY that's the SPIRIT im taking about!
         Narrator: now, go take him down with everything you just learned.
         Narrator: Never underestimate the power of SCANDALS. 
         Narrator: Now, RANDOM BULLSH*T GO!
-        <<LoadScene Tutorial>>
+        <<LoadScene "Tutorial">>
 ===

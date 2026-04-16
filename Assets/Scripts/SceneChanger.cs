@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; 
-using Yarn.Unity; // 1. Open the Yarn dictionary!
+using Yarn.Unity; 
 
 public class SceneChanger : MonoBehaviour
 {
-    // 2. Hand Yarn the walkie-talkie and tell it to listen for "LoadScene"
+    // Added "static" here to make it a global command!
     [YarnCommand("LoadScene")]
-    public void MoveToScene(string sceneName)
+    public static void MoveToScene(string sceneName) 
     {
+        // Added a Debug log so we can see if Yarn is actually trying!
+        Debug.Log("Yarn is attempting to load: " + sceneName); 
         SceneManager.LoadScene(sceneName);
     }
 }
