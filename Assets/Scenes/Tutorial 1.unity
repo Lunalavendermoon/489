@@ -524,24 +524,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSteps:
-  - videoClip: {fileID: 32900000, guid: 65b743a977b04c64787434232bdccb18, type: 3}
-    caption: Hold down your mouse and hover over Rumors to collect them. You can
-      collect a max of 10 at once.
-  - videoClip: {fileID: 32900000, guid: 3ed195f13ea6fb245bb94b6eb0f17bc7, type: 3}
-    caption: Drag the Rumors to the center to deposit them. Deposit when the pulse
-      reaches the yellow line to get a PERFECT
-  - videoClip: {fileID: 32900000, guid: b97514f06c2647b468b9f4074a9baf2b, type: 3}
-    caption: Collect all 5 special (yellow) Rumors on-screen to deposit them. Do
-      this to score massive points!
-  - videoClip: {fileID: 32900000, guid: 8c24dc83c838b594e8c496238e0777f6, type: 3}
-    caption: Watch out and avoid enemies! Keep scoring PERFECT to keep up your combo
-      for bonuses.
+  - videoClip: {fileID: 32900000, guid: 0552ff903c242a443b0688eb7b3b79a3, type: 3}
+    caption: Touch the love bombs with your cursor or rumors to prevent them from
+      reaching the core and losing points!
   videoPlayer: {fileID: 689740925}
   captionText: {fileID: 1851544836}
   leftArrowButton: {fileID: 93864934}
   rightArrowButton: {fileID: 1283957228}
   startGameButton: {fileID: 1105063438}
-  gameSceneName: Level 1
+  gameSceneName: Level 3
 --- !u!4 &755588686
 Transform:
   m_ObjectHideFlags: 0
