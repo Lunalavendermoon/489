@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 65c92f190bf2bdf449c8e5ff7ee2d016
+guid: e21ddc2beb4c7694ea20d35b98fa1935
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5013696877288080541
-    second: bb_email_0
-  - first:
-      213: -7989877311677286866
-    second: bb_email_1
+      213: -589105054210113896
+    second: Obj_Report_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bb_email_0
+      name: Obj_Report_0
       rect:
         serializedVersion: 2
-        x: 439
-        y: 538
-        width: 2555
-        height: 1771
+        x: 1010
+        y: 796
+        width: 2938
+        height: 1611
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36b32c9f045cb6ab0800000000000000
-      internalID: -5013696877288080541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bb_email_1
-      rect:
-        serializedVersion: 2
-        x: 1236
-        y: 535
-        width: 3145
-        height: 1738
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e26b58ecae04e1190800000000000000
-      internalID: -7989877311677286866
+      spriteID: 89e3b6c031413d7f0800000000000000
+      internalID: -589105054210113896
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bb_email_0: -5013696877288080541
-      bb_email_1: -7989877311677286866
+      Obj_Report_0: -589105054210113896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

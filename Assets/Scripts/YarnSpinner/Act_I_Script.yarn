@@ -17,6 +17,8 @@
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -147,8 +149,10 @@ title: start5
 <<hide cc_tradeoffer>>
 <<hide cc_pushup>>
 <<hide cc_realization>>
-<<show cc_flyer>>
+<<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -205,6 +209,8 @@ title: IntoVilla
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -313,6 +319,8 @@ title: IntoVilla_YN
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<show y/nbox>>
 <<show narratorbox>>
@@ -397,6 +405,8 @@ title: BadEnding2
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -506,6 +516,8 @@ title: IntoVilla_Confrontation
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<show y/nbox>>
 <<show narratorbox>>
@@ -527,14 +539,14 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
                 <<hide eugene_alpha>>
                 <<show eugene_sas>>
+                <<show y/n_sob>>
                 Eugene: I will lock you up somewhere you can never leave me again! 
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
                 <<hide y/nbox>>
-                Narrator: is this legal tho? dont copy this irl
+                Narrator: is this legal? dont copy this irl
                 <<show y/nbox>>
                 Eugene: The gatehouse! Lock her up in the gatehouse. 
                 Eugene: DO NOT LET HER OUT. You listening? 
-                <<show y/n_sob>>
                 y/n: Eugene... please... don't do this to me...
                     -> ok grandma lets get u to bed
                     <<jump theGatehouse>>
@@ -566,11 +578,15 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<show secretary_anxious>>
                 Secretary: YES BOSS!!
                 <<hide secretary_anxious>>
+                <<show y/n_sob>>
                 y/n: Eugene... please... don't do this to me...
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
-                <<jump theStudy>>
+                <<hide y/nbox>>
+                Narrator: geez, they totally towed her away.
+                <<hide y/n_sob>>
+                <<jump EugeneSecrets>>
     -> what da hell r they talkin abt
         y/n: Vincent... the name is like a shard of glass, slicing through my dainty ears!
         y/n: I thought you were gone forever. I was lost in the dark, without your strong shoulders...
@@ -624,11 +640,15 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<show secretary_anxious>>
                 Secretary: YES BOSS!!
                 <<hide secretary_anxious>>
+                <<show y/n_sob>>
                 y/n: Eugene... please... don't do this to me...
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
-                <<jump theStudy>>
+                <<hide y/nbox>>
+                Narrator: geez, they totally towed her away.
+                <<hide y/n_sob>>
+                <<jump EugeneSecrets>>
 ===
 
 title: theGatehouse
@@ -650,6 +670,8 @@ title: theGatehouse
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<show y/nbox>>
 <<show narratorbox>>
@@ -675,36 +697,66 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
                         y/n: He doesn't know...!
                         y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE!
                         y/n: This baby——the fruit of our love——is the ultimate proof of my true devotion to Eugene...!
+                        y/n: I cannot be the one to tell him, words are too fragile. Here, take this.
+                        //cutscene hair here
+                        y/n: Eugene suffers from terrifying manic episodes, and only my natural scent can soothe his madness.
+                        y/n: Give him this lock of my hair... Once he has it, he will understand my true feelings...!
+                        <<show obj_hair>>
+                        <<hide y/nbox>>
+                        Narrator: ew.
+                        Narrator: At a time like this? Let's go check out eugene.
+                        <<hide obj_hair>>
+                        <<jump theStudy>>
                     -> who else knows abt this??
                         <<hide y/n_calm>>
                         <<show y/n_sob>>
                         y/n: Nobody except for you... not even Eugene...!
                         y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE!
                         y/n: This baby——the fruit of our love——is the ultimate proof of my true devotion to Eugene...!
+                        y/n: I cannot be the one to tell him, words are too fragile. Here, take this.
+                        //cutscene hair here
+                        y/n: Eugene suffers from terrifying manic episodes, and only my natural scent can soothe his madness.
+                        y/n: Give him this lock of my hair... Once he has it, he will understand my true feelings...!
+                        <<show obj_hair>>
+                        <<hide y/nbox>>
+                        Narrator: ew.
+                        Narrator: At a time like this? Let's go check out eugene.
+                        <<hide obj_hair>>
+                        <<jump theStudy>>
     -> did you actually cheat
-        y/n: I WOULD NEVER CHEAT ON EUGENE!
+        y/n: I WOULD NEVER CHEAT ON EUGENE!!!
         y/n: We have made sacred promises... he is my TRUE LOVE, my one and only.
         y/n: What Vincent and I had was just a fleeting fling——My heart has always belonged to Eugene alone! 
         y/n: That will never change, not in this lifetime or the next...!!
-
-
-
-
-
-
-
+        <<hide y/nbox>>
+        Narrator: well she seems to be telling the truth.
+        Narrator: what? i dont know whats going on... wait huh
+        <<show y/nbox>>
+        y/n: My stomach... it hurts...
+        y/n: I... I think... I'm having... a miscarriage... //vineboom here
+            -> u're having a WHAT?
+                y/n: Yes... Eugene's baby... the cystalization of our love...
+                y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE...!
+                y/n: But nevermind... I'll die with our unborn child... just as I wish my feelings for him never exsisted...
+                y/n: Eugene suffers from terrifying manic episodes, and only my natural scent can soothe his madness.
+                y/n: Give him this lock of my hair... it will accompany him after I'm gone...
+                <<show obj_hair>>
+                <<hide y/nbox>>
+                Narrator: At a time like this?? B*tch u gotta be kidding me
+                Narrator: We have to do something. We need the baby father to know. 
+                <<hide obj_hair>>
+                <<jump theStudy>>
 ===
 
-
-title: theStudy
+title: EugeneSecrets
 ---
-<<background StaffRoom_0>>
+<<background Villa>>
 
-<<hide eugene_calm>>
-<<show eugene_sas>>
+<<show eugene_calm>>
+<<hide eugene_sas>>
 <<hide eugene_alpha>>
 <<hide y/n_calm>>
-<<show y/n_sob>>
+<<hide y/n_sob>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
 <<hide player>>
@@ -715,8 +767,177 @@ title: theStudy
 <<hide cc_realization>>
 <<hide cc_flyer>>
 <<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
+
+<<hide y/nbox>>
+<<show narratorbox>>
+
+Narrator: Still, i dont think anyone has yet to realized that ur here too. 
+Narrator: You're just at your corner of the room, blending in with all the fancy furnatures.
+Narrator: LOLLL I have no clue how u did it, but plz dont stop
+    -> ...
+        <<show y/nbox>>
+        Eugene: ...
+        Eugene: ...
+        Eugene: ......
+        Eugene: Alexa, open projector.
+        <<background Projector_0>>
+        <<hide y/nbox>>
+        Narrator: oh he's working
+        <<show y/nbox>>
+        Eugene: Alexa, show me latest revenue of Princess Sparkle Dress-up: Royal Academy. //Secret Revenue -> Scandal
+            -> ...?
+                <<hide eugene_calm>>
+                <<show eugene_sas>>
+                Eugene: Idiots. We could have just plagarized Fro*en for winter speical gown.
+                Eugene: Alexa, call the design team, add a limited new gacha pool with 90 pity rate. 
+                Eugene: Actually, make it 120. The kids can't say no to this one.  
+                    -> *quietly... leave the scene*
+                        <<jump Busted>>
+                    -> *QUIETLY LEAVE THE SCENE...!*
+                        <<jump Busted>>
+    -> actually i have free will
+        <<show y/nbox>>
+        <<hide eugene_calm>>
+        <<show eugene_sas>>
+        Eugene: YOU THERE. Yeah, you. 
+        Eugene: My head is gonna explode. Go grab my med.
+            -> which med
+                <<hide eugene_calm>>
+                <<show eugene_sas>>
+                Eugene: The green one. 
+                Eugene: NOW GO. BE BACK IN 10 SECONDS or I'll fire you.
+                <<detour Meds>>
+                Narrator: Before you leave the bedroom, something caught your eyes.
+                <<show obj_report>>
+                Narrator: wait what
+                <<show y/nbox>>
+                <<show eugene_alpha>>
+                Eugene: WHAT, ARE, YOU, DOING?!
+                <<jump Busted>>
+            -> on it
+                <<hide eugene_calm>>
+                <<show eugene_sas>>
+                Eugene: NOW GO. BE BACK IN 10 SECONDS or I'll fire you.
+                <<detour Meds>>
+                Narrator: Before you leave the bedroom, something caught your eyes.
+                <<show obj_report>>
+                Narrator: wait what
+                <<show y/nbox>>
+                <<show eugene_alpha>>
+                Eugene: WHAT, ARE, YOU, DOING?!
+                <<jump Busted>>
+===
+
+title: Meds
+---
+<<hide eugene_sas>>
+<<hide y/nbox>>
+Narrator: nice, now you're in the bedroom of sir Eugene Gallinaceus. 
+Narrator: Fancy but sadly we dont have the background sprite for it so just imagine
+Narrator: Apparently, there are only two types of pills in his drawer.
+Narrator: I guess he's too healthy for an average working adult in 2026. 
+Narrator: Yet, u immediately realized that u haven't seen anything green yet---
+Narrator: ---due to the black & yellow aestheic principles of this game, lolllll
+Narrator: Even if something is green, it would be a certain shade of gray. 
+Narrator: Now, bet your wager---which one is GREEN?
+    -> Light gray pill
+        Narrator: Let's just hope Eugene doesn't die after taking this.
+    -> Dark gray pill
+        Narrator: Let's just hope Eugene doesn't die after taking this.
+===
+
+
+title: theStudy
+---
+<<background Villa>>
+
+<<hide eugene_calm>>
+<<hide eugene_sas>>
+<<hide eugene_alpha>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide player>>
+
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<hide cc_flyer>>
+<<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
 
 <<show y/nbox>>
 <<show narratorbox>>
 
+Narrator: You ran all the way into the house, looking for Eugene everywhere.
+Narrator: He's not in the living room, not in the study, not in the restroom...
+Narrator: nice, now you're in the bedroom of sir Eugene Gallinaceus. 
+Narrator: Fancy but sadly we dont have the background sprite for it so just imagine
+Narrator: No one here.
+Narrator: But before you leave the bedroom, something caught your eyes.
+<<show obj_report>>
+Narrator: wait what
+    -> ???
+        <<show y/nbox>>
+        <<show eugene_alpha>>
+        Eugene: WHAT, ARE, YOU, DOING?!
+        <<jump Busted>>
+    -> WHOS THE BABY FATHER THEN??
+        <<show y/nbox>>
+        <<show eugene_alpha>>
+        Eugene: WHAT, ARE, YOU, DOING?!
+        <<jump Busted>>
+===
+
+
+
+title: Busted
+---
+<<background Villa>>
+
+<<hide eugene_calm>>
+<<hide eugene_sas>>
+<<show eugene_alpha>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide player>>
+
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<hide cc_flyer>>
+<<hide cc_you>>
+<<hide obj_report>>
+<<hide obj_hair>>
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+Eugene: HOW DARE YOU REMAIN HERE!!
+Eugene: I FINALLY RECOGNIZED... YOU ARE THE SECURITY I JUST FIRED!!
+Eugene: SECURITY!!!! TAKE THEM DOWN!!!
+<<hide y/nbox>>
+Narrator: SH*t you know too much
+Narrator: He's calling all the security in the villa
+Narrator: In no time u will be shoved down the drain and forever be silenced
+    -> da fak should i do now??
+        Narrator: low key, just fight
+        Narrator: Why so serious? LMAOOO go SLAP him with what you just learned!
+        Narrator: Never underestimate the power of SCANDALS. 
+        Narrator: Now, RANDOM BULLSH*T GO!
+        <<LoadScene Tutorial>>
+    -> *roll up sleeves*
+        Narrator: AYYYYYY that's the SPIRIT im taking about!
+        Narrator: now, go take him down with everything you just learned.
+        Narrator: Never underestimate the power of SCANDALS. 
+        Narrator: Now, RANDOM BULLSH*T GO!
+        <<LoadScene Tutorial>>
 ===

@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: ba7f74eba5fe05e4d876e50ac1e51a94
+guid: cfc654ec6ecfd09498c3e5a12a914deb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3251709932676122231
-    second: Ajob_0
+      213: -1914279029325653879
+    second: Obj_Hair_0
   - first:
-      213: 6701098772182800355
-    second: Ajob_1
-  - first:
-      213: 3155633400813189843
-    second: Ajob_2
+      213: -2288399199003368924
+    second: Obj_Hair_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ajob_0
+      name: Obj_Hair_0
       rect:
         serializedVersion: 2
-        x: 2983
-        y: 750
-        width: 100
-        height: 98
+        x: 1048
+        y: 2050
+        width: 519
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 989fa366b0b9fd2d0800000000000000
-      internalID: -3251709932676122231
+      spriteID: 98890187d5d1f65e0800000000000000
+      internalID: -1914279029325653879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ajob_1
+      name: Obj_Hair_1
       rect:
         serializedVersion: 2
-        x: 3066
-        y: 776
-        width: 1492
-        height: 1319
+        x: 1109
+        y: 1031
+        width: 2561
+        height: 1322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e713c054d51ffc50800000000000000
-      internalID: 6701098772182800355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ajob_2
-      rect:
-        serializedVersion: 2
-        x: 3144
-        y: 733
-        width: 118
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3daf3d8dbdf0bcb20800000000000000
-      internalID: 3155633400813189843
+      spriteID: 422ad1f8d09fd30e0800000000000000
+      internalID: -2288399199003368924
       vertices: []
       indices: 
       edges: []
@@ -175,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ajob_0: -3251709932676122231
-      Ajob_1: 6701098772182800355
-      Ajob_2: 3155633400813189843
+      Obj_Hair_0: -1914279029325653879
+      Obj_Hair_1: -2288399199003368924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
