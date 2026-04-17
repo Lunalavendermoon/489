@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 1c83c00b93e14d46bf99a963f3262275
     GuidInternal: 
-    m_lastTime: -8584255804702623896
+    m_lastTime: -8584253355911451431
     List:
     - name: DuckedSFX
       guid: 446cddadfc6e92429ade5189d0e194a1
@@ -356,6 +356,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: 9547f1d7363da547a50b00c3a91936c8
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/MX Bus
+    - name: NotDuckedSFX
+      guid: 6da933f44e95c042b7c872a2cb5b22a5
+      id: 1806361253
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1c83c00b93e14d46bf99a963f3262275
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 1fdd95b36ae3e24cb8af8ed20b0c4dcb
+      - ElementName: NotDuckedSFX
+        ObjectType: 2
+        guid: 6da933f44e95c042b7c872a2cb5b22a5
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX Bus/NotDuckedSFX
     - name: SFX Bus
       guid: 1fdd95b36ae3e24cb8af8ed20b0c4dcb
       id: 1502772432
@@ -385,7 +405,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: f0ba40fa663d804ebd62c84aede4aa7e
     GuidInternal: 
-    m_lastTime: -8584255801112928002
+    m_lastTime: -8584253848713888513
     List:
     - name: GGGG_Soundbank
       guid: 73099d8a19c3564db936dc45fcdd5075
@@ -413,7 +433,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 483e542009910e4e86052c19d5868422
     GuidInternal: 
-    m_lastTime: -8584255804702518535
+    m_lastTime: -8584253852058263932
     List:
     - name: Music Events
       guid: a114ce1d532b8245acd51da1faac75d9
@@ -432,8 +452,68 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: PlaySFXSlap
+    - name: PlaySFXBonus
+      guid: a543bfe9a6c43f44841d4c405eb0a7d8
+      id: 1355982377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: PlaySFXBonus
+        ObjectType: 3
+        guid: a543bfe9a6c43f44841d4c405eb0a7d8
+      Path: Events/Default Work Unit/SFX Events/PlaySFXBonus
+      maxAttenuation: 0
+      maxDuration: 1.5045365
+      minDuration: 1.5045365
+    - name: PlaySFXEnemy
+      guid: 1ac8f2d440914745bba1acb65d47afaa
+      id: 4004607848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: PlaySFXEnemy
+        ObjectType: 3
+        guid: 1ac8f2d440914745bba1acb65d47afaa
+      Path: Events/Default Work Unit/SFX Events/PlaySFXEnemy
+      maxAttenuation: 0
+      maxDuration: 0.44597742
+      minDuration: 0.3153537
+    - name: PlaySFXPerfectSlap
       guid: d4266a36c5c6964e9f9ee565962083eb
+      id: 3898042413
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: PlaySFXPerfectSlap
+        ObjectType: 3
+        guid: d4266a36c5c6964e9f9ee565962083eb
+      Path: Events/Default Work Unit/SFX Events/PlaySFXPerfectSlap
+      maxAttenuation: 0
+      maxDuration: 1.3462051
+      minDuration: 0.9519108
+    - name: PlaySFXSlap
+      guid: c3d47c0847a8e549bb2640e0fa8c6a57
       id: 1133927134
       PathAndIcons:
       - ElementName: Events
@@ -447,11 +527,31 @@ MonoBehaviour:
         guid: d7dabcc051bebf4d906ce19f0f137f61
       - ElementName: PlaySFXSlap
         ObjectType: 3
-        guid: d4266a36c5c6964e9f9ee565962083eb
+        guid: c3d47c0847a8e549bb2640e0fa8c6a57
       Path: Events/Default Work Unit/SFX Events/PlaySFXSlap
       maxAttenuation: 0
-      maxDuration: 1.1341205
-      minDuration: 0.8019443
+      maxDuration: 1.1010494
+      minDuration: 0.77855957
+    - name: PlaySFXSpecialEnemy
+      guid: a2233eb31ffea54594e71ea4d0124496
+      id: 1584450231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: PlaySFXSpecialEnemy
+        ObjectType: 3
+        guid: a2233eb31ffea54594e71ea4d0124496
+      Path: Events/Default Work Unit/SFX Events/PlaySFXSpecialEnemy
+      maxAttenuation: 0
+      maxDuration: 0.85444224
+      minDuration: 0.85444224
     - name: SetMusicGameOver
       guid: 583bfc681827d442b606e50a5b42888c
       id: 1613597420

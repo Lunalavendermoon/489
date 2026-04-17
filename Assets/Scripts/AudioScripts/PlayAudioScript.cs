@@ -7,7 +7,7 @@ public class PlayAudioScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AudioManager.Instance.PlayEvent("StartGameAudio");
+        //AudioManager.Instance.PlayEvent("StartGameAudio");
         AudioManager.Instance.PlayEvent(WwiseEventID);
     }
 }

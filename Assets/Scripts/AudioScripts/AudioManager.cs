@@ -42,6 +42,11 @@ public class AudioManager : MonoBehaviour
         InitializeAudio();
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayEvent("StartGameAudio");
+    }
+
     private void InitializeAudio()
     {
         if (isInitialized) return;
