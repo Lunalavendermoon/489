@@ -164,12 +164,13 @@ Narrator: Better yet, the richest CEO in the galaxy, sir Gallinaceous, is paying
 Narrator: as a security guard, ofc
     -> nah i dont want to be a security guard
         Narrator: Well TOO LATE cuz we're already here
-        <<hide cc_flyer>>
+        <<show cc_flyer>>
         <<hide player>>
         <<background Outside>>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
+        <<hide cc_flyer>>
         Narrator: whats the life like being that top 1%? we're gonna find out. Excited?
             -> *go stand infront of the gates*
                 <<jump IntoVilla>>
