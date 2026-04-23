@@ -14,10 +14,18 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAYSFXBONUS = 1355982377U;
+        static const AkUniqueID PLAYSFXCROWDGASP = 2163776490U;
+        static const AkUniqueID PLAYSFXDOORCLOSE = 3169162288U;
+        static const AkUniqueID PLAYSFXDOOROPEN = 1169845828U;
         static const AkUniqueID PLAYSFXENEMY = 4004607848U;
+        static const AkUniqueID PLAYSFXHELICOPTER = 1541798471U;
         static const AkUniqueID PLAYSFXPERFECTSLAP = 3898042413U;
+        static const AkUniqueID PLAYSFXPUNCH = 3458251708U;
         static const AkUniqueID PLAYSFXSLAP = 1133927134U;
+        static const AkUniqueID PLAYSFXSPARKLE = 3789347866U;
         static const AkUniqueID PLAYSFXSPECIALENEMY = 1584450231U;
+        static const AkUniqueID PLAYSFXVINEBOOM = 2113102501U;
+        static const AkUniqueID PLAYSFXWOLFHOWL = 2723462030U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;
         static const AkUniqueID SETMUSICTODIESIRAE = 49138649U;
