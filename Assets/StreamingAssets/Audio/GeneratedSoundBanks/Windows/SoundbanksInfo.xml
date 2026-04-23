@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{1FEA417B-EE34-D61C-2073-6BD35F638513}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{DA6BCC49-4393-1821-3BE6-9C3A7AFE6484}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
+				<File Id="76961625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Boss-Finale_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Boss-Finale_v01_56CEF360.wem</CachePath>
+				</File>
 				<File Id="88198512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_door-open.wav</ShortName>
 					<CachePath>SFX/sfx_door-open_8E324C96.wem</CachePath>
@@ -23,7 +27,7 @@
 				</File>
 				<File Id="197115731" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_vine-boom.wav</ShortName>
-					<CachePath>SFX/sfx_vine-boom_3482293E.wem</CachePath>
+					<CachePath>SFX/sfx_vine-boom_977D1BEC.wem</CachePath>
 				</File>
 				<File Id="303531575" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_sparkle.wav</ShortName>
@@ -41,6 +45,10 @@
 					<ShortName>Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="409382553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_Tempo-Track.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Vivaldi's-Winter-Remix_Tempo-Track_56CEF360.wem</CachePath>
+				</File>
 				<File Id="431644092" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Drama-Theme_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem</CachePath>
@@ -52,10 +60,6 @@
 				<File Id="486117005" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_door-close.wav</ShortName>
 					<CachePath>SFX/sfx_door-close_8E324C96.wem</CachePath>
-				</File>
-				<File Id="491007725" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track.wav</ShortName>
-					<CachePath>SFX/Matuska-Logan_Vivaldi's-Winter-Remix_with-tempo-track_56CEF360.wem</CachePath>
 				</File>
 				<File Id="516056618" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Main-Theme_ROUGH-v01.wav</ShortName>
@@ -81,6 +85,10 @@
 					<ShortName>sfx_bonus-slap.wav</ShortName>
 					<CachePath>SFX/sfx_bonus-slap_6CC118BE.wem</CachePath>
 				</File>
+				<File Id="749163517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Dies-Irae-Rhythm-Track.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Dies-Irae-Rhythm-Track_56CEF360.wem</CachePath>
+				</File>
 				<File Id="756565802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_special-enemy.wav</ShortName>
 					<CachePath>SFX/sfx_special-enemy_59EC7613.wem</CachePath>
@@ -88,6 +96,10 @@
 				<File Id="770219755" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_crowd-gasp.wav</ShortName>
 					<CachePath>SFX/sfx_crowd-gasp_8E324C96.wem</CachePath>
+				</File>
+				<File Id="830419555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix-Final-Draft.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Vivaldi's-Winter-Remix-Final-Draft_56CEF360.wem</CachePath>
 				</File>
 				<File Id="855988282" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemy-1.wav</ShortName>
@@ -109,6 +121,10 @@
 					<ShortName>Matuska-Logan_GGGG-Casual-Theme_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Casual-Theme_v01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="975946022" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_Moonlight-3-Claps.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_Moonlight-3-Claps_56CEF360.wem</CachePath>
+				</File>
 				<File Id="985152196" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_helicopter.wav</ShortName>
 					<CachePath>SFX/sfx_helicopter_8E324C96.wem</CachePath>
@@ -119,6 +135,7 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2575275712" Name="EndGameAudio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1355982377" Name="PlaySFXBonus" DurationType="OneShot" DurationMin="1.5045365" DurationMax="1.5045365">
 					<MediaRefs>
 						<MediaRef Id="660248666"/>
@@ -187,6 +204,11 @@
 						<MediaRef Id="631788712"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1313951137" Name="SetBossFinale" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="2713684135" Name="BossFinale"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1613597420" Name="SetMusicGameOver" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
@@ -244,6 +266,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4178467550" Id="3699353111"/>
 							<MediaRefs>
+								<MediaRef Id="749163517"/>
 								<MediaRef Id="1057349562"/>
 							</MediaRefs>
 						</SwitchContainer>
@@ -251,12 +274,14 @@
 							<SwitchValue GroupType="State" GroupId="4178467550" Id="2394330185"/>
 							<MediaRefs>
 								<MediaRef Id="647185346"/>
+								<MediaRef Id="975946022"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4178467550" Id="2965343494"/>
 							<MediaRefs>
-								<MediaRef Id="491007725"/>
+								<MediaRef Id="409382553"/>
+								<MediaRef Id="830419555"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -295,9 +320,26 @@
 								<MediaRef Id="139325359"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="2713684135"/>
+							<MediaRefs>
+								<MediaRef Id="76961625"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
+						<ActionSetStateEntry GroupId="1964413792" Id="461404097" Name="RhythmTrackIsOn"/>
 						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3840335565" Name="ToggleRhythmTrackOff" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1964413792" Id="339513613" Name="RhythmTrackIsOff"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="35798401" Name="ToggleRhythmTrackOn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1964413792" Id="461404097" Name="RhythmTrackIsOn"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="1657091384" Name="TurnOffMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -307,6 +349,13 @@
 				</Event>
 			</Events>
 			<StateGroups>
+				<StateGroup Id="1964413792" Name="GGGG_Rhythm_Track">
+					<States>
+						<State Id="339513613" Name="RhythmTrackIsOff"/>
+						<State Id="461404097" Name="RhythmTrackIsOn"/>
+						<State Id="748895195" Name="None"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4178467550" Name="GGGG_Music_States">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -315,6 +364,7 @@
 						<State Id="1810055758" Name="TragicTheme"/>
 						<State Id="1844532073" Name="DramaTheme"/>
 						<State Id="2394330185" Name="Moonlight3"/>
+						<State Id="2713684135" Name="BossFinale"/>
 						<State Id="2965343494" Name="Winter"/>
 						<State Id="3694417201" Name="UpbeatTheme"/>
 						<State Id="3699353111" Name="DiesIrae"/>
@@ -323,7 +373,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C56786AD-D942-BCAA-D190-50652E58BCC0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{320DA3FF-BD5A-5652-73E7-3D75EB4E4975}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -352,6 +402,13 @@
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="1964413792" Name="GGGG_Rhythm_Track">
+					<States>
+						<State Id="339513613" Name="RhythmTrackIsOff"/>
+						<State Id="461404097" Name="RhythmTrackIsOn"/>
+						<State Id="748895195" Name="None"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4178467550" Name="GGGG_Music_States">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -360,6 +417,7 @@
 						<State Id="1810055758" Name="TragicTheme"/>
 						<State Id="1844532073" Name="DramaTheme"/>
 						<State Id="2394330185" Name="Moonlight3"/>
+						<State Id="2713684135" Name="BossFinale"/>
 						<State Id="2965343494" Name="Winter"/>
 						<State Id="3694417201" Name="UpbeatTheme"/>
 						<State Id="3699353111" Name="DiesIrae"/>
@@ -497,5 +555,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{064A1379-A726-3670-41C0-D1B47EBF8AF9}</FileHash>
+	<FileHash>{E7497E1C-9DF3-B759-6CAE-8C621D2BB663}</FileHash>
 </SoundBanksInfo>

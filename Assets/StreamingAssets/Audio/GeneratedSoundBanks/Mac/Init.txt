@@ -1,13 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	1964413792	GGGG_Rhythm_Track			\Default Work Unit\GGGG_Rhythm_Track	
 	4178467550	GGGG_Music_States			\Default Work Unit\GGGG_Music_States	
 
 State	ID	Name	State Group			Notes
+	339513613	RhythmTrackIsOff	GGGG_Rhythm_Track			
+	461404097	RhythmTrackIsOn	GGGG_Rhythm_Track			
+	748895195	None	GGGG_Rhythm_Track			
 	748895195	None	GGGG_Music_States			
 	824317709	MainTheme	GGGG_Music_States			
 	824977647	DefaultTheme	GGGG_Music_States			
 	1810055758	TragicTheme	GGGG_Music_States			
 	1844532073	DramaTheme	GGGG_Music_States			
 	2394330185	Moonlight3	GGGG_Music_States			
+	2713684135	BossFinale	GGGG_Music_States			
 	2965343494	Winter	GGGG_Music_States			
 	3694417201	UpbeatTheme	GGGG_Music_States			
 	3699353111	DiesIrae	GGGG_Music_States			

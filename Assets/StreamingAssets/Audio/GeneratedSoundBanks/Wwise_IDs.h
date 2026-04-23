@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ENDGAMEAUDIO = 2575275712U;
         static const AkUniqueID PLAYSFXBONUS = 1355982377U;
         static const AkUniqueID PLAYSFXCROWDGASP = 2163776490U;
         static const AkUniqueID PLAYSFXDOORCLOSE = 3169162288U;
@@ -26,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAYSFXSPECIALENEMY = 1584450231U;
         static const AkUniqueID PLAYSFXVINEBOOM = 2113102501U;
         static const AkUniqueID PLAYSFXWOLFHOWL = 2723462030U;
+        static const AkUniqueID SETBOSSFINALE = 1313951137U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;
         static const AkUniqueID SETMUSICTODIESIRAE = 49138649U;
@@ -36,6 +38,8 @@ namespace AK
         static const AkUniqueID SETMUSICTOUPBEATTHEME = 1515763U;
         static const AkUniqueID SETMUSICTOWINTER = 1958764012U;
         static const AkUniqueID STARTGAMEAUDIO = 667805585U;
+        static const AkUniqueID TOGGLERHYTHMTRACKOFF = 3840335565U;
+        static const AkUniqueID TOGGLERHYTHMTRACKON = 35798401U;
         static const AkUniqueID TURNOFFMUSIC = 1657091384U;
     } // namespace EVENTS
 
@@ -47,6 +51,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID BOSSFINALE = 2713684135U;
                 static const AkUniqueID DEFAULTTHEME = 824977647U;
                 static const AkUniqueID DIESIRAE = 3699353111U;
                 static const AkUniqueID DRAMATHEME = 1844532073U;
@@ -59,6 +64,18 @@ namespace AK
                 static const AkUniqueID WINTER = 2965343494U;
             } // namespace STATE
         } // namespace GGGG_MUSIC_STATES
+
+        namespace GGGG_RHYTHM_TRACK
+        {
+            static const AkUniqueID GROUP = 1964413792U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID RHYTHMTRACKISOFF = 339513613U;
+                static const AkUniqueID RHYTHMTRACKISON = 461404097U;
+            } // namespace STATE
+        } // namespace GGGG_RHYTHM_TRACK
 
     } // namespace STATES
 
