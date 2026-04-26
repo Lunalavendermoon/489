@@ -4395,7 +4395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df282236fdddd42138b5ed4803dcf3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WwiseEventID: SetMusicToMoonlight3
+  WwiseEventID: SetMusicToDiesIrae
 --- !u!1 &2134034278
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{56FEDFB2-4332-BEBD-ABCB-AFBBF859319B}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{4943CF86-1B39-0014-2837-3E1BEAF0C7FF}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
@@ -150,6 +150,11 @@
 					<CachePath>SFX/Matuska-Logan_Dies-Irae-Remix_v01_56CEF360.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1072799009" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="2575275712" Name="EndGameAudio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1355982377" Name="PlaySFXBonus" DurationType="OneShot" DurationMin="1.5045365" DurationMax="1.5045365">
@@ -224,6 +229,11 @@
 					<MediaRefs>
 						<MediaRef Id="197115731"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1072799009"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="2723462030" Name="PlaySFXWolfHowl" DurationType="OneShot" DurationMin="5.000021" DurationMax="5.000021">
 					<MediaRefs>
@@ -416,7 +426,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{320DA3FF-BD5A-5652-73E7-3D75EB4E4975}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1FBD5A08-6651-B718-42F5-2E86F06E0BA5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -599,5 +609,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{37334C34-D5D1-DE8F-6E53-17BD2D48ACEC}</FileHash>
+	<FileHash>{F40E7B04-D254-9A05-30FF-D10F9582180B}</FileHash>
 </SoundBanksInfo>

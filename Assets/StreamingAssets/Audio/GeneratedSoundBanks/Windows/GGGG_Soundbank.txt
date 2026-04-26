@@ -53,6 +53,9 @@ State	ID	Name	State Group			Notes
 	3699353111	DiesIrae	GGGG_Music_States			
 	4158285989	GameOver	GGGG_Music_States			
 
+Effect plug-ins	ID	Name	Type				Notes
+	1072799009	Parametric EQ (Custom)	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	39113071	sfx_man-sigh	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_man-sigh_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Batch-3\sfx_man-sigh		12828
 	88198512	sfx_door-open	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Windows\SFX\sfx_door-open_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_door-open		9550

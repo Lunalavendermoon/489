@@ -405,7 +405,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: f0ba40fa663d804ebd62c84aede4aa7e
     GuidInternal: 
-    m_lastTime: -8584253848713888513
+    m_lastTime: -8584243816300351876
     List:
     - name: GGGG_Soundbank
       guid: 73099d8a19c3564db936dc45fcdd5075
@@ -433,8 +433,85 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 483e542009910e4e86052c19d5868422
     GuidInternal: 
-    m_lastTime: -8584253852058263932
+    m_lastTime: -8584243830910139089
     List:
+    - name: Batch 1
+      guid: 5062306a0640ac47ae68b58cb242807c
+      id: 4281772178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
+      Path: Events/Default Work Unit/SFX Events/Batch 1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Batch 2
+      guid: 1894cd87af3b694bae67524eb2b6372a
+      id: 4281772177
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      Path: Events/Default Work Unit/SFX Events/Batch 2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Batch 3
+      guid: 3ca2660281482344b9549d3d5464159d
+      id: 4281772176
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 3
+        ObjectType: 4
+        guid: 3ca2660281482344b9549d3d5464159d
+      Path: Events/Default Work Unit/SFX Events/Batch 3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: EndGameAudio
+      guid: 1d451e4a583b934b9df90d44b0765876
+      id: 2575275712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: EndGameAudio
+        ObjectType: 3
+        guid: 1d451e4a583b934b9df90d44b0765876
+      Path: Events/Default Work Unit/EndGameAudio
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Music Events
       guid: a114ce1d532b8245acd51da1faac75d9
       id: 3264800193
@@ -465,13 +542,85 @@ MonoBehaviour:
       - ElementName: SFX Events
         ObjectType: 4
         guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
       - ElementName: PlaySFXBonus
         ObjectType: 3
         guid: a543bfe9a6c43f44841d4c405eb0a7d8
-      Path: Events/Default Work Unit/SFX Events/PlaySFXBonus
+      Path: Events/Default Work Unit/SFX Events/Batch 1/PlaySFXBonus
       maxAttenuation: 0
       maxDuration: 1.5045365
       minDuration: 1.5045365
+    - name: PlaySFXCrowdGasp
+      guid: 50e65cd126fb774590af7b3c3e1a1687
+      id: 2163776490
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXCrowdGasp
+        ObjectType: 3
+        guid: 50e65cd126fb774590af7b3c3e1a1687
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXCrowdGasp
+      maxAttenuation: 0
+      maxDuration: 2.0000207
+      minDuration: 2.0000207
+    - name: PlaySFXDoorClose
+      guid: 103a79f16c6eac40accfe2633282f28f
+      id: 3169162288
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXDoorClose
+        ObjectType: 3
+        guid: 103a79f16c6eac40accfe2633282f28f
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXDoorClose
+      maxAttenuation: 0
+      maxDuration: 2.0000207
+      minDuration: 2.0000207
+    - name: PlaySFXDoorOpen
+      guid: bea247b9298d9342ae7d6691c5426406
+      id: 1169845828
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXDoorOpen
+        ObjectType: 3
+        guid: bea247b9298d9342ae7d6691c5426406
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXDoorOpen
+      maxAttenuation: 0
+      maxDuration: 1.0000209
+      minDuration: 1.0000209
     - name: PlaySFXEnemy
       guid: 1ac8f2d440914745bba1acb65d47afaa
       id: 4004607848
@@ -485,13 +634,85 @@ MonoBehaviour:
       - ElementName: SFX Events
         ObjectType: 4
         guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
       - ElementName: PlaySFXEnemy
         ObjectType: 3
         guid: 1ac8f2d440914745bba1acb65d47afaa
-      Path: Events/Default Work Unit/SFX Events/PlaySFXEnemy
+      Path: Events/Default Work Unit/SFX Events/Batch 1/PlaySFXEnemy
       maxAttenuation: 0
       maxDuration: 0.44597742
       minDuration: 0.3153537
+    - name: PlaySFXFootsteps
+      guid: c8a85a2f3a31a84b87786eddd333ed1c
+      id: 2644022681
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 3
+        ObjectType: 4
+        guid: 3ca2660281482344b9549d3d5464159d
+      - ElementName: PlaySFXFootsteps
+        ObjectType: 3
+        guid: c8a85a2f3a31a84b87786eddd333ed1c
+      Path: Events/Default Work Unit/SFX Events/Batch 3/PlaySFXFootsteps
+      maxAttenuation: 0
+      maxDuration: 3.5000207
+      minDuration: 3.5000207
+    - name: PlaySFXHelicopter
+      guid: 7fad8f907cd0d14b8e123fd070bb9aea
+      id: 1541798471
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXHelicopter
+        ObjectType: 3
+        guid: 7fad8f907cd0d14b8e123fd070bb9aea
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXHelicopter
+      maxAttenuation: 0
+      maxDuration: 5.750021
+      minDuration: 5.750021
+    - name: PlaySFXManSigh
+      guid: d12f443e03fb0649a0c78fcff6ffcb0a
+      id: 418038653
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 3
+        ObjectType: 4
+        guid: 3ca2660281482344b9549d3d5464159d
+      - ElementName: PlaySFXManSigh
+        ObjectType: 3
+        guid: d12f443e03fb0649a0c78fcff6ffcb0a
+      Path: Events/Default Work Unit/SFX Events/Batch 3/PlaySFXManSigh
+      maxAttenuation: 0
+      maxDuration: 1.3750209
+      minDuration: 1.3750209
     - name: PlaySFXPerfectSlap
       guid: d4266a36c5c6964e9f9ee565962083eb
       id: 3898042413
@@ -505,13 +726,39 @@ MonoBehaviour:
       - ElementName: SFX Events
         ObjectType: 4
         guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
       - ElementName: PlaySFXPerfectSlap
         ObjectType: 3
         guid: d4266a36c5c6964e9f9ee565962083eb
-      Path: Events/Default Work Unit/SFX Events/PlaySFXPerfectSlap
+      Path: Events/Default Work Unit/SFX Events/Batch 1/PlaySFXPerfectSlap
       maxAttenuation: 0
       maxDuration: 1.3462051
       minDuration: 0.9519108
+    - name: PlaySFXPunch
+      guid: d8a116f8228e114aac8d309a887bbe9e
+      id: 3458251708
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXPunch
+        ObjectType: 3
+        guid: d8a116f8228e114aac8d309a887bbe9e
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXPunch
+      maxAttenuation: 0
+      maxDuration: 2.1189482
+      minDuration: 1.887768
     - name: PlaySFXSlap
       guid: c3d47c0847a8e549bb2640e0fa8c6a57
       id: 1133927134
@@ -525,13 +772,39 @@ MonoBehaviour:
       - ElementName: SFX Events
         ObjectType: 4
         guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
       - ElementName: PlaySFXSlap
         ObjectType: 3
         guid: c3d47c0847a8e549bb2640e0fa8c6a57
-      Path: Events/Default Work Unit/SFX Events/PlaySFXSlap
+      Path: Events/Default Work Unit/SFX Events/Batch 1/PlaySFXSlap
       maxAttenuation: 0
       maxDuration: 1.1010494
       minDuration: 0.77855957
+    - name: PlaySFXSparkle
+      guid: bff2195a1d3fe14593cda1d9b06f42b0
+      id: 3789347866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXSparkle
+        ObjectType: 3
+        guid: bff2195a1d3fe14593cda1d9b06f42b0
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXSparkle
+      maxAttenuation: 0
+      maxDuration: 6.000021
+      minDuration: 6.000021
     - name: PlaySFXSpecialEnemy
       guid: a2233eb31ffea54594e71ea4d0124496
       id: 1584450231
@@ -545,13 +818,125 @@ MonoBehaviour:
       - ElementName: SFX Events
         ObjectType: 4
         guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 1
+        ObjectType: 4
+        guid: 5062306a0640ac47ae68b58cb242807c
       - ElementName: PlaySFXSpecialEnemy
         ObjectType: 3
         guid: a2233eb31ffea54594e71ea4d0124496
-      Path: Events/Default Work Unit/SFX Events/PlaySFXSpecialEnemy
+      Path: Events/Default Work Unit/SFX Events/Batch 1/PlaySFXSpecialEnemy
       maxAttenuation: 0
       maxDuration: 0.85444224
       minDuration: 0.85444224
+    - name: PlaySFXVineboom
+      guid: 6467f8007772724ca9b2f2465349c736
+      id: 2113102501
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXVineboom
+        ObjectType: 3
+        guid: 6467f8007772724ca9b2f2465349c736
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXVineboom
+      maxAttenuation: 0
+      maxDuration: 2.8125207
+      minDuration: 2.8125207
+    - name: PlaySFXWolfHowl
+      guid: 52e887ce3cefec46a001956774194180
+      id: 2723462030
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 2
+        ObjectType: 4
+        guid: 1894cd87af3b694bae67524eb2b6372a
+      - ElementName: PlaySFXWolfHowl
+        ObjectType: 3
+        guid: 52e887ce3cefec46a001956774194180
+      Path: Events/Default Work Unit/SFX Events/Batch 2/PlaySFXWolfHowl
+      maxAttenuation: 0
+      maxDuration: 5.000021
+      minDuration: 5.000021
+    - name: PlaySFXWomanCry
+      guid: 50310d88a70dea458385ad9bcf7486c1
+      id: 937875958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: SFX Events
+        ObjectType: 4
+        guid: d7dabcc051bebf4d906ce19f0f137f61
+      - ElementName: Batch 3
+        ObjectType: 4
+        guid: 3ca2660281482344b9549d3d5464159d
+      - ElementName: PlaySFXWomanCry
+        ObjectType: 3
+        guid: 50310d88a70dea458385ad9bcf7486c1
+      Path: Events/Default Work Unit/SFX Events/Batch 3/PlaySFXWomanCry
+      maxAttenuation: 0
+      maxDuration: 3.118164
+      minDuration: 3.118164
+    - name: SetBossFinale
+      guid: 3fde5e68efbeeb43bbe4841be539446f
+      id: 1313951137
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
+      - ElementName: SetBossFinale
+        ObjectType: 3
+        guid: 3fde5e68efbeeb43bbe4841be539446f
+      Path: Events/Default Work Unit/Music Events/SetBossFinale
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SetLevelComplete
+      guid: 2cea1707c3070747b1bbb3045a1597ab
+      id: 2848106702
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Music Events
+        ObjectType: 4
+        guid: a114ce1d532b8245acd51da1faac75d9
+      - ElementName: SetLevelComplete
+        ObjectType: 3
+        guid: 2cea1707c3070747b1bbb3045a1597ab
+      Path: Events/Default Work Unit/Music Events/SetLevelComplete
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: SetMusicGameOver
       guid: 583bfc681827d442b606e50a5b42888c
       id: 1613597420
@@ -759,16 +1144,70 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 483e542009910e4e86052c19d5868422
-      - ElementName: Music Events
-        ObjectType: 4
-        guid: a114ce1d532b8245acd51da1faac75d9
       - ElementName: StartGameAudio
         ObjectType: 3
         guid: 8c96ce791fe29a499bf0a97f74096029
-      Path: Events/Default Work Unit/Music Events/StartGameAudio
+      Path: Events/Default Work Unit/StartGameAudio
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Technical Events
+      guid: 59399001277f984ba87433ef778fb0d2
+      id: 3710918249
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Technical Events
+        ObjectType: 4
+        guid: 59399001277f984ba87433ef778fb0d2
+      Path: Events/Default Work Unit/Technical Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ToggleRhythmTrackOff
+      guid: 041cbf65638f084f9da1500cd82e5981
+      id: 3840335565
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Technical Events
+        ObjectType: 4
+        guid: 59399001277f984ba87433ef778fb0d2
+      - ElementName: ToggleRhythmTrackOff
+        ObjectType: 3
+        guid: 041cbf65638f084f9da1500cd82e5981
+      Path: Events/Default Work Unit/Technical Events/ToggleRhythmTrackOff
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ToggleRhythmTrackOn
+      guid: 9b1c5b37ad27824b834e313ff4443be7
+      id: 35798401
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 483e542009910e4e86052c19d5868422
+      - ElementName: Technical Events
+        ObjectType: 4
+        guid: 59399001277f984ba87433ef778fb0d2
+      - ElementName: ToggleRhythmTrackOn
+        ObjectType: 3
+        guid: 9b1c5b37ad27824b834e313ff4443be7
+      Path: Events/Default Work Unit/Technical Events/ToggleRhythmTrackOn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: TurnOffMusic
       guid: dc19108aa6429e49b64d0eafee7cbb0f
       id: 1657091384
@@ -968,7 +1407,7 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: fb1b91ee16bf22489016a81ca1caea2e
     GuidInternal: 
-    m_lastTime: -8584255850319109123
+    m_lastTime: -8584243830910095361
     List:
     - name: GGGG_Music_States
       guid: d5ad2f31189098408c605ceeb6b35073
@@ -985,6 +1424,22 @@ MonoBehaviour:
         guid: d5ad2f31189098408c605ceeb6b35073
       Path: States/Default Work Unit/GGGG_Music_States
       values:
+      - name: BossFinale
+        guid: d666b373e921a6479f1c2d0b68867f96
+        id: 2713684135
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: fb1b91ee16bf22489016a81ca1caea2e
+        - ElementName: GGGG_Music_States
+          ObjectType: 9
+          guid: d5ad2f31189098408c605ceeb6b35073
+        - ElementName: BossFinale
+          ObjectType: 8
+          guid: d666b373e921a6479f1c2d0b68867f96
       - name: DefaultTheme
         guid: ead966e32c5d724eb1d63b7340796398
         id: 824977647
@@ -1049,6 +1504,22 @@ MonoBehaviour:
         - ElementName: GameOver
           ObjectType: 8
           guid: dd7b1030c6168f4f8a57094659ecfa68
+      - name: LevelComplete
+        guid: 2404f64741ba9945af0bcfa27f508c51
+        id: 853594596
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: fb1b91ee16bf22489016a81ca1caea2e
+        - ElementName: GGGG_Music_States
+          ObjectType: 9
+          guid: d5ad2f31189098408c605ceeb6b35073
+        - ElementName: LevelComplete
+          ObjectType: 8
+          guid: 2404f64741ba9945af0bcfa27f508c51
       - name: MainTheme
         guid: 96b8c51139de264c88fde0fe8b95ff61
         id: 824317709
@@ -1145,6 +1616,72 @@ MonoBehaviour:
         - ElementName: Winter
           ObjectType: 8
           guid: 5ed3fcd06bb4a44a8add4f4507343de8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: GGGG_Rhythm_Track
+      guid: b4242f798d4a41499025e9e83e87a0c6
+      id: 1964413792
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fb1b91ee16bf22489016a81ca1caea2e
+      - ElementName: GGGG_Rhythm_Track
+        ObjectType: 9
+        guid: b4242f798d4a41499025e9e83e87a0c6
+      Path: States/Default Work Unit/GGGG_Rhythm_Track
+      values:
+      - name: None
+        guid: 7fb15e890e6bda409c722793717ce0cc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: fb1b91ee16bf22489016a81ca1caea2e
+        - ElementName: GGGG_Rhythm_Track
+          ObjectType: 9
+          guid: b4242f798d4a41499025e9e83e87a0c6
+        - ElementName: None
+          ObjectType: 8
+          guid: 7fb15e890e6bda409c722793717ce0cc
+      - name: RhythmTrackIsOff
+        guid: e9e88563da7ea74e9643da1e2d534999
+        id: 339513613
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: fb1b91ee16bf22489016a81ca1caea2e
+        - ElementName: GGGG_Rhythm_Track
+          ObjectType: 9
+          guid: b4242f798d4a41499025e9e83e87a0c6
+        - ElementName: RhythmTrackIsOff
+          ObjectType: 8
+          guid: e9e88563da7ea74e9643da1e2d534999
+      - name: RhythmTrackIsOn
+        guid: 112b10687d66ad4d98ee031ca9baf50f
+        id: 461404097
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: fb1b91ee16bf22489016a81ca1caea2e
+        - ElementName: GGGG_Rhythm_Track
+          ObjectType: 9
+          guid: b4242f798d4a41499025e9e83e87a0c6
+        - ElementName: RhythmTrackIsOn
+          ObjectType: 8
+          guid: 112b10687d66ad4d98ee031ca9baf50f
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
