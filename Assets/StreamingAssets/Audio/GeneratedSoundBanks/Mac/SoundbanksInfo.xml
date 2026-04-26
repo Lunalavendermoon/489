@@ -9,17 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{3737FC89-47A7-2BE0-5B67-14059637ED53}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{FAC9E328-F3FF-E3BA-AA92-8F6BD341534C}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
 				<File Id="39113071" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_man-sigh.wav</ShortName>
 					<CachePath>SFX/sfx_man-sigh_8E324C96.wem</CachePath>
-				</File>
-				<File Id="76961625" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Matuska-Logan_GGGG-Boss-Finale_v01.wav</ShortName>
-					<CachePath>SFX/Matuska-Logan_GGGG-Boss-Finale_v01_56CEF360.wem</CachePath>
 				</File>
 				<File Id="88198512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_door-open.wav</ShortName>
@@ -51,7 +47,7 @@
 				</File>
 				<File Id="358326556" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_woman-crying.wav</ShortName>
-					<CachePath>SFX/sfx_woman-crying_FD9A12B6.wem</CachePath>
+					<CachePath>SFX/sfx_woman-crying_30296A70.wem</CachePath>
 				</File>
 				<File Id="409382553" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_Tempo-Track.wav</ShortName>
@@ -108,6 +104,10 @@
 				<File Id="803533773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps-running.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps-running_8E324C96.wem</CachePath>
+				</File>
+				<File Id="826885257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Boss-Finale_v02.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Boss-Finale_v02_56CEF360.wem</CachePath>
 				</File>
 				<File Id="830419555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix-Final-Draft.wav</ShortName>
@@ -350,7 +350,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4178467550" Id="2713684135"/>
 							<MediaRefs>
-								<MediaRef Id="76961625"/>
+								<MediaRef Id="826885257"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -582,5 +582,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EBC72389-2C24-F282-AE81-31E13A2B0210}</FileHash>
+	<FileHash>{0361F940-B994-CB86-E83E-B5C60B6C8EF9}</FileHash>
 </SoundBanksInfo>
