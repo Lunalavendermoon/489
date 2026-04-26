@@ -19,7 +19,9 @@ namespace AK
         static const AkUniqueID PLAYSFXDOORCLOSE = 3169162288U;
         static const AkUniqueID PLAYSFXDOOROPEN = 1169845828U;
         static const AkUniqueID PLAYSFXENEMY = 4004607848U;
+        static const AkUniqueID PLAYSFXFOOTSTEPS = 2644022681U;
         static const AkUniqueID PLAYSFXHELICOPTER = 1541798471U;
+        static const AkUniqueID PLAYSFXMANSIGH = 418038653U;
         static const AkUniqueID PLAYSFXPERFECTSLAP = 3898042413U;
         static const AkUniqueID PLAYSFXPUNCH = 3458251708U;
         static const AkUniqueID PLAYSFXSLAP = 1133927134U;
@@ -27,6 +29,7 @@ namespace AK
         static const AkUniqueID PLAYSFXSPECIALENEMY = 1584450231U;
         static const AkUniqueID PLAYSFXVINEBOOM = 2113102501U;
         static const AkUniqueID PLAYSFXWOLFHOWL = 2723462030U;
+        static const AkUniqueID PLAYSFXWOMANCRY = 937875958U;
         static const AkUniqueID SETBOSSFINALE = 1313951137U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;

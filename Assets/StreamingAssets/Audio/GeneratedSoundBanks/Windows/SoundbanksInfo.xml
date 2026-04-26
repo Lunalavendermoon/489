@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{DA6BCC49-4393-1821-3BE6-9C3A7AFE6484}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{3737FC89-47A7-2BE0-5B67-14059637ED53}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
+				<File Id="39113071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_man-sigh.wav</ShortName>
+					<CachePath>SFX/sfx_man-sigh_8E324C96.wem</CachePath>
+				</File>
 				<File Id="76961625" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Boss-Finale_v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Boss-Finale_v01_56CEF360.wem</CachePath>
@@ -44,6 +48,10 @@
 				<File Id="354105497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01.wav</ShortName>
 					<CachePath>SFX/Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="358326556" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_woman-crying.wav</ShortName>
+					<CachePath>SFX/sfx_woman-crying_FD9A12B6.wem</CachePath>
 				</File>
 				<File Id="409382553" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix_Tempo-Track.wav</ShortName>
@@ -96,6 +104,10 @@
 				<File Id="770219755" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_crowd-gasp.wav</ShortName>
 					<CachePath>SFX/sfx_crowd-gasp_8E324C96.wem</CachePath>
+				</File>
+				<File Id="803533773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_footsteps-running.wav</ShortName>
+					<CachePath>SFX/sfx_footsteps-running_8E324C96.wem</CachePath>
 				</File>
 				<File Id="830419555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Matuska-Logan_Vivaldi's-Winter-Remix-Final-Draft.wav</ShortName>
@@ -164,9 +176,19 @@
 						<MediaRef Id="911778575"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2644022681" Name="PlaySFXFootsteps" DurationType="OneShot" DurationMin="3.5000207" DurationMax="3.5000207">
+					<MediaRefs>
+						<MediaRef Id="803533773"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1541798471" Name="PlaySFXHelicopter" DurationType="OneShot" DurationMin="5.750021" DurationMax="5.750021">
 					<MediaRefs>
 						<MediaRef Id="985152196"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="418038653" Name="PlaySFXManSigh" DurationType="OneShot" DurationMin="1.3750209" DurationMax="1.3750209">
+					<MediaRefs>
+						<MediaRef Id="39113071"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3898042413" Name="PlaySFXPerfectSlap" DurationType="OneShot" DurationMin="0.9519108" DurationMax="1.3462051">
@@ -202,6 +224,11 @@
 				<Event Id="2723462030" Name="PlaySFXWolfHowl" DurationType="OneShot" DurationMin="5.000021" DurationMax="5.000021">
 					<MediaRefs>
 						<MediaRef Id="631788712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="937875958" Name="PlaySFXWomanCry" DurationType="OneShot" DurationMin="3.118164" DurationMax="3.118164">
+					<MediaRefs>
+						<MediaRef Id="358326556"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1313951137" Name="SetBossFinale" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -555,5 +582,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E7497E1C-9DF3-B759-6CAE-8C621D2BB663}</FileHash>
+	<FileHash>{6FB1359D-FC8B-2A37-D01B-B89B3F66BBB6}</FileHash>
 </SoundBanksInfo>

@@ -2,8 +2,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1515763	SetMusicToUpbeatTheme			\Default Work Unit\Music Events\SetMusicToUpbeatTheme	
 	35798401	ToggleRhythmTrackOn			\Default Work Unit\Technical Events\ToggleRhythmTrackOn	
 	49138649	SetMusicToDiesIrae			\Default Work Unit\Music Events\SetMusicToDiesIrae	
+	418038653	PlaySFXManSigh			\Default Work Unit\SFX Events\Batch 3\PlaySFXManSigh	
 	667805585	StartGameAudio			\Default Work Unit\StartGameAudio	
 	814886303	SetMusicToDramaTheme			\Default Work Unit\Music Events\SetMusicToDramaTheme	
+	937875958	PlaySFXWomanCry			\Default Work Unit\SFX Events\Batch 3\PlaySFXWomanCry	
 	1133927134	PlaySFXSlap			\Default Work Unit\SFX Events\Batch 1\PlaySFXSlap	
 	1169845828	PlaySFXDoorOpen			\Default Work Unit\SFX Events\Batch 2\PlaySFXDoorOpen	
 	1313951137	SetBossFinale			\Default Work Unit\Music Events\SetBossFinale	
@@ -16,6 +18,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2113102501	PlaySFXVineboom			\Default Work Unit\SFX Events\Batch 2\PlaySFXVineboom	
 	2163776490	PlaySFXCrowdGasp			\Default Work Unit\SFX Events\Batch 2\PlaySFXCrowdGasp	
 	2575275712	EndGameAudio			\Default Work Unit\EndGameAudio	
+	2644022681	PlaySFXFootsteps			\Default Work Unit\SFX Events\Batch 3\PlaySFXFootsteps	
 	2723462030	PlaySFXWolfHowl			\Default Work Unit\SFX Events\Batch 2\PlaySFXWolfHowl	
 	2770684787	SetMusicToCasualTheme			\Default Work Unit\Music Events\SetMusicToCasualTheme	
 	2996985392	SetMusicToTragicTheme			\Default Work Unit\Music Events\SetMusicToTragicTheme	
@@ -49,6 +52,7 @@ State	ID	Name	State Group			Notes
 	4158285989	GameOver	GGGG_Music_States			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	39113071	sfx_man-sigh	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_man-sigh_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Batch-3\sfx_man-sigh		12828
 	76961625	Matuska-Logan_GGGG-Boss-Finale_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Boss-Finale_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Boss Finale\Boss Finale Clip\Matuska-Logan_GGGG-Boss-Finale_v01		482083
 	88198512	sfx_door-open	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_door-open_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_door-open		9550
 	139325359	SILENCE	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\SILENCE_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Silence\SILENCE\SILENCE		643
@@ -57,6 +61,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	312482483	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx-slap_ABE4DED5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-slap		14111
 	351717463	sfx-perfect-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_perfect-slap_74BC34FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-perfect-slap		16239
 	354105497	Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Tragic Theme\Tragic Theme\Matuska-Logan_GGGG-Tragic-Theme_Rough-Draft-v01		1569871
+	358326556	sfx_woman-crying	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_woman-crying_FD9A12B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Batch-3\sfx_woman-crying		41242
 	409382553	Matuska-Logan_Vivaldi's-Winter-Rhythm-Track	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_Vivaldi's-Winter-Remix_Tempo-Track_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Winter Remix\Matuska-Logan_Vivaldi's-Winter-Rhythm-Track		2110918
 	431644092	Matuska-Logan_GGGG-Drama-Theme_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Drama-Theme_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Drama Theme\Drama Theme\Matuska-Logan_GGGG-Drama-Theme_v01		1690421
 	445551067	sfx_enemy-4	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_enemy-4_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-enemy\sfx_enemy-4		6795
@@ -70,6 +75,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	749163517	Matuska-Logan_Dies-Irae-Rhythm-Track	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_Dies-Irae-Rhythm-Track_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Dies Irae Remix\Matuska-Logan_Dies-Irae-Rhythm-Track		1725483
 	756565802	sfx_special-enemy	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_special-enemy_59EC7613.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx_special-enemy		12395
 	770219755	sfx_crowd-gasp	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_crowd-gasp_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_crowd-gasp		22746
+	803533773	sfx_footsteps-running	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_footsteps-running_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Batch-3\sfx_footsteps-running		24819
 	830419555	Matuska-Logan_Vivaldi's-Winter-Remix	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_Vivaldi's-Winter-Remix-Final-Draft_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Remixes\Winter Remix\Matuska-Logan_Vivaldi's-Winter-Remix		2386987
 	855988282	sfx_enemy-1	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_enemy-1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-enemy\sfx_enemy-1		7021
 	866710893	sfx_enemy-3	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_enemy-3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-enemy\sfx_enemy-3		7338
