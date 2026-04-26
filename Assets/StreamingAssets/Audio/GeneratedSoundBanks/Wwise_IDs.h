@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID PLAYSFXWOLFHOWL = 2723462030U;
         static const AkUniqueID PLAYSFXWOMANCRY = 937875958U;
         static const AkUniqueID SETBOSSFINALE = 1313951137U;
+        static const AkUniqueID SETLEVELCOMPLETE = 2848106702U;
         static const AkUniqueID SETMUSICGAMEOVER = 1613597420U;
         static const AkUniqueID SETMUSICTOCASUALTHEME = 2770684787U;
         static const AkUniqueID SETMUSICTODIESIRAE = 49138649U;
@@ -59,6 +60,7 @@ namespace AK
                 static const AkUniqueID DIESIRAE = 3699353111U;
                 static const AkUniqueID DRAMATHEME = 1844532073U;
                 static const AkUniqueID GAMEOVER = 4158285989U;
+                static const AkUniqueID LEVELCOMPLETE = 853594596U;
                 static const AkUniqueID MAINTHEME = 824317709U;
                 static const AkUniqueID MOONLIGHT3 = 2394330185U;
                 static const AkUniqueID NONE = 748895195U;

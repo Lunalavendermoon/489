@@ -21,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2644022681	PlaySFXFootsteps			\Default Work Unit\SFX Events\Batch 3\PlaySFXFootsteps	
 	2723462030	PlaySFXWolfHowl			\Default Work Unit\SFX Events\Batch 2\PlaySFXWolfHowl	
 	2770684787	SetMusicToCasualTheme			\Default Work Unit\Music Events\SetMusicToCasualTheme	
+	2848106702	SetLevelComplete			\Default Work Unit\Music Events\SetLevelComplete	
 	2996985392	SetMusicToTragicTheme			\Default Work Unit\Music Events\SetMusicToTragicTheme	
 	3169162288	PlaySFXDoorClose			\Default Work Unit\SFX Events\Batch 2\PlaySFXDoorClose	
 	3458251708	PlaySFXPunch			\Default Work Unit\SFX Events\Batch 2\PlaySFXPunch	
@@ -42,6 +43,7 @@ State	ID	Name	State Group			Notes
 	748895195	None	GGGG_Music_States			
 	824317709	MainTheme	GGGG_Music_States			
 	824977647	DefaultTheme	GGGG_Music_States			
+	853594596	LevelComplete	GGGG_Music_States			
 	1810055758	TragicTheme	GGGG_Music_States			
 	1844532073	DramaTheme	GGGG_Music_States			
 	2394330185	Moonlight3	GGGG_Music_States			
@@ -55,6 +57,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	39113071	sfx_man-sigh	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_man-sigh_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Batch-3\sfx_man-sigh		12828
 	88198512	sfx_door-open	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_door-open_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_door-open		9550
 	139325359	SILENCE	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\SILENCE_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Silence\SILENCE\SILENCE		643
+	182260765	Matuska-Logan_GGGG-Level-Complete-Stinger_v01	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\Matuska-Logan_GGGG-Level-Complete-Stinger_v01_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\GGGG-Main-Music-Switch\Level Complete Stinger\Matuska-Logan_GGGG-Level-Complete-Stinger_v01		75171
 	197115731	sfx_vine-boom	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_vine-boom_977D1BEC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_vine-boom		26211
 	303531575	sfx_sparkle	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx_sparkle_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-2\sfx_sparkle		95702
 	312482483	sfx-slap	Z:\Volumes\LoganX9Pro\8 SEM DRIVE\GAIM-489 (Capstone)\COLLAB PROJ (Gallincaeous Villa)\GGGG Wwise Project\GGGG-Wwise-Project\.cache\Mac\SFX\sfx-slap_ABE4DED5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX-Batch-1\sfx-slap		14111

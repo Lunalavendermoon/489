@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{FAC9E328-F3FF-E3BA-AA92-8F6BD341534C}">
+		<SoundBank Id="1232654019" Type="User" Language="SFX" Hash="{56FEDFB2-4332-BEBD-ABCB-AFBBF859319B}">
 			<ShortName>GGGG_Soundbank</ShortName>
 			<Path>GGGG_Soundbank.bnk</Path>
 			<Media>
@@ -24,6 +24,10 @@
 				<File Id="139325359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SILENCE.wav</ShortName>
 					<CachePath>SFX/SILENCE_56CEF360.wem</CachePath>
+				</File>
+				<File Id="182260765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Matuska-Logan_GGGG-Level-Complete-Stinger_v01.wav</ShortName>
+					<CachePath>SFX/Matuska-Logan_GGGG-Level-Complete-Stinger_v01_56CEF360.wem</CachePath>
 				</File>
 				<File Id="197115731" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_vine-boom.wav</ShortName>
@@ -236,6 +240,11 @@
 						<ActionSetStateEntry GroupId="4178467550" Id="2713684135" Name="BossFinale"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="2848106702" Name="SetLevelComplete" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4178467550" Id="853594596" Name="LevelComplete"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1613597420" Name="SetMusicGameOver" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4178467550" Id="748895195" Name="None"/>
@@ -353,6 +362,12 @@
 								<MediaRef Id="826885257"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4178467550" Id="853594596"/>
+							<MediaRefs>
+								<MediaRef Id="182260765"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1964413792" Id="461404097" Name="RhythmTrackIsOn"/>
@@ -388,6 +403,7 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="824317709" Name="MainTheme"/>
 						<State Id="824977647" Name="DefaultTheme"/>
+						<State Id="853594596" Name="LevelComplete"/>
 						<State Id="1810055758" Name="TragicTheme"/>
 						<State Id="1844532073" Name="DramaTheme"/>
 						<State Id="2394330185" Name="Moonlight3"/>
@@ -441,6 +457,7 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="824317709" Name="MainTheme"/>
 						<State Id="824977647" Name="DefaultTheme"/>
+						<State Id="853594596" Name="LevelComplete"/>
 						<State Id="1810055758" Name="TragicTheme"/>
 						<State Id="1844532073" Name="DramaTheme"/>
 						<State Id="2394330185" Name="Moonlight3"/>
@@ -582,5 +599,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EABBF78D-A298-DEC3-1C5C-A6F27028740F}</FileHash>
+	<FileHash>{37334C34-D5D1-DE8F-6E53-17BD2D48ACEC}</FileHash>
 </SoundBanksInfo>
