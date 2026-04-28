@@ -184,7 +184,7 @@ Narrator: as a security guard, ofc
         Narrator: Well TOO LATE cuz we're already here
         <<hide player>>
         <<background Outside>>
-        //sparkle
+        <<play_sound "PlaySFXSparkle">>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         Narrator: why would anyone as rich as sir Gallinaceus hire ppl through flyers??? lol
         Narrator: But now, you're here
@@ -195,7 +195,7 @@ Narrator: as a security guard, ofc
             -> *wander around*
                 <<jump IntoVilla>>
     -> nice
-        //sparkle
+        <<play_sound "PlaySFXSparkle">>
         Narrator: You honestly thought this is a scam, but the mansion is REAL
         <<hide player>>
         <<background Outside>>
@@ -237,14 +237,14 @@ title: IntoVilla
 <<hide y/nbox>>
 <<show narratorbox>>
 
-//helicopter
+<<play_sound "PlaySFXHelicopter">>
 Narrator: DANGGGGG whos that
 Narrator: seems like its no other than *Eugene Arthur K. Windsar A. Percival Gallinaceus* himself!
 Narrator: Hopping off the private jet and walking towards the gate like wide putin meme
 <<show y/nbox>>
 <<hide eugene_calm>>
 <<show eugene_alpha>>
-//howl
+<<play_sound "PlaySFXWolfHowl">>
 Eugene: ASSEMBLE ALL TO THE CONFERENCE ROOM IN 30 SECONDS!
 <<show secretary_anxious>>
 Secretary: Boss, you just fired everyone yesterday...
@@ -258,7 +258,7 @@ Secretary: Boss, Emily just gave birth to a baby boy this morning...
 Eugene: Brilliant timing——bring her son too. Get him up to speed on his mom's business.
 <<hide eugene_sas>>
 <<show eugene_alpha>>
-//howl
+<<play_sound "PlaySFXWolfHowl">>
 Eugene: NOW GET MOVING! I want everyone in the room IMMEDIATELY!
 //SCANDAL: Eugene likes to howl??
 <<hide y/nbox>>
@@ -276,14 +276,14 @@ Narrator: The alpha walked straight pass you, and threw his black Armani coat on
                 <<detour IntoVilla_FirstDirec>>
                 <<hide eugene_sas>>
                 <<show eugene_alpha>>
-                //howl
+                <<play_sound "PlaySFXWolfHowl">>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
                 <<jump IntoVilla_YN>>
             -> where to put your coat m'boss?
                 <<detour IntoVilla_FirstDirec>>
                 <<hide eugene_sas>>
                 <<show eugene_alpha>>
-                //howl
+                <<play_sound "PlaySFXWolfHowl">>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
                 <<jump IntoVilla_YN>>
 ===
@@ -295,7 +295,7 @@ title: IntoVilla_FirstDirec
 <<show y/nbox>>
 <<play_sound "PlaySFXVineboom">>
 Eugene: What a twig——who does the hiring around here? Where's that old guy who used to watch the gate?
-//vineboon
+<<play_sound "PlaySFXVineboom">>
 Secretary: Sir, you fired him five years ago.
 <<hide secretary_anxious>>
 <<show secretary_calm>>
@@ -324,8 +324,8 @@ Eugene: You——security guard!
         <<hide eugene_alpha>>
         <<show eugene_sas>>
         Eugene: DO NOT let her in. Or else, I will fire you too. 
-        //door open
-        //door close
+        <<play_sound "PlaySFXDoorOpen">>
+        <<play_sound "PlaySFXDoorClose">>
     -> u just called me a twig
         <<play_sound "PlaySFXVineboom">>
         Eugene: Is everyone outside the villa too broke to buy a mirror nowadays?
@@ -336,8 +336,8 @@ Eugene: You——security guard!
         <<hide eugene_alpha>>
         <<show eugene_sas>>
         Eugene: DO NOT let her in. Or else, I will fire you too. 
-        //door open
-        //door close
+        <<play_sound "PlaySFXDoorOpen">>
+        <<play_sound "PlaySFXDoorClose">>
 ===
 
 title: IntoVilla_YN
@@ -367,7 +367,7 @@ title: IntoVilla_YN
 <<show y/nbox>>
 <<show narratorbox>>
 
-//womancry
+<<play_sound "PlaySFXWomanCry">>
 y/n: Eugene... please, we need to talk...!
 y/n: We've been through so much. You will never shut doors in front of me...!
 <<hide y/nbox>>
@@ -411,7 +411,7 @@ Narrator: y/n collapsed to the ground and fainted.
     Narrator: Eugene slides out of the mansion, gliding across the driveway and straight to the main gate.
         -> arent u in a meeting??
             <<show y/nbox>>
-            //woman cry
+            <<play_sound "PlaySFXWomanCry">>
             y/n: Eugene... I'm sorry...
             Eugene: You... you refused her entry? How could you?!
             y/n: Do not blame them, my love... please...
@@ -420,19 +420,19 @@ Narrator: y/n collapsed to the ground and fainted.
             Eugene: My kind-hearted fluffy marshmellow... I won't let anyone hurt you like this!!
             <<hide eugene_sas>>
             <<show eugene_alpha>>
-            //howl
+            <<play_sound "PlaySFXWolfHowl">>
             Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
                 -> B*TCH it was u who told me
                     <<hide y/nbox>>
-                    <<play_sound "PlaySFXVineboom">>
-                    //punch
+                    <<play_sound "PlaySFXPunch">>
                     Narrator: The alpha turns around, *PUNCHED* you right in the face!
+                    <<play_sound "PlaySFXVineboom">>
                     <<show y/nbox>>
                     Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
                     Eugene: You are FIRED! Get out of my sight, you incompetent FOOL!
                     <<jump BadEnding2>>
                 -> oops
-                    //howl
+                    <<play_sound "PlaySFXWolfHowl">>
                     Eugene: How DARE you! How DARE you refuse her entry! Do you have ANY idea who she is to me?!
                     Eugene: You are FIRED! Get out of my sight, you incompetent FOOL!
                     <<jump BadEnding2>>
@@ -466,26 +466,26 @@ title: BadEnding2
 
 <<hide y/nbox>>
 <<show narratorbox>>
-//insert gameover music
+<<play_sound "SetMusicGameOver">>
 
 Narrator: oh wow.
 Narrator: You got fired right there and then, while Eugene carried Y/N into the mansion. 
 Narrator: So that's how you lost your first job after. 
 Narrator: Well, game over.
     -> wats that 'mindset' thing again
-        //casual
+        <<play_sound "SetMusicToCasualTheme">>
         Narrator: ofc! it still applies.
         Narrator: What I'm trynna say is, this world is not AS serious as u might think.
         Narrator: Turns out even the so-called most high-end places on earth aren't all they're cracked up to be. 
         Narrator: Good thing you saw through it early on——this world is FAR MORE ABSURD than we were told growing up. 
-        //upbeat
+        <<play_sound "SetMusicToUpbeatTheme">>
         Narrator: Who knows? maybe all those ppl you thought had their lives figured out, are a total mess behind the scene.
         Narrator: Wouldn't it be nice to know? Arent u curicous?
             -> but im fired
                 <<show y/nbox>>
                 <<background Outside>>
                 <<show secretary_calm>>
-                //casual
+                <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
@@ -502,7 +502,7 @@ Narrator: Well, game over.
                 <<hide y/box>>
                 <<background Outside>>
                 <<show secretary_calm>>
-                //casual
+                <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
@@ -514,10 +514,10 @@ Narrator: Well, game over.
                 Narrator: So, don't sweat it. Just go wild and HAVE FUN. 
                 Narrator: This game really isn't all that serious anyway.
     -> revive me rn imma BEAT the sh*t out of
-        //stopmusic
-        //Sparkle
+        <<play_sound "TurnOffMusic">>
+        <<play_sound "PlaySFXSparkle">>
         Narrator: daddy chill
-        //upbeat
+        <<play_sound "SetMusicToUpbeatTheme">>
         Narrator: But now u know, even the so-called most high-end places on earth aren't all they're cracked up to be. 
         Narrator: Good thing you saw through it——this world is FAR MORE ABSURD than we were told growing up. 
         Narrator: All those ppl you thought had their lives figured out, are probably a total mess behind the scene.
@@ -526,7 +526,7 @@ Narrator: Well, game over.
                 <<show y/nbox>>
                 <<background Outside>>
                 <<show secretary_calm>>
-                //casual
+                <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
@@ -543,7 +543,7 @@ Narrator: Well, game over.
                 <<hide y/box>>
                 <<background Outside>>
                 <<show secretary_calm>>
-                //casual
+                <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
@@ -586,8 +586,8 @@ title: IntoVilla_Confrontation
 
 <<show y/nbox>>
 <<show narratorbox>>
-//door open
-//door closed
+<<play_sound "PlaySFXDoorOpen">>
+<<play_sound "PlaySFXDoorClose">>
 
 <<play_sound "PlaySFXVineboom">>
 Eugene: Enough! You speak nothing but lies, kitten-whiskers.
@@ -595,19 +595,19 @@ Eugene: It's you who betrayed me, you who abandoned me, you who left me in the c
 y/n: But pookie, you know I could never leave you, I could never stop loving you...!
 Eugene: My little posioned apple...
 <<play_sound "PlaySFXVineboom">>
-//gasp
+<<play_sound "PlaySFXCrowdGasp">>
 Eugene: You were never scared of anything when you were with *VINCENT*, were you? 
     -> f in the chat
         y/n: I thought you were gone forever. I was lost in the dark, without your strong shoulders...
         <<hide eugene_sas>>
         <<show eugene_alpha>>
-        //howl
+        <<play_sound "PlaySFXWolfHowl">>
         Eugene: Lies! All lies! You are a deceitful little minx, a treacherous little siren!
         Eugene: SECURITY!!!
             -> oh wait right
                 Eugene: YOU THERE! Stop standing around, COME HERE.
                 Eugene: Take her away...! lock her up! 
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
                 <<hide eugene_alpha>>
                 <<show eugene_sas>>
@@ -615,13 +615,13 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 Eugene: I will lock you up somewhere you can never leave me again! 
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
                 <<hide y/nbox>>
-                //stop music
+                <<play_sound "TurnOffMusic">>
                 Narrator: is this legal? dont copy this irl
                 <<play_sound "SetMusicToDramaTheme">>
                 <<show y/nbox>>
                 Eugene: The gatehouse! Lock her up in the gatehouse. 
                 Eugene: DO NOT LET HER OUT. You listening? 
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: Eugene... please... don't do this to me...
                     -> ok grandma lets get u to bed
                     <<jump theGatehouse>>
@@ -629,7 +629,7 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
                 <<hide y/nbox>>
-                //stop music
+                <<play_sound "TurnOffMusic">>
                 Narrator: Wait, he actually didnt see you. 
                 <<show y/nbox>>
                 <<hide eugene_calm>>
@@ -642,13 +642,13 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<hide secretary_anxious>>
                 <<show secretary_calm>>
                 Eugene: Take her away...! lock her up! 
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
                 <<hide eugene_alpha>>
                 <<show eugene_sas>>
                 Eugene: I will lock you up somewhere you can never leave me again! 
                 <<hide y/nbox>>
-                //stop music
+                <<play_sound "TurnOffMusic">>
                 Narrator: is this legal tho? dont copy this irl
                 <<play_sound "SetMusicToDramaTheme">>
                 <<show y/nbox>>
@@ -659,7 +659,7 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 Secretary: YES BOSS!!
                 <<hide secretary_anxious>>
                 <<show y/n_sob>>
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: Eugene... please... don't do this to me...
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
@@ -669,34 +669,34 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<hide y/n_sob>>
                 <<jump EugeneSecrets>>
     -> what da hell r they talkin abt
-        //woman cry
+        <<play_sound "PlaySFXWomanCry">>
         y/n: Vincent... the name is like a shard of glass, slicing through my dainty ears!
         y/n: I thought you were gone forever. I was lost in the dark, without your strong shoulders...
         Eugene: You chose Vincent over me. You chose to run away with him, to hide in his weak arms!
         //Scandal who Vincent
         <<hide eugene_sas>>
         <<show eugene_alpha>>
-        //howl
+        <<play_sound "PlaySFXWolfHowl">>
         Eugene: Lies! All lies! You are a deceitful little minx, a treacherous little siren!
         Eugene: SECURITY!!!
             -> oh wait right
                 Eugene: YOU THERE! Stop standing around, COME HERE.
                 Eugene: Take her away...! lock her up! 
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: No! Please... Eugene... you know I have severe clusterfophia since I was 2!
                 <<hide eugene_alpha>>
                 <<show eugene_sas>>
                 Eugene: I will lock you up somewhere you can never leave me again! 
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
                 <<hide y/nbox>>
-                //stop
+                <<play_sound "TurnOffMusic">>
                 Narrator: is this legal tho? dont copy this irl
                 <<play_sound "SetMusicToDramaTheme">>
                 <<show y/nbox>>
                 Eugene: The gatehouse! Lock her up in the gatehouse. 
                 Eugene: DO NOT LET HER OUT. You listening? 
                 <<show y/n_sob>>
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: Eugene... please... don't do this to me...
                     -> ok grandma lets get u to bed
                     <<jump theGatehouse>>
@@ -704,13 +704,13 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
                 <<hide y/nbox>>
-                //stop
+                <<play_sound "TurnOffMusic">>
                 Narrator: Wait, he actually didnt see you. 
                 <<play_sound "SetMusicToDramaTheme">>
                 <<show y/nbox>>
                 <<hide eugene_calm>>
                 <<show eugene_alpha>>
-                //howl
+                <<play_sound "PlaySFXWolfHowl">>
                 Eugene: ...SECRETARY!!!!!
                 <<hide y/n_sob>>
                 <<show secretary_anxious>>
@@ -723,7 +723,7 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<show eugene_sas>>
                 Eugene: I will lock you up somewhere you can never leave me again! 
                 <<hide y/nbox>>
-                //stop
+                <<play_sound "TurnOffMusic">>
                 Narrator: is this legal tho? dont copy this irl
                 <<play_sound "SetMusicToDramaTheme">>
                 <<show y/nbox>>
@@ -734,7 +734,7 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 Secretary: YES BOSS!!
                 <<hide secretary_anxious>>
                 <<show y/n_sob>>
-                //woman cry
+                <<play_sound "PlaySFXWomanCry">>
                 y/n: Eugene... please... don't do this to me...
                 <<hide eugene_alpha>>
                 <<show eugene_calm>>
@@ -772,7 +772,7 @@ title: theGatehouse
 <<show y/nbox>>
 <<show narratorbox>>
 
-//woman cry
+<<play_sound "PlaySFXWomanCry">>
 y/n: Please... you don't understand... I need Eugene... I cannot live without him...
 y/n: This isn't right... you have no rights to lock me up like this...!
 y/n: You don't know how much he needs me. He'll become a monster without me, I swear... 
@@ -793,7 +793,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
                     -> does he know????
                         <<hide y/n_calm>>
                         <<show y/n_sob>>
-                        //crowd gasp
+                        <<play_sound "PlaySFXCrowdGasp">>
                         y/n: He doesn't know...!
                         y/n: I don't know who would fabricate these rumors about me and Vincent but its FALSE!
                         y/n: This baby——the fruit of our love——is the ultimate proof of my true devotion to Eugene...!
@@ -828,7 +828,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
                         <<hide obj_hair>>
                         <<jump theStudy>>
     -> did you actually cheat
-        //woman cry
+        <<play_sound "PlaySFXWomanCry">>
         <<play_sound "PlaySFXVineboom">>
         y/n: I WOULD NEVER CHEAT ON EUGENE!!!
         y/n: We have made sacred promises... he is my TRUE LOVE, my one and only.
@@ -840,7 +840,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
         <<show y/nbox>>
         y/n: My stomach... it hurts...
         <<play_sound "PlaySFXVineboom">>
-        //crowd gasp
+        <<play_sound "PlaySFXCrowdGasp">>
         y/n: I... I think... I'm having... a miscarriage... 
             -> u're having a WHAT?
                 y/n: Yes... Eugene's baby... the cystalization of our love...
@@ -862,7 +862,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
 title: EugeneSecrets
 ---
 <<background Villa>>
-//casual
+<<play_sound "SetMusicToCasualTheme">>
 
 <<show eugene_calm>>
 <<hide eugene_sas>>
@@ -895,7 +895,7 @@ Narrator: LOLLL I have no clue how u did it, but plz dont stop
         Eugene: ...
         Eugene: ......
         Eugene: Alexa, open projector.
-        //door open
+        <<play_sound "PlaySFXDoorOpen">>
         <<background Projector_0>>
         <<hide y/nbox>>
         Narrator: oh he's working
