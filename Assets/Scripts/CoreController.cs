@@ -44,6 +44,7 @@ public class CoreController : MonoBehaviour
     public UIManager ui;
     public EffectsManager fx;
     public SpawnManager spawns;
+    public BombManager bombManager;
 
     private int fill;
 
@@ -248,9 +249,7 @@ public class CoreController : MonoBehaviour
             CoreDirection direction = GetCoreDirectionForCollision(GetCursorWorldPos());
             fx?.TriggerPerfectPostFX(direction);
             fx?.DepositPop(true);
-            AudioManager.Instance.PlayEvent("PlaySFXPerfectSlap");
 
-            // Increment combo and apply combo multiplier to the batch score
             gm?.OnPerfectDeposit(true);
             float mul = gm != null ? gm.GetComboMultiplier() : 1f;
             totalPoints = Mathf.RoundToInt(totalPoints * mul);
@@ -258,10 +257,15 @@ public class CoreController : MonoBehaviour
         else
         {
             fx?.DepositPop(false);
-            // Non-perfect resets combo
             gm?.ResetCombo();
         }
 
+        // Bomb bonuses
+        if (bombManager != null)
+        {
+            totalPoints = Mathf.RoundToInt(totalPoints * bombManager.CurrentDepositMultiplier);
+            totalPoints += bombManager.ConsumeNextDepositBonus();
+        }
         AudioManager.Instance.PlayEvent("PlaySFXBonus");
 
         gm?.AddScore(totalPoints);
@@ -354,6 +358,11 @@ public class CoreController : MonoBehaviour
             {
                 pointsAwarded = 0;
             }
+        }
+        if (bombManager != null)
+        {
+            pointsAwarded = Mathf.RoundToInt(pointsAwarded * bombManager.CurrentDepositMultiplier);
+            pointsAwarded += bombManager.ConsumeNextDepositBonus();
         }
 
         gm?.AddScore(pointsAwarded);
