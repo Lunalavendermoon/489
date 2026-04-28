@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
     public float superDurationSeconds = 10f;
     public int superClickPoints = 40;
     public bool superPausesSpawns = true;
-    public AudioSource supermodeAudioSource;
     public float superClickCooldown = 0.15f;
     [Tooltip("Sprite shown when Super click hits from UP direction.")]
     public Sprite supermodeSpriteUp;
@@ -67,7 +66,7 @@ public class GameManager : MonoBehaviour
     public CoreController core;
     public EffectsManager fx;
     public MediaWaveSpawner mediaWaveSpawner;
-
+    public BombManager bombManager;
     private float superCountdownTimer;
     private float superTimer;
     private bool supermodeFromSongEnd = false;
@@ -207,10 +206,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Start supermode audio when countdown begins
-        if (supermodeAudioSource != null)
-        {
-            supermodeAudioSource.Play();
-        }
+        AudioManager.Instance.PlayEvent("SetBossFinale");
 
         ui?.ShowSuperCountdown(true);
         ui?.SetSuperCountdown(superCountdownTimer);
@@ -241,13 +237,9 @@ public class GameManager : MonoBehaviour
 
         if (supermodeFromSongEnd)
         {
-            // Stop supermode audio
-            if (supermodeAudioSource != null && supermodeAudioSource.isPlaying)
-            {
-                supermodeAudioSource.Stop();
-            }
 
             // Song ended, show end screen instead of returning to normal
+            AudioManager.Instance.PlayEvent("SetLevelComplete");
             supermodeFromSongEnd = false;
             state = GameState.EndScreen;
             ui?.ShowSuperUI(false);
@@ -256,11 +248,7 @@ public class GameManager : MonoBehaviour
         else
         {
             // Stop supermode audio only if regular supermode (not song end)
-            if (supermodeAudioSource != null && supermodeAudioSource.isPlaying)
-            {
-                supermodeAudioSource.Stop();
-            }
-
+            
             state = GameState.Normal;
             ui?.ShowSuperUI(false);
             ui?.ClearJudgment();
@@ -297,6 +285,8 @@ public class GameManager : MonoBehaviour
         bullets?.DespawnAllBullets();
         core?.ResetFill();
         mediaWaveSpawner.ResetSpawner();
+        bullets?.ResetTimeline();
+        bombManager?.ResetBombSystem();
 
         ui?.ShowGameOver(false, 0);
         ui?.ShowSuperUI(false);
@@ -325,17 +315,11 @@ public class GameManager : MonoBehaviour
 
             if (bullets != null)
             {
-                bullets.spawnBullets = false;
                 bullets.DespawnAllBullets();
             }
 
             ui?.ShowSuperUI(false);
             ui?.ShowSuperCountdown(false);
-        }
-        else
-        {
-            // Apply bullets toggle
-            if (bullets != null) bullets.spawnBullets = enableBullets;
         }
     }
 
