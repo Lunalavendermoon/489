@@ -135,13 +135,17 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
+        Debug.Log($"[GameManager] AddScore amount={amount}, oldScore={score}");
         score += Mathf.Max(0, amount);
+        Debug.Log($"[GameManager] New score after AddScore={score}");
         ui?.SetScore(score);
     }
 
     public void SubtractScore(int amount)
     {
+        Debug.Log($"[GameManager] SubtractScore amount={amount}, oldScore={score}");
         score = Mathf.Max(0, score - Mathf.Max(0, amount));
+        Debug.Log($"[GameManager] New score after SubtractScore={score}");
         ui?.SetScore(score);
     }
 
@@ -190,7 +194,6 @@ public class GameManager : MonoBehaviour
         SubtractScore(scorePenaltyOnHit);
         AudioManager.Instance.PlayEvent("PlaySFXEnemy");
         fx?.ShakeSmall();
-        ui?.FlashDamage();
     }
 
     public void RequestSuperCountdown()

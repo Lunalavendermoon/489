@@ -275,12 +275,10 @@ public class CoreController : MonoBehaviour
         ui?.ShowSpecialScore(totalPoints);
         // Fill once per batch
         fill += specialBatchFillAmount;
-        UpdateFillUI();
 
         if (fill >= fillMax)
         {
             fill = fillMax;
-            UpdateFillUI();
             // Disabled: auto-supermode trigger. Supermode now only triggers at song end.
             // gm.RequestSuperCountdown();
         }
@@ -370,14 +368,12 @@ public class CoreController : MonoBehaviour
         if (shouldDespawn)
         {
             fill += dotFillAmount;
-            UpdateFillUI();
             dot.DespawnSelf();
         }
 
         if (fill >= fillMax)
         {
             fill = fillMax;
-            UpdateFillUI();
             // Disabled: auto-supermode trigger. Supermode now only triggers at song end.
             // gm.RequestSuperCountdown();
         }
@@ -404,15 +400,9 @@ public class CoreController : MonoBehaviour
         batchAnyPerfect = false;
     }
 
-    private void UpdateFillUI()
-    {
-        ui?.SetCoreFill(Mathf.Clamp01(fill / (float)Mathf.Max(1, fillMax)));
-    }
-
     public void ResetFill()
     {
         fill = 0;
-        UpdateFillUI();
         ResetBatch();
     }
 }

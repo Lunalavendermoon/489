@@ -131,14 +131,14 @@ public class EffectsManager : MonoBehaviour
         if (perfect)
         {
             if (now - lastPerfectTime < perfectCooldown) return;
-            Debug.Log("Playing PERFECT deposit sound");
+            //Debug.Log("Playing PERFECT deposit sound");
             AudioManager.Instance.PlayEvent("PlaySFXPerfectSlap");
             lastPerfectTime = now;
         }
         else
         {
             if (now - lastNormalTime < normalCooldown) return;
-            Debug.Log("Playing normal deposit sound");
+            //Debug.Log("Playing normal deposit sound");
             AudioManager.Instance.PlayEvent("PlaySFXSlap");
             lastNormalTime = now;
         }

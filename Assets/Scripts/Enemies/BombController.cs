@@ -126,6 +126,7 @@ public class BombController : MonoBehaviour
         {
             lowWarningTriggered = true;
             // TODO: Play low bomb warning SFX here
+            AudioManager.Instance.PlayEvent("PlaySFXWolfHowl");
         }
 
         if (currentCountdown <= 0f)
@@ -216,8 +217,10 @@ public class BombController : MonoBehaviour
 
             currentCountdown = Mathf.Min(maxCountdown, currentCountdown + timeRestoreOnHit);
             bombManager?.GrantNextDepositBonus(nextDepositBonusOnHit);
+            Debug.Log($"[Bomb] Successful hit on {name}. Granted next deposit bonus: {nextDepositBonusOnHit}");
 
             // TODO: Play successful bomb hit / stabilize SFX here
+            AudioManager.Instance.PlayEvent("PlaySFXPunch");
 
             lowWarningTriggered = currentCountdown <= criticalThreshold;
             UpdateVisual();
@@ -233,6 +236,7 @@ public class BombController : MonoBehaviour
             gm?.ResetCombo();
 
         // TODO: Play bomb explosion SFX here
+        AudioManager.Instance.PlayEvent("PlaySFXVineboom");
 
         currentCountdown = maxCountdown;
         isAttackable = false;

@@ -17,6 +17,9 @@ public class BombManager : MonoBehaviour
     [Min(0f)] public float depositBonusPerActiveBomb = 0.05f;
 
     [Header("Next Deposit Bonus")]
+    [Tooltip("If greater than 0, caps how much flat bomb bonus can be stored at once. Set to 0 for no cap.")]
+    [Min(0)] public int maxStoredNextDepositBonus = 0;
+
     [SerializeField] private bool hasStoredNextDepositBonus = false;
     [SerializeField] private int storedNextDepositBonus = 0;
 
@@ -95,18 +98,29 @@ public class BombManager : MonoBehaviour
     {
         if (amount <= 0) return;
 
-        hasStoredNextDepositBonus = true;
-        storedNextDepositBonus = amount;
+        storedNextDepositBonus += amount;
+
+        if (maxStoredNextDepositBonus > 0)
+            storedNextDepositBonus = Mathf.Min(storedNextDepositBonus, maxStoredNextDepositBonus);
+
+        hasStoredNextDepositBonus = storedNextDepositBonus > 0;
+
+        Debug.Log($"[BombManager] Granted next deposit bonus: +{amount}, total stored = {storedNextDepositBonus}");
     }
 
     public int ConsumeNextDepositBonus()
     {
-        if (!hasStoredNextDepositBonus)
+        if (!hasStoredNextDepositBonus || storedNextDepositBonus <= 0)
+        {
+            Debug.Log("[BombManager] No stored next deposit bonus to consume.");
             return 0;
+        }
 
         int bonus = storedNextDepositBonus;
         hasStoredNextDepositBonus = false;
         storedNextDepositBonus = 0;
+
+        Debug.Log($"[BombManager] Consumed stacked next deposit bonus: {bonus}");
         return bonus;
     }
 

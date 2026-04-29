@@ -7,8 +7,6 @@ public class UIManager : MonoBehaviour
     [Header("Bars")]
 
     public Slider superSlider;
-    public Image coreFillImage; // radial fill
-    public Slider coreFillSlider; // optional alternative
 
     [Header("Text")]
     public TMP_Text scoreText;
@@ -43,10 +41,6 @@ public class UIManager : MonoBehaviour
     public TMP_Text endScoreText;
     public TMP_Text endGradeText;
 
-    [Header("Damage Flash (optional)")]
-    public Image damageFlash;
-    public float flashFadeSpeed = 6f;
-
     private void Awake()
     {
         // Ensure special texts start hidden/clean
@@ -62,13 +56,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        // Damage flash fade (optional)
-        if (damageFlash != null && damageFlash.color.a > 0f)
-        {
-            Color c = damageFlash.color;
-            c.a = Mathf.MoveTowards(c.a, 0f, flashFadeSpeed * Time.deltaTime);
-            damageFlash.color = c;
-        }
 
         // Special score pop fade
         if (specialScoreText != null)
@@ -87,12 +74,6 @@ public class UIManager : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void SetCoreFill(float fill01)
-    {
-        if (coreFillImage != null) coreFillImage.fillAmount = fill01;
-        if (coreFillSlider != null) coreFillSlider.value = fill01;
     }
 
     public void SetScore(int score)
@@ -205,14 +186,6 @@ public class UIManager : MonoBehaviour
     {
         if (gameOverPanel != null) gameOverPanel.SetActive(show);
         if (finalScoreText != null) finalScoreText.text = $"Final Score: {finalScore:n0}";
-    }
-
-    public void FlashDamage()
-    {
-        if (damageFlash == null) return;
-        Color c = damageFlash.color;
-        c.a = 0.35f;
-        damageFlash.color = c;
     }
 
     public void ShowEndScreen(bool show, int finalScore, string grade)
