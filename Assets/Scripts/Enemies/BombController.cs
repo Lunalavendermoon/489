@@ -47,9 +47,14 @@ public class BombController : MonoBehaviour
     public bool resetComboOnExplode = true;
 
     [Header("Visuals")]
+    [Tooltip("Base color when the bomb has lots of time left.")]
     public Color normalColor = Color.white;
+
+    [Tooltip("Color shown while the bomb is attackable.")]
     public Color openColor = new Color(1f, 0.8f, 0.2f, 1f);
-    public Color criticalColor = new Color(1f, 0.25f, 0.25f, 1f);
+
+    [Tooltip("Color the bomb gradually shifts toward as time runs out.")]
+    public Color dangerColor = new Color(1f, 0.2f, 0.2f, 1f);
 
     [Header("Pulse")]
     [Tooltip("Base scale when idle.")]
@@ -276,10 +281,18 @@ public class BombController : MonoBehaviour
         }
 
         if (isAttackable)
+        {
             spriteRenderer.color = openColor;
-        else if (currentCountdown <= criticalThreshold)
-            spriteRenderer.color = criticalColor;
-        else
-            spriteRenderer.color = normalColor;
+            return;
+        }
+
+        // 0 = full timer left, 1 = almost exploded
+        float danger01 = 1f - Countdown01;
+        danger01 = Mathf.Clamp01(danger01);
+
+        // Optional easing so it stays calmer early and gets redder faster near the end
+        danger01 = danger01 * danger01;
+
+        spriteRenderer.color = Color.Lerp(normalColor, dangerColor, danger01);
     }
 }

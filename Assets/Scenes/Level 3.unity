@@ -2441,11 +2441,19 @@ PrefabInstance:
       objectReference: {fileID: 1164069692}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: timeRestoreOnHit
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: criticalThreshold
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: baseSpriteRenderer
+      value: 
+      objectReference: {fileID: 1164069692}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: dangerFillRenderer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: maxPulseMultiplier
@@ -2454,6 +2462,10 @@ PrefabInstance:
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: maxScaleMultiplier
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: dangerFillTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: activeScaleMultiplier
@@ -3339,8 +3351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   superSlider: {fileID: 2140429845}
-  coreFillImage: {fileID: 0}
-  coreFillSlider: {fileID: 0}
   scoreText: {fileID: 2114057755}
   comboText: {fileID: 458932203}
   judgmentText: {fileID: 270521767}
@@ -3355,8 +3365,6 @@ MonoBehaviour:
   endPanel: {fileID: 393984895}
   endScoreText: {fileID: 546042965}
   endGradeText: {fileID: 192433392}
-  damageFlash: {fileID: 0}
-  flashFadeSpeed: 6
 --- !u!1 &1795166334
 GameObject:
   m_ObjectHideFlags: 0
