@@ -12,10 +12,6 @@ public class BombManager : MonoBehaviour
     [Tooltip("Assign fixed bomb instances placed in the scene.")]
     public List<BombController> bombs = new List<BombController>();
 
-    [Header("Progression")]
-    [Tooltip("Seconds since run start when each additional bomb becomes active.")]
-    public List<float> bombUnlockTimes = new List<float>() { 20f, 50f, 90f };
-
     [Header("Deposit Multiplier")]
     [Tooltip("Each active bomb increases deposit score by this multiplier amount.")]
     [Min(0f)] public float depositBonusPerActiveBomb = 0.05f;
@@ -28,21 +24,18 @@ public class BombManager : MonoBehaviour
     [SerializeField] private float elapsedTime;
     [SerializeField] private int activeBombCount;
 
+    public float ElapsedTime => elapsedTime;
     public int ActiveBombCount => activeBombCount;
     public bool HasStoredNextDepositBonus => hasStoredNextDepositBonus;
     public int StoredNextDepositBonus => storedNextDepositBonus;
 
     public float CurrentDepositMultiplier
     {
-        get
-        {
-            return 1f + (activeBombCount * depositBonusPerActiveBomb);
-        }
+        get { return 1f + (activeBombCount * depositBonusPerActiveBomb); }
     }
 
     private void Awake()
     {
-        SortUnlockTimes();
         WireBombRefs();
         ResetBombSystem();
     }
@@ -53,7 +46,7 @@ public class BombManager : MonoBehaviour
             return;
 
         elapsedTime += Time.deltaTime;
-        UpdateActiveBombsFromTimeline();
+        UpdateBombActivation();
     }
 
     private void WireBombRefs()
@@ -70,35 +63,23 @@ public class BombManager : MonoBehaviour
         }
     }
 
-    private void SortUnlockTimes()
+    private void UpdateBombActivation()
     {
-        bombUnlockTimes.Sort();
-    }
-
-    private void UpdateActiveBombsFromTimeline()
-    {
-        int targetActive = 0;
-
-        for (int i = 0; i < bombUnlockTimes.Count; i++)
-        {
-            if (elapsedTime >= bombUnlockTimes[i])
-                targetActive++;
-        }
-
-        targetActive = Mathf.Clamp(targetActive, 0, bombs.Count);
-
-        if (targetActive == activeBombCount)
-            return;
+        int count = 0;
 
         for (int i = 0; i < bombs.Count; i++)
         {
             BombController bomb = bombs[i];
             if (bomb == null) continue;
 
-            if (i < targetActive)
+            bool shouldBeActive = elapsedTime >= bomb.ActivateAtTime;
+
+            if (shouldBeActive)
             {
                 if (!bomb.IsActiveBomb)
                     bomb.ActivateBomb();
+
+                count++;
             }
             else
             {
@@ -107,7 +88,7 @@ public class BombManager : MonoBehaviour
             }
         }
 
-        activeBombCount = targetActive;
+        activeBombCount = count;
     }
 
     public void GrantNextDepositBonus(int amount)

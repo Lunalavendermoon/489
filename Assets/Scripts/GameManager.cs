@@ -1,4 +1,6 @@
 // GameManager.cs
+using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public enum GameState { Normal, CountdownToSuper, Super, GameOver, EndScreen }
 
+    public float waitTime = 0.5f;
     [Header("Mode Toggles")]
     [Tooltip("Practice mode: only dots + curves. Disables bullets and Super Mode.")]
     public bool dotsAndCurvesOnlyMode = false;
@@ -79,7 +82,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        RestartGame();
+        //RestartGame();
+        StartCoroutine(BeginGameRoutine());
     }
 
     private void Update()
@@ -278,6 +282,7 @@ public class GameManager : MonoBehaviour
         state = GameState.Normal;
         score = 0;
         combo = 0;
+        
         beat?.ResetSongClock();
         spawns?.ResetAll();
         timedDotSpawns?.ResetTimeline();
@@ -298,7 +303,16 @@ public class GameManager : MonoBehaviour
         spawns?.SetPaused(false);
         bullets?.SetPaused(false);
     }
+    private IEnumerator BeginGameRoutine()
+    {
+    #if UNITY_EDITOR
+        yield return new WaitForSeconds(waitTime);
+    #endif
 
+        RestartGame();
+
+        AudioManager.Instance.PlayEvent("SetMusicToDiesIrae");
+    }
     private void ApplyModeRules()
     {
         if (spawns != null)

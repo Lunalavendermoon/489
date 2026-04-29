@@ -5,6 +5,7 @@ using UnityEngine;
 public class BeatManager : MonoBehaviour
 {
     [System.Serializable]
+    
     public class PulseSpriteTarget
     {
         public Transform target;
@@ -45,7 +46,6 @@ public class BeatManager : MonoBehaviour
 
     [Header("Song End")]
     public GameManager gm;
-
     public event Action OnPeak;
 
     public float BeatDuration => 60f / Mathf.Max(1f, bpm);
