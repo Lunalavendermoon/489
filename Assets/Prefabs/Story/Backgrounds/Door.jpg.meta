@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: cfc654ec6ecfd09498c3e5a12a914deb
+guid: da7ca84cd69360f4fa6c49256182ceed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1914279029325653879
-    second: Obj_Hair_0
-  - first:
-      213: -2288399199003368924
-    second: Obj_Hair_1
+      213: 5213229242370633579
+    second: Door_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Obj_Hair_0
+      name: Door_0
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 2050
-        width: 519
-        height: 210
+        x: 0
+        y: 0
+        width: 4800
+        height: 2700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98890187d5d1f65e0800000000000000
-      internalID: -1914279029325653879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obj_Hair_1
-      rect:
-        serializedVersion: 2
-        x: 1109
-        y: 1031
-        width: 2561
-        height: 1322
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 422ad1f8d09fd30e0800000000000000
-      internalID: -2288399199003368924
+      spriteID: b6f2e24006c195840800000000000000
+      internalID: 5213229242370633579
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Obj_Hair_0: -1914279029325653879
-      Obj_Hair_1: -2288399199003368924
+      Door_0: 5213229242370633579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

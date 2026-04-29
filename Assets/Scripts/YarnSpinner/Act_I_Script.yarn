@@ -7,10 +7,13 @@
 <<hide eugene_calm>>
 <<hide eugene_sas>>
 <<hide eugene_alpha>>
+<<hide eugene_collared>>
 <<hide y/n_calm>>
 <<hide y/n_sob>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
+<<hide vincent>>
+<<hide vincent_shadow>>
 <<show player>>
 
 <<hide cc_life>>
@@ -22,6 +25,8 @@
 <<hide cc_pill>>
 <<hide obj_report>>
 <<hide obj_hair>>
+<<hide obj_collar>>
+<<hide obj_key>>
 
 <<hide y/nbox>>
 <<show narratorbox>>
@@ -240,6 +245,7 @@ title: IntoVilla
 <<play_sound "PlaySFXHelicopter">>
 Narrator: DANGGGGG whos that
 Narrator: seems like its no other than *Eugene Arthur K. Windsar A. Percival Gallinaceus* himself!
+<<play_sound "PlaySFXFootsteps">>
 Narrator: Hopping off the private jet and walking towards the gate like wide putin meme
 <<show y/nbox>>
 <<hide eugene_calm>>
@@ -278,6 +284,7 @@ Narrator: The alpha walked straight pass you, and threw his black Armani coat on
                 <<show eugene_alpha>>
                 <<play_sound "PlaySFXWolfHowl">>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
+                <<play_sound "PlaySFXFootsteps">>
                 <<jump IntoVilla_YN>>
             -> where to put your coat m'boss?
                 <<detour IntoVilla_FirstDirec>>
@@ -285,6 +292,7 @@ Narrator: The alpha walked straight pass you, and threw his black Armani coat on
                 <<show eugene_alpha>>
                 <<play_sound "PlaySFXWolfHowl">>
                 Eugene: Now TIME IS MONEY, I need everyone to get MOVING!!
+                <<play_sound "PlaySFXFootsteps">>
                 <<jump IntoVilla_YN>>
 ===
 
@@ -473,7 +481,6 @@ Narrator: You got fired right there and then, while Eugene carried Y/N into the 
 Narrator: So that's how you lost your first job after. 
 Narrator: Well, game over.
     -> wats that 'mindset' thing again
-        <<play_sound "SetMusicToCasualTheme">>
         Narrator: ofc! it still applies.
         Narrator: What I'm trynna say is, this world is not AS serious as u might think.
         Narrator: Turns out even the so-called most high-end places on earth aren't all they're cracked up to be. 
@@ -487,7 +494,9 @@ Narrator: Well, game over.
                 <<show secretary_calm>>
                 <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
+                <<play_sound "PlaySFXVineboom">>
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                <<play_sound "PlaySFXManSigh">>
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
                 Secretary: Now go inside the villa.
                 <<hide y/nbox>>
@@ -504,7 +513,9 @@ Narrator: Well, game over.
                 <<show secretary_calm>>
                 <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
+                <<play_sound "PlaySFXVineboom">>
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                <<play_sound "PlaySFXManSigh">>
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
                 Secretary: Now go inside the villa. 
                 <<show narratorbox>>
@@ -528,7 +539,9 @@ Narrator: Well, game over.
                 <<show secretary_calm>>
                 <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
+                <<play_sound "PlaySFXVineboom">>
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                <<play_sound "PlaySFXManSigh">>
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
                 Secretary: Now go inside the villa.
                 <<hide y/nbox>>
@@ -545,7 +558,9 @@ Narrator: Well, game over.
                 <<show secretary_calm>>
                 <<play_sound "SetMusicToCasualTheme">>
                 Secretary: Hey, you. Come back.
+                <<play_sound "PlaySFXVineboom">>
                 Secretary: We can't get anyone else at this moment, you're the only one who showed up. 
+                <<play_sound "PlaySFXManSigh">>
                 Secretary: Just change your clothes. Boss got a million things on his plate every day, no one will know.
                 Secretary: Now go inside the villa. 
                 <<show narratorbox>>
@@ -665,6 +680,8 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<show eugene_calm>>
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
                 <<hide y/nbox>>
+                <<play_sound "PlaySFXFootsteps">>
+                <<play_sound "PlaySFXWomanCry">>
                 Narrator: geez, they totally towed her away.
                 <<hide y/n_sob>>
                 <<jump EugeneSecrets>>
@@ -740,6 +757,8 @@ Eugene: You were never scared of anything when you were with *VINCENT*, were you
                 <<show eugene_calm>>
                 Eugene: My little lost lamb, I will build a maze... a labyrinth... a prison... just for you...
                 <<hide y/nbox>>
+                <<play_sound "PlaySFXFootsteps">>
+                <<play_sound "PlaySFXWomanCry">>
                 Narrator: geez, they totally towed her away.
                 <<hide y/n_sob>>
                 <<jump EugeneSecrets>>
@@ -854,7 +873,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
                 <<play_sound "PlaySFXVineboom">>
                 Narrator: At a time like this?? B*tch u gotta be kidding me
                 Narrator: We have to do something. We need the baby father to know. 
-                Narrator: Let's go lets go!
+                Narrator: Let's go LETS GO!
                 <<hide obj_hair>>
                 <<jump theStudy>>
 ===
@@ -862,7 +881,7 @@ y/n: You don't know how much he needs me. He'll become a monster without me, I s
 title: EugeneSecrets
 ---
 <<background Villa>>
-<<play_sound "SetMusicToCasualTheme">>
+<<play_sound "SetMusicToTragicTheme">>
 
 <<show eugene_calm>>
 <<hide eugene_sas>>
@@ -888,28 +907,34 @@ title: EugeneSecrets
 
 Narrator: Still, i dont think anyone has yet to realize that ur here too. 
 Narrator: You're just at your corner of the room, blending in with all the fancy furnatures.
-Narrator: LOLLL I have no clue how u did it, but plz dont stop
+Narrator: LOLLL I have no clue how u did it, but plz keep quiet
     -> ...
         <<show y/nbox>>
         Eugene: ...
         Eugene: ...
         Eugene: ......
-        Eugene: Alexa, open projector.
+        Eugene: Alexius, open projector.
         <<play_sound "PlaySFXDoorOpen">>
         <<background Projector_0>>
         <<hide y/nbox>>
+        Narrator: what is an alexius
         Narrator: oh he's working
         <<show y/nbox>>
         <<play_sound "PlaySFXVineboom">>
-        Eugene: Alexa, show me latest revenue of Princess Sparkle Dress-up: Royal Academy. //Secret Revenue -> Scandal
+        Eugene: Alexius, show me latest revenue of Princess Sparkle Dress-up: Royal Academy. //Secret Revenue -> Scandal
             -> ...?
                 <<play_sound "SetMusicToDramaTheme">>
+                <<hide y/nbox>>
+                Narrator: ...98% percent of the Gallinaceous company revenue...
+                Narrator: comes from a gacha game called Princess Sparkle Dress-up: Royal Academy???
+                <<play_sound "PlaySFXVineboom">>
+                <<show y/nbox>>
                 <<hide eugene_calm>>
                 <<show eugene_sas>>
-                <<play_sound "PlaySFXVineboom">>
                 Eugene: Idiots. We could have just plagarized Fro*en for winter speical gown.
-                Eugene: Alexa, call the design team, add a limited new gacha pool with 90 pity rate. 
-                Eugene: Actually, make it 120. The kids can't say no to this one.  
+                <<play_sound "PlaySFXVineboom">>
+                Eugene: Alexius, call the design team, add a limited new gacha pool with 90 pity rate. 
+                Eugene: Actually, make it 120. The kids can't say no to this one. 
                     -> *quietly... leave the scene*
                         <<jump Busted>>
                     -> *QUIETLY LEAVE THE SCENE...!*
@@ -920,70 +945,272 @@ Narrator: LOLLL I have no clue how u did it, but plz dont stop
         <<hide eugene_calm>>
         <<show eugene_sas>>
         Eugene: YOU THERE. Yeah, you. 
+        <<play_sound "PlaySFXManSigh">>
         Eugene: My head is gonna explode. Go grab my med.
-            -> which med
+            -> what med
                 <<hide eugene_calm>>
                 <<show eugene_sas>>
-                Eugene: The green one. 
+                Eugene: the GREEN ONE.
                 Eugene: NOW GO. BE BACK IN 10 SECONDS or I'll fire you.
-                <<detour Meds>>
-
-                Narrator: Before you leave the bedroom, something caught your eyes.
-                <<show obj_report>>
-                Narrator: wait what
-                <<show y/nbox>>
-                <<show eugene_alpha>>
-                Eugene: WHAT, ARE, YOU, DOING?!
-                <<jump Busted>>
+                <<jump Meds>>
             -> on it
                 <<hide eugene_calm>>
                 <<show eugene_sas>>
+                Eugene: Remember, the GREEN ONE.
                 Eugene: NOW GO. BE BACK IN 10 SECONDS or I'll fire you.
-                <<detour Meds>>
-
-                Narrator: Before you leave the bedroom, something caught your eyes.
-                <<show obj_report>>
-                Narrator: wait what
-                <<show y/nbox>>
-                <<show eugene_alpha>>
-                Eugene: WHAT, ARE, YOU, DOING?!
-                <<jump Busted>>
+                <<jump Meds>>
 ===
 
-//stayed but grab meds -> 
+//stayed but grab meds -> wolf syndrome 
 title: Meds
 ---
 <<hide eugene_sas>>
 <<hide y/nbox>>
-Narrator: nice, now you're in the bedroom of sir Eugene Gallinaceus. 
 <<background Bedroom_0>>
+<<play_sound "PlaySFXDoorOpen">>
+Narrator: nice, now you're in the bedroom of sir Eugene Gallinaceus. 
+    -> i have INFILTRATED
+        Narrator: nice we're SO in 
+        Narrator: Lets just grab the med and leave
+        <<background Drawer_0>>
+        <<play_sound "PlaySFXDoorOpen">>
+        Narrator: Opening the drawer, you see only two types of pills. 
+        Narrator: I guess he's too healthy for a fully-funcitoning adult in this economy. 
+        <<show cc_pill>>
+        <<play_sound "PlaySFXVineboom">>
+        Narrator: Alright
+        Narrator: Feel free to take a pause here, have all the time to decide
+        Narrator: Let's go lets go
+            -> *grab A*
+                <<jump Eugene_Basement>>
+            -> *grab B*
+                <<jump Eugene_Basement>>
+            -> bro i cant tell
+                <<jump Meds_Decision>>
     -> man who wants to be here
         Narrator: Trust me bro I dont want to be here too
         Narrator: i prefer to stay away from that bed
         Narrator: Lets just grab the med and leave
+        <<play_sound "PlaySFXDoorOpen">>
         <<background Drawer_0>>
         Narrator: Opening the drawer, you see only two types of pills. 
         Narrator: I guess he's too healthy for a fully-funcitoning adult in this economy. 
         <<show cc_pill>>
-        Narrator: Alright, go go go
-        Narrator: What are you waiting for——
+        <<play_sound "PlaySFXVineboom">>
+        Narrator: Alright make sure u grab the right one
+        Narrator: Let's go lets go
             -> *grab A*
+                <<jump Eugene_Basement>>
             -> *grab B*
-
-
-    -> i have infiltrated
-        Narrator: Trust me bro I dont want to be here too
-        Narrator: i prefer to stay away from that bed
-        Narrator: Lets just grab the med and leave
-        <<background Drawer_0>>
-        Narrator: Opening the drawer, you see only two types of pills. 
-        Narrator: I guess he's too healthy for a fully-funcitoning adult in this economy. 
-        <<show cc_pill>>
-        Narrator: Alright, go go go
-        Narrator: What are you waiting for——
-            -> *grab A*
-            -> *grab B*
+                <<jump Eugene_Basement>>
+            -> bro i cant tell
+                <<jump Meds_Decision>>
 ===
+
+title: Meds_Decision
+---
+Narrator: wdym u cant tell
+<<hide cc_pill>>
+Narrator: fine if u rlly want to be responsible to eugene, lemme see
+Narrator: man
+Narrator: the drug instructions are not here
+Narrator: Maybe look around? how about other drawers 
+<<background Bedroom_0>>
+Narrator: I'll look for it with u
+<<play_sound "PlaySFXFootsteps">>
+<<show obj_key>>
+Narrator: oh wait whats that?
+Narrator: A key? maybe eugene has a secret storage of drugs lol 
+Narrator: what door does it open?
+<<hide obj_key>>
+<<background Door_0>>
+Narrator: Dangggg secret chamberrrrr
+Narrator: Well since now we have the key, we might be able to open it
+Narrator: but u know, totally up to u tho
+Narrator: we can also just grab either A or B and leave
+Narrator: so, whats the verdict?
+    -> *Open door*
+        <<jump Basement>>
+    -> *just grab A and leave*
+        <<jump Eugene_Basement>>
+    -> *just grab B and leave*
+        <<jump Eugene_Basement>>
+===
+
+title: Basement
+---
+<<play_sound "SetMusicToDramaTheme">>
+<<hide cc_pill>>
+<<play_sound "PlaySFXDoorOpen">>
+<<play_sound "PlaySFXDoorClose">>
+<<background Basement_0>>
+<<play_sound "PlaySFXCrowdGasp">>
+Narrator: what
+Narrator: the
+Narrator: ...fuck
+<<play_sound "PlaySFXVineboom">>
+Narrator: Is this even pg-13 HOLD UPP
+Narrator: if ur under 13 please close ur eyes right now
+<<play_sound "PlaySFXVineboom">>
+Narrator: Wait actually 
+Narrator: WAIT
+Narrator: These are just normal PET SUPPLIES! nothing weird
+Narrator: These are ACTUAL dog leashes, dog collars, and dog cage
+Narrator: All ones u can find in Petsma*t irl for 20 bucks
+Narrator: PHEWWWWWWWWWWW normal pet supplies guys 
+<<play_sound "PlaySFXSparkle">>
+Narrator: lmaoooo what were u thinking just now??
+    -> what were YOU thinking
+        Narrator: low k who puts their dog in a basement 
+        Narrator: but maybe eugene had a pet dog before 
+        Narrator: Awwww they must be very close
+        <<show obj_collar>>
+        Narrator: Or else why would he named it "Eugene" too? awwww so cute
+            -> ...?
+                <<show eugene_alpha>>
+                <<play_sound "PlaySFXWolfHowl">>
+                <<show y/nbox>>
+                Eugene: WHAT, ARE, YOU, DOING IN HERE?!!
+                <<hide obj_collar>>
+                <<jump Busted>>
+            -> UHHhh i dont think
+                <<show eugene_alpha>>
+                <<play_sound "PlaySFXWolfHowl">>
+                <<show y/nbox>>
+                Eugene: WHAT, ARE, YOU, DOING IN HERE?!!!
+                <<hide obj_collar>>
+                <<jump Busted>>
+===
+
+title: Eugene_Basement
+---
+<<hide cc_pill>>
+<<background Villa>>
+<<show eugene_sas>>
+<<show y/nbox>>
+Eugene: Idiot! what's taking you so long?!
+Eugene: My head is gonna break into half!
+Eugene: Gimme right now.
+<<hide y/nbox>>
+Narrator: He did not look before throwing it into his mouth.
+Narrator: if he dies i mean lol we just might not care
+<<show y/nbox>>
+<<show eugene_calm>>
+Eugene: ...
+<<show eugene_sas>>
+<<show eugene_calm>>
+Eugene: ...
+<<hide eugene_calm>>
+<<show eugene_sas>>
+Eugene: ......
+<<hide eugene_sas>>
+<<show eugene_calm>>
+<<play_sound "PlaySFXVineboom">>
+<<hide eugene_calm>>
+<<show eugene_alpha>>
+<<play_sound "PlaySFXWolfHowl">>
+Eugene: RRRRRRRROOOOAAAAAAARRRRRRRRRR!!!!!
+<<play_sound "SetMusicToDramaTheme">>
+<<hide y/nbox>>
+Narrator: what---the---faaaahhhhh----------
+<<hide eugene_alpha>>
+Narrator: HOLY SHIT HE'S CRAWLING ON THE GROUND
+    -> HE DISAPPEARED
+        Narrator: HOLY SHIT HE'S BARKING
+        <<show y/nbox>>
+        Eugene: GRRRRR... BARK! BARK! BARK! WOOF!
+        <<play_sound "PlaySFXVineboom">>
+        <<play_sound "PlaySFXWolfHowl">>
+        Eugene: GRRR-RAFF! BARK! SNARL! ARF! ARF! AWOOOOOO! WOOF! BARK!
+        <<play_sound "PlaySFXWolfHowl">>
+        <<hide y/nbox>>
+        Narrator: EUGENE I COMMAND U WITH THE POWER OF GOD AND ANIME
+        Narrator: BACK OFF AND WAKE DA FAK UP
+        <<show eugene_alpha>>
+        <<show y/nbox>>
+        Eugene: ...Hey u..! You have to... you have to listen to me! 
+        Eugene: I don't have much time before the... grrr... before it completely takes over!
+        <<play_sound "PlaySFXVineboom">>
+        Eugene: It is burning in my chest, this absolutely overwhelming need to— w-woof! No! Focus!
+        Eugene: Please, you have to help me. There is an item, an artifact. It is a *pink sparkle collar*... in the basement.
+        <<play_sound "PlaySFXVineboom">>
+        Eugene: I know how it sounds, but it’s the only cure for this... this feral syndrome! Arf! Arf! ...Please!
+        <<play_sound "PlaySFXWolfHowl">>
+        Eugene: I can feel myself slipping... find the collar and bring it back to me before I completely lose my mind and just... AWOOOO— Go!
+        Eugene: GRRR-RAFF! BARK! SNARL! ARF! ARF! AWOOOOOO! WOOF! BARK!
+        <<hide y/nbox>>
+        Narrator: alright ALRIGHT LETS GET GOING 
+        Narrator: BEFORE HE BITES US BOTH
+        Narrator: ITS THAT DOOR
+        Narrator: I know that's where the basement is LETS GO!!
+        <<hide eugene_alpha>>
+        <<jump Eugene_Basement2>>
+    -> FUCK NO
+        Narrator: HOLY SHIT HE'S BARKING
+        <<show y/nbox>>
+        Eugene: GRRRRR... BARK! BARK! BARK! WOOF!
+        <<play_sound "PlaySFXVineboom">>
+        <<play_sound "PlaySFXWolfHowl">>
+        Eugene: GRRR-RAFF! BARK! SNARL! ARF! ARF! AWOOOOOO! WOOF! BARK!
+        <<play_sound "PlaySFXWolfHowl">>
+        <<hide y/nbox>>
+        Narrator: EUGENE I COMMAND U WITH THE POWER OF GOD AND ANIME
+        Narrator: BACK OFF AND WAKE DA FAK UP
+        <<show eugene_alpha>>
+        <<show y/nbox>>
+        Eugene: ...Hey u..! You have to... you have to listen to me! 
+        Eugene: I don't have much time before the... grrr... before it completely takes over!
+        <<play_sound "PlaySFXVineboom">>
+        Eugene: It is burning in my chest, this absolutely overwhelming need to— w-woof! No! Focus!
+        Eugene: Please, you have to help me. There is an item, an artifact. It is a *pink sparkle collar*... in the basement.
+        <<play_sound "PlaySFXVineboom">>
+        Eugene: I know how it sounds, but it’s the only cure for this... this feral syndrome! Arf! Arf! ...Please!
+        <<play_sound "PlaySFXWolfHowl">>
+        Eugene: I can feel myself slipping... find the collar and bring it back to me before I completely lose my mind and just... AWOOOO— Go!
+        Eugene: GRRR-RAFF! BARK! SNARL! ARF! ARF! AWOOOOOO! WOOF! BARK!
+        <<hide y/nbox>>
+        Narrator: alright ALRIGHT LETS GET GOING 
+        Narrator: BEFORE HE BITES US BOTH
+        Narrator: ITS THAT DOOR
+        Narrator: I know that's where the basement is LETS GO!!
+        <<hide eugene_alpha>>
+        <<jump Eugene_Basement2>>
+===
+
+title: Eugene_Basement2
+---
+<<background Door_0>>
+<<play_sound "PlaySFXFootsteps">>
+<<play_sound "PlaySFXDoorOpen">>
+<<play_sound "PlaySFXDoorClose">>
+<<background Basement_0>>
+<<play_sound "PlaySFXCrowdGasp">>
+Narrator: what
+Narrator: the
+<<play_sound "PlaySFXVineboom">>
+Narrator: Is this even pg-13 HOLD UPP
+Narrator: if ur under 13 please close ur eyes right now
+<<play_sound "PlaySFXVineboom">>
+Narrator: WAIT
+Narrator: These are ACTUAL dog leashes, dog collars, and dog cage
+Narrator: All ones u can find in Petsma*t irl for 20 bucks
+Narrator: ...FUCK that doesnt make this ANY BETTER
+<<play_sound "PlaySFXSparkle">>
+<<show obj_collar>>
+Narrator: Alright OKAY GRAB THAT PINK SPARKLE ONE AND LEAVE 
+<<hide obj_collar>>
+<<background Villa>>
+<<show y/nbox>>
+<<show eugene_collared>>
+Eugene: ...
+<<nide y/nbox>>
+Narrator: Damn... he finally calmed down
+Narrator: we saved his life dawg
+Narrator: what is he gonna do
+<<hide eugene_collared>>
+<<jump Busted>>
+===
+
 
 //two pregnant lines -> infertile scandal
 title: theStudy
@@ -1012,38 +1239,74 @@ title: theStudy
 <<show y/nbox>>
 <<show narratorbox>>
 
+<<play_sound "PlaySFXFootsteps">>
 Narrator: You ran into the house, looking for Eugene.
+<<play_sound "PlaySFXFootsteps">>
 Narrator: But he's not in the living room, not in the study, not in the restroom...
 <<background Bedroom_0>>
 Narrator: nice, now you're in the bedroom of sir Eugene Gallinaceus. 
-Narrator: Where did he go? prob some secret underground basement u dont know of
+Narrator: Trust me bro I dont want to be here too i prefer to stay away from that bed
+<<play_sound "PlaySFXVineboom">>
+Narrator: But where did bro go? prob some secret underground basement u dont know of
 Narrator: Maybe an entrance is near by? 
     -> sh*t how am i supposed to know
-    -> 
-Narrator: But before you leave the bedroom, something caught your eyes.
-<<show obj_report>>
-Narrator: wait what
-    -> ???
-        <<show y/nbox>>
-        <<show eugene_alpha>>
-        Eugene: WHAT, ARE, YOU, DOING?!
-        <<jump Busted>>
-    -> WHOS THE BABY FATHER THEN???
-        <<show y/nbox>>
-        <<show eugene_alpha>>
-        Eugene: WHAT, ARE, YOU, DOING?!
-        <<jump Busted>>
+        <<jump theStudy2>>
+    -> time to turn this place upside down
+        <<jump theStudy2>>
 ===
 
+title: theStudy2
+---
+<<play_sound "PlaySFXFootsteps">>
+<<background Door_0>>
+Narrator: oh wait a door 
+Narrator: seems to lead to a secret basement i think
+<<show y/nbox>>
+Eugene: *@#^!@#^%@*
+Eugene: *^&&#*^@!*
+<<hide y/nbox>>
+Narrator: Wait, he's down there
+Narrator: Is he yelling for help??? i cant tell
+<<show y/nbox>>
+Eugene: *^&&#*^@!*
+Eugene: *@#^!@#^%@*!!
+<<hide y/nbox>>
+Narrator: The door is locked, he sounds kinda desperate tho
+Narrator: did he accidentally locked himself in there
+    -> *knock on door*
+        <<show y/nbox>>
+        Eugene: *^&&#*^@!*
+        <<hide y/nbox>>
+        Narrator: Alright we gotta get him out
+        Narrator: we have a FAMILY issue going on here
+            -> *look for keys*
+                <<background Bedroom_0>>
+                Narrator: Better search every corner guys
+                Narrator: wait what is that?
+                <<play_sound "PlaySFXCrowdGasp">>
+                <<show obj_report>>
+                Narrator: wait what
+                    -> ?????
+                        <<show y/nbox>>
+                        <<show eugene_alpha>>
+                        Eugene: WHAT, ARE, YOU, DOING?!
+                        <<jump Busted>>
+                    -> WHOS THE BABY FATHER THEN???
+                        <<show y/nbox>>
+                        <<show eugene_alpha>>
+                        Eugene: WHAT, ARE, YOU, DOING?!
+                        <<jump Busted>>
+===
 
 
 title: Busted
 ---
 <<background Villa>>
+<<play_sound "SetMusicToDramaTheme">>
 
 <<hide eugene_calm>>
-<<hide eugene_sas>>
-<<show eugene_alpha>>
+<<show eugene_sas>>
+<<hide eugene_alpha>>
 <<hide y/n_calm>>
 <<hide y/n_sob>>
 <<hide secretary_calm>>
@@ -1063,21 +1326,25 @@ title: Busted
 <<show y/nbox>>
 <<show narratorbox>>
 
-Eugene: HOW DARE YOU REMAIN HERE!!
+<<play_sound "PlaySFXVineboom">>
+Eugene: ...YOU KNOW TOO MUCH...
+<<hide eugene_sas>>
+<<show eugene_alpha>>
 Eugene: I FINALLY RECOGNIZED... YOU ARE THE SECURITY I JUST FIRED!!
 Eugene: SECURITY!!!! TAKE THEM DOWN!!!
 <<hide y/nbox>>
-Narrator: SH*t you know too much
-Narrator: He's calling all the security in the villa
+Narrator: SHIT He's calling all the security in the villa!
 Narrator: In no time u will be shoved down the drain and forever be silenced
     -> da fak should i do now??
         Narrator: low key, just fight
-        Narrator: Why so serious? LMAOOO go SLAP him with what you just learned!
+        Narrator: we did everything we can 
+        Narrator: Why so serious? LMAOOO go SLAP him with what you just learned.
         Narrator: Never underestimate the power of SCANDALS. 
         Narrator: Now, RANDOM BULLSH*T GO!
         <<LoadScene "Tutorial">>
     -> *roll up sleeves*
-        Narrator: AYYYYYY that's the SPIRIT im taking about!
+        Narrator: AYYYYYY that's the SPIRIT!
+        Narrator: we did everything we can 
         Narrator: now, go take him down with everything you just learned.
         Narrator: Never underestimate the power of SCANDALS. 
         Narrator: Now, RANDOM BULLSH*T GO!

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: cfc654ec6ecfd09498c3e5a12a914deb
+guid: 36be5e535152870498cd27e045f681ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1914279029325653879
-    second: Obj_Hair_0
-  - first:
-      213: -2288399199003368924
-    second: Obj_Hair_1
+      213: -66977520297296777
+    second: eugene_collared_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Obj_Hair_0
+      name: eugene_collared_0
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 2050
-        width: 519
-        height: 210
+        x: 2610
+        y: 0
+        width: 1711
+        height: 2463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98890187d5d1f65e0800000000000000
-      internalID: -1914279029325653879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obj_Hair_1
-      rect:
-        serializedVersion: 2
-        x: 1109
-        y: 1031
-        width: 2561
-        height: 1322
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 422ad1f8d09fd30e0800000000000000
-      internalID: -2288399199003368924
+      spriteID: 77c3eb6dc4c021ff0800000000000000
+      internalID: -66977520297296777
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Obj_Hair_0: -1914279029325653879
-      Obj_Hair_1: -2288399199003368924
+      eugene_collared_0: -66977520297296777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
