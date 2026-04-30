@@ -12,8 +12,6 @@
 <<hide y/n_sob>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
-<<hide vincent>>
-<<hide vincent_shadow>>
 <<show player>>
 
 <<hide cc_life>>
@@ -478,9 +476,9 @@ title: BadEnding2
 
 Narrator: oh wow.
 Narrator: You got fired right there and then, while Eugene carried Y/N into the mansion. 
-Narrator: So that's how you lost your first job after. 
+Narrator: So that's how you lost your job.
 Narrator: Well, game over.
-    -> wats that 'mindset' thing again
+    -> so 'mindset change lives' huh
         Narrator: ofc! it still applies.
         Narrator: What I'm trynna say is, this world is not AS serious as u might think.
         Narrator: Turns out even the so-called most high-end places on earth aren't all they're cracked up to be. 
@@ -1203,7 +1201,7 @@ Narrator: Alright OKAY GRAB THAT PINK SPARKLE ONE AND LEAVE
 <<show y/nbox>>
 <<show eugene_collared>>
 Eugene: ...
-<<nide y/nbox>>
+<<hide y/nbox>>
 Narrator: Damn... he finally calmed down
 Narrator: we saved his life dawg
 Narrator: what is he gonna do

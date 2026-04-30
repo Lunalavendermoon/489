@@ -1,36 +1,196 @@
 ﻿title: ending_start
 ---
 <<background Villa>>
-<<play_sound "SetMusicToDramaTheme">>
+<<play_sound "SetMusicToCasualTheme">>
 
 <<hide eugene_calm>>
-<<show eugene_sas>>
 <<hide eugene_alpha>>
 <<hide eugene_collared>>
+<<show eugene_defeat>>
 <<hide y/n_calm>>
 <<hide y/n_sob>>
 <<hide vincent>>
 <<hide vincent_shadow>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
-<<hide player>>
-
-<<hide cc_life>>
-<<hide cc_tradeoffer>>
-<<hide cc_pushup>>
-<<hide cc_realization>>
-<<hide cc_flyer>>
-<<hide cc_you>>
-<<hide cc_pill>>
-<<hide obj_report>>
-<<hide obj_hair>>
-<<hide obj_key>>
-<<hide obj_collar>>
 
 <<show y/nbox>>
 <<show narratorbox>>
 
+Eugene: ...
+<<play_sound "PlaySFXVineboom">>
+Eugene: ....Wh-whine... ruff...
+<<show y/n_sob>>
+<<play_sound "PlaySFXWomanCry">>
+y/n: NO EUGENE!!!!!
+y/n: Eugene, my love.... No! Don't you dare TOUCH HIM! NO!!!
+y/n: Eugene, I've got you, my king, my god... I'm right here, I'm here....
+Eugene: Yip... y-y-yip...
+<<hide y/n_sob>>
+<<show y/n_calm>>
+y/n: If ANYONE takes one more step, I swear to god———YOU WILL HAVE TO KILL ME FIRST!!!!
+<<hide eugene_defeat>>
+//show fbi agent (on the right)
+FBI Agent: Look, lady, I get that you're having a moment here with... whatever he is now.
+FBI Agent: But you really might want to step back and look at the reality of your situation.
+FBI Agent: The guy has been textbook gaslighting you since day one.
+<<play_sound "PlaySFXVineboom">>
+FBI Agent: We've got solid proof he's illegally confined you over ten times,
+<<play_sound "PlaySFXVineboom">>
+FBI Agent: Systematically cutting you off from your entire social circle so you'd have no one else to rely on,
+<<play_sound "PlaySFXVineboom">>
+FBI Agent: He's incredibly emotionally unstable, constantly irritable, 
+<<play_sound "PlaySFXVineboom">>
+FBI Agent: and he just uses that whole "affair with Vincent" as a way to guilt-trip you into staying under his thumb
+FBI Agent: So honestly you throwing yourself on the concrete for him is a bit much.
+<<hide y/nbox>>
+Narrator: Take it from me but eugene ending up on a leash is probably the best ending to this chaos
+    -> i agree
+        <<play_sound "SetMusicToTragicTheme">>
+        <<show y/nbox>>
+        <<hide y/n_calm>>
+        <<show y/n_sob>>
+        y/n: Lies! all LIES!!!
+        <<play_sound "PlaySFXWomanCry">>
+        y/n: You don't know anything about us! He loved me so FIERCELY it terrified him...
+        y/n: Every time he locked that door, he was protecting me from a world that wanted to tear us apart!
+        y/n: I never cheated on him... 
+        y/n: BUT he had every right to be angry about Vincent———he knew you outsiders would try to POISON me against HIM!
+        <<play_sound "PlaySFXWomanCry">>
+        y/n: You all have NO idea about the Gallinaceus... and what it TAKES to bear this name....
+        y/n: I'm Eugene's. He is my SOULMATE, and I will never abandon him!
+        y/n: I would NEVER, EVER be someone elses bride...!
+        <<jump Vincent>>
+    -> girl vincent sounds like a better option
+        <<play_sound "SetMusicToTragicTheme">>
+        <<show y/nbox>>
+        <<hide y/n_calm>>
+        <<show y/n_sob>>
+        y/n: Lies! all LIES!!!
+        <<play_sound "PlaySFXWomanCry">>
+        y/n: You don't know anything about us! He loved me so FIERCELY it terrified him...
+        y/n: Every time he locked that door, he was protecting me from a world that wanted to tear us apart!
+        y/n: I never cheated on him... 
+        y/n: BUT he had every right to be angry about Vincent———he knew you outsiders would try to POISON me against HIM!
+        <<play_sound "PlaySFXWomanCry">>
+        y/n: You all have NO idea about the Gallinaceus... and what it TAKES to bear this name....
+        y/n: I'm Eugene's. He is my SOULMATE, and I will never abandon him!
+        y/n: I would NEVER, EVER be someone elses bride...!
+        <<jump Vincent>>
+===
 
-Narrator: 
+
+title: Vincent
+---
+<<background Outside>>
+<<play_sound "SetMusicToDramaTheme">>
+//hide FBI Agent
+<<hide y/nbox>>
+<<play_sound "PlaySFXHelicopter">>
+Narrator: Wait a helicopter landed over there
+Narrator: FBI is already here, who could it be?
+<<play_sound "PlaySFXHelicopter">>
+<<show y/nbox>>
+//show FBI Agent
+FBI Agent: ?
+FBI Agent: Who's there? get off the helicopter right now
+//hide FBI Agent
+<<play_sound "PlaySFXFootsteps">>
+<<show vincent_shadow>>
+???: Well, well, well, what an absolutely delightful little tragedy we have unfolding on the pavement today~
+???: Y/N, oh my sweet darling~ dry those pretty tears. There is nothing left to fear———for I have arrived~
+<<hide y/nbox>>
+Narrator: Eugene??? 
+Narrator: bruh Eugene doesnt talk like that..?
+<<show y/nbox>>
+<<play_sound "PlaySFXWomanCry">>
+y/n: You might wear his face, and you might wear his expensive suits, but you will never have his soul...
+y/n: ...if you think for one single second that I will ever submit to you, you are completely out of your mind...
+<<hide vincent_shadow>>
+<<show vincent>>
+y/n: ...VINCENT Felixius T. Ralph D. Richard Gallinaceus...!!!
+<<play_sound "PlaySFXCrowdGasp">>
+    -> THERES TWO OF THEM???
+    -> HOLY SHT they are TWINS 
+Vincent: It seems my twin brother always did have a spectacular talent for making a pathetic mess out of everything he touched~
+Vincent: Grandmother has heard and spoken: Eugene Arthur K. Windsar A. Percival Gallinaceus is a disgrace to the entire Gallinaceus family~
+Vincent: She has given me the rights to take full control of his estates, his bank accounts, and his properties from now on~
+Vincent: Including you, Y/N... my little Aphrodite~
+Vincent: And as for that mangy mutt shivering in your arms, feel free to just hand him over to the pound where a filthy beast like him truly belongs~
+Vincent: ...and YOU, great work indeed~ 
+<<hide y/n_sob>>
+<<show secretary_anxious>>
+Vincent: As promised, I will promote you to main manager of Gallinaceus enterprise~  
+    -> HE'S YOUR GUY???
+    -> bro eugene is so cooked
+<<play_sound "PlaySFXVineboom">>
+Secretary: ...THANK YOU, sir Vincent... I mean, my boss...!
+Vincent: It breaks my heart to see a TALENT like you be WASTED in managing my brother's daily chores~ 
+Vincent: Don't let me down~ 
+Secretary: I WON'T...! I shall dedicate my ENTIRE life to you, boss!
+<<hide secretary_anxious>>
+Vincent: Oh~ lastly, I must be missing someone here~ someone, SPECIAL.
+Vincent: ...YOU. My most trusted SECURITY GUARD. You did a SPLENDID job~
+    -> me?
+Vincent: Ah, my good man! I simply must express my absolute, deepest gratitude for your spectacular service today~
+Vincent: Who do you think protected your employment in the Gallinaceus Villa~?
+Vincent: Who do you think paved your way to uncovering the SECRETS~? 
+Vincent: How adorable~ You really thought you could've done it all on your own~?
+    -> narrator ur on his side too
+<<hide y/nbox>>
+Narrator: Bro LEAVE ME OUTTA THIS
+Narrator: im ur guy trust 
+<<show y/nbox>>
+Vincent: The power of SECRETS... how SIGNIFICANT~ 
+Vincent: Even the most impenetrable figure can shatter like a glass in front of SCANDALS~
+Vincent: You see, my dear, pathetic brother was merely the first domino to fall~
+Vincent: I have an entire family tree of arrogant, incredibly wealthy fools just begging to be pruned...
+Vincent: ...and a rather grand, overarching masterplan to seize every single asset they possess~
+Vincent: So tell me, my loyal, burly friend... 
+<<play_sound "SetMusicToDramaTheme">>
+Vincent: How would you like a permanent front-row seat to the hostile TAKEOVER of an entire dynasty?
+<<play_sound "PlaySFXCrowdGasp">>
+<<hide y/nbox>>
+    -> Im in
+        Narrator: Wow, what a commitment.
+        Narrator: U do realize that playing with a dangerous guy like Vincent might backfires, right?
+        Narrator: lol whats more to trust to a guy that has the exact same face as Eugene? 
+        Narrator: But he's absolutely right abt one thing
+        Narrator: ...the immense power of SCANDALS, and how it can be used to destroy anyone.
+        Narrator: Who knows? maybe there will be MORE, absolutely MESSED-UP secrets behind this eloquent man in white suits...
+        Narrator: ...9000 times CRAZIER than what Eugene had.
+        Narrator: Trust me, it will be uncovered. Because you know, we live in a reward system. 
+        Narrator: Afterall, this is the grungy Gallinaceus Villa.
+        <<jump ending_credits>>
+    -> I just wanna go home dawg
+        Narrator: actually u can go home soon cuz the game is ending
+        Narrator: lol whats more to trust to a guy that has the exact same face as Eugene? 
+        Narrator: But he's absolutely right abt one thing
+        Narrator: ...the immense power of SCANDALS, and how it can be used to destroy anyone.
+        Narrator: Who knows? maybe there will be MORE, absolutely MESSED-UP secrets behind this eloquent man in white suits...
+        Narrator: ...9000 times CRAZIER than what Eugene had.
+        Narrator: Trust me, it will be uncovered. Because you know, we live in a reward system. 
+        Narrator: Afterall, this is the grungy Gallinaceus Villa.
+        <<jump ending_credits>>
+===
+
+title: ending_credits
+---
+<<background Introduction_0>>
+<<play_sound "SetMusicToMainTheme">>
+
+<<hide eugene_calm>>
+<<hide eugene_alpha>>
+<<hide eugene_collared>>
+<<show eugene_defeat>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide vincent>>
+<<hide vincent_shadow>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+
+<<hide y/nbox>>
+<<hide narratorbox>>
 
 ===
