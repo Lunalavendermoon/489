@@ -1,0 +1,36 @@
+﻿title: ending_start
+---
+<<background Villa>>
+<<play_sound "SetMusicToDramaTheme">>
+
+<<hide eugene_calm>>
+<<show eugene_sas>>
+<<hide eugene_alpha>>
+<<hide eugene_collared>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide vincent>>
+<<hide vincent_shadow>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide player>>
+
+<<hide cc_life>>
+<<hide cc_tradeoffer>>
+<<hide cc_pushup>>
+<<hide cc_realization>>
+<<hide cc_flyer>>
+<<hide cc_you>>
+<<hide cc_pill>>
+<<hide obj_report>>
+<<hide obj_hair>>
+<<hide obj_key>>
+<<hide obj_collar>>
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+
+Narrator: 
+
+===
