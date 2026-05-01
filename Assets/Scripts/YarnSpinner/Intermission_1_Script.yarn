@@ -1,8 +1,10 @@
 ﻿title: intermission1_start
 ---
 
+
 <<background Villa>>
 <<play_sound "SetMusicToDramaTheme">>
+
 
 <<hide eugene_calm>>
 <<hide eugene_alpha>>
@@ -12,58 +14,97 @@
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
 
+
 <<show y/nbox>>
 <<show narratorbox>>
+
 
 Eugene: ...I....I will fire you.
 <<hide eugene_collared>>
 <<show eugene_alpha>>
-//howl
+<<play_sound "PlaySFXWolfHowl">>
 Eugene: I WILL FIRE YOU!!
 <<show secretary_anxious>>
-Secretary: BOSS!! BOSS!! 
+Secretary: BOSS!! BOSS!!
 Secretary: WE GOT A PROBLEM!! BOSS!!
-<<hide eugene_alpha>> 
+<<hide eugene_alpha>>
 <<show eugene_collared>>
-Eugene: Why are you in such a panic? 
+Eugene: Why are you in such a panic?
 Eugene: Spit it out IMMEDIATELY if you have anything to say!!
 <<hide secretary_anxious>>
 <<show secretary_calm>>
 Secretary: ...But boss, I can't do it here.
 Eugene: WHAT DO YOU MEAN YOU CAN'T?!
 Eugene: Are you disobeying me?!
+<<play_sound "PlaySFXVineboom">>
 <<hide secretary_calm>>
 <<show secretary_anxious>>
 Secretary: ...But! but this is top business secrets...
-Secretary: It was you who forbidden any mention outside of the...
+Secretary: It was you who forbade any mention outside of the...
 <<hide eugene_collared>>
 <<show eugene_alpha>>
 Eugene: SPEAK NOW!! ———now! Before my patience runs out completely!!!
-Secretary: Its your proudest enterprise! Our flagship asset———the mobile game *Princess Sparkle Dress Up: Royal Academy*...!
-Secretary: We are being massively canceled online! The servers are literally melting from the sheer volume of boycotts.
+<<play_sound "PlaySFXWolfHowl">>
+Secretary: Its your proudest enterprise!! Our flagship asset———the mobile game *Princess Sparkle Dress Up: Royal Academy*...!
+<<play_sound "PlaySFXVineboom">>
+Secretary: We are being massively canceled online! The servers are literally melting from the sheer volume of boycotts!
+<<play_sound "PlaySFXVineboom">>
 Secretary: And—and that's not even the worst of it! The legal department just called in a panic. We are being sued by D*sney!
-Secretary: B-But the absolute worst part... Boss, the FBI found out the money laundering, the shell companies, the tax evasion...
+<<play_sound "PlaySFXVineboom">>
+Secretary: B-But the absolute worst part... Boss, the FBI found out about the money laundering, the shell companies, the tax evasion…
+<<play_sound "PlaySFXVineboom">>
 Secretary: They are coming...!!
-    -> Princess what royal what
+    -> Princess what royal what???
     -> damnnnnnnnnn
-<<hide eugene_alpha>> 
+<<hide eugene_alpha>>
 <<show eugene_collared>>
 Eugene: ....what.... HOW DID THEY FIND OUT?!!
+<<play_sound "PlaySFXCrowdGasp">>
 <<hide y/nbox>>
-Narrator: wait C'MON this might be our chance here! 
-Narrator: Eugene is hit by severe emotional damange, currently in a state of paralyze
-Narrator: Now might be the chance to permanently defeat———
+Narrator: Bruh isn't it even weirder if no one noticed
 <<hide secretary_anxious>>
 <<show y/nbox>>
 <<show y/n_sob>>
-y/n: EUGENE...! tsk.... EUGENE......!!! 
+<<play_sound "PlaySFXWomanCry">>
+y/n: EUGENE...!....EUGENE......!!!
+<<play_sound "PlaySFXSparkle">>
 y/n: Eugene, I'm here... I'm here for you!!... ugh...
 <<hide y/nbox>>
 Narrator: Oh lord why is she here
 Narrator: She looks so much in pain GOSH can't she just settle down for one moment?
 <<show y/nbox>>
-y/n: Eugene, I have heard about the FBI...! 
-
-
-
+y/n: Eugene, I have heard about the FBI...! …ugh… I will not let them take you… 
+	-> how did you get out
+		<<play_sound "PlaySFXWomanCry">>
+		y/n: My love is so strong that it communicates to all the birds and butterflies and Squirrels… together, they helped me escape and led me here…!
+		<<play_sound "PlaySFXVineboom">>
+		y/n: It's meant to be… Eugene…! We will stay together no matter what happens…
+	-> GIRL GO BACK and REST
+		y/n: It’s okay… I can feel it in my stomach… 
+y/n: My love is so strong that it communicates to heaven, a light beam falls upon me, and now I’m feeling much better…
+<<play_sound "PlaySFXVineboom">>
+y/n: All the birds and butterflies and Squirrels got together, they broke the lock and led me here…!
+<<play_sound "PlaySFXVineboom">>
+y/n: It's meant to be… Eugene…! We will stay together no matter what happens…
+Eugene: Y/N…
+<<play_sound "PlaySFXWomanCry">>
+y/n: Oh, Eugene… every night of the full moon—— when your fits of frenzy strike—— who is the one by your side, keeping you company…?
+y/n: Who is the one who stays with you to help you fight against that madness—even under the risk of being bitten…?
+y/n: Who is the one who, carries you down to the basement, 
+<<play_sound "PlaySFXVineboom">>
+y/n: fastens a collar around your neck, 
+<<play_sound "PlaySFXVineboom">>
+y/n: locks you away, and uses the scent of their own body to help soothe your mania…?
+<<play_sound "PlaySFXVineboom">>
+	-> what the fuck
+	-> So you KNEW???
+<<play_sound "PlaySFXWomanCry">>
+y/n: I am the only one who truly knows your inner demons... Eugene! I have seen ALL… but I’m still here… because I love you… 
+Eugene: Y/N…
+Eugene: …Why do you toy with my heart, subjecting me to wave after wave of heartbreaking agony and struggle?
+<<hide y/nbox>>
+Narrator: Wait, C'MON this might be our chance here!
+Narrator: Eugene is hit by severe emotional damage, currently in a state of paralysis!
+Narrator: If we wanna survive it here, NOW might be the chance———!
+<<LoadScene "Tutorial 1">>
 ===

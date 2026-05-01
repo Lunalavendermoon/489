@@ -1,0 +1,80 @@
+﻿title: intermission2_start
+---
+<<background Villa>>
+<<play_sound "SetMusicToTragicTheme">>
+
+
+<<hide eugene_calm>>
+<<hide eugene_alpha>>
+<<hide eugene_collared>>
+<<show eugene_beaten>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+<<hide agent>>
+
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+
+Eugene: ……
+Eugene: …I …I will kill you…
+<<show y/n_sob>> 
+y/n: EUGENE…! NO!!! STOP HURTING HIM…!!!
+y/n: Please… if only you could look through my eyes and see the pure, flawless young boy beneath this beastly mask…
+<<hide eugene_beaten>>
+<<show agent>>
+<<play_sound "PlaySFXDoorOpen">>
+FBI Agent: ay FBI open up
+<<play_sound "PlaySFXFootsteps">>
+FBI Agent: who’s…
+FBI Agent: uhh, Eugene Arthur K. Windsar A. Percival Gallinaceus?
+<<hide y/n_sob>>
+<<show y/n_calm>>
+y/n: NO!!! No… NO!! NO…!!!
+y/n: No… no… no, wait! Stop! You can't do this!  officer…!!
+y/n: You have to let this slide… he hasn’t done anything bad…!!
+FBI Agent: m’am please step aside
+y/n: You can't take him away! Please, you have to let him go! He's a father! I'm... I'm PREGNANT! 
+<<play_sound "PlaySFXVineboom">>
+y/n: I’m pregnant… with Eugene’s child…!!
+y/n: Do you truly have the heart to let a poor, innocent child lose their father from the very moment of their birth…?!
+<<hide Agent>>
+<<show eugene_beaten>>
+Eugene: …
+Eugene: You are… what?
+<<hide y/n_calm>>
+<<show y/n_sob>>
+y/n: Yes, my love! We're having a baby! 
+y/n: So just tell them to— 
+Eugene: …Look at me. Who is it?
+y/n: What... what do you mean? It's yours, darling! We're having a baby... 
+<<hide eugene_beaten>>
+<<show eugene_alpha>>
+Eugene: Don't you dare lie to me!!
+<<play_sound "PlaySFXVineboom">>
+Eugene: Is it Vincent?! 
+Eugene: So it’s TRUE…!
+Eugene: Is that it?! Have you been sneaking around with that pathetic rat behind my back?! How long has it been going on 
+<<play_sound "PlaySFXVineboom">>
+	-> BRO FIX THE ADDITUDE
+	-> …
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eugene: I WILL FIRE YOU!!
+<<show secretary_anxious>>
+===
