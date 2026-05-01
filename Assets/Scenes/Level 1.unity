@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cef3829f158324a8b3612f7ddc6be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
   dotsAndCurvesOnlyMode: 0
   enableSuperMode: 1
   enableBullets: 1
@@ -1416,6 +1415,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 799204363}
     m_Modifications:
+    - target: {fileID: 264771929511838170, guid: e403fa482d813ee419faa19c36f53b60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Intermission_1
+      objectReference: {fileID: 0}
     - target: {fileID: 543737601698910912, guid: e403fa482d813ee419faa19c36f53b60, type: 3}
       propertyPath: m_Name
       value: EndPanel (1)

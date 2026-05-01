@@ -847,7 +847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264771929511838170, guid: e403fa482d813ee419faa19c36f53b60, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Tutorial 2
+      value: Intermission_2
       objectReference: {fileID: 0}
     - target: {fileID: 543737601698910912, guid: e403fa482d813ee419faa19c36f53b60, type: 3}
       propertyPath: m_Name
