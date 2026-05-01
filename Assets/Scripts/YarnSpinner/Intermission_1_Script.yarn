@@ -1,0 +1,20 @@
+﻿title: intermission1_start
+---
+
+<<background Villa>>
+<<play_sound "SetMusicToDramaTheme">>
+
+<<hide eugene_calm>>
+<<hide eugene_alpha>>
+<<show eugene_collared>>
+<<hide y/n_calm>>
+<<hide y/n_sob>>
+<<hide secretary_calm>>
+<<hide secretary_anxious>>
+
+<<show y/nbox>>
+<<show narratorbox>>
+
+Eugene: hhh
+
+===
