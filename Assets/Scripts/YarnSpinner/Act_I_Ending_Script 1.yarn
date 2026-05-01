@@ -8,11 +8,13 @@
 <<hide eugene_collared>>
 <<show eugene_defeat>>
 <<hide y/n_calm>>
+<<hide agent>>
 <<hide y/n_sob>>
 <<hide vincent>>
 <<hide vincent_shadow>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
+<<hide Credits>>
 
 <<show y/nbox>>
 <<show narratorbox>>
@@ -30,7 +32,7 @@ Eugene: Yip... y-y-yip...
 <<show y/n_calm>>
 y/n: If ANYONE takes one more step, I swear to god———YOU WILL HAVE TO KILL ME FIRST!!!!
 <<hide eugene_defeat>>
-//show fbi agent (on the right)
+<<show agent>>
 FBI Agent: Look, lady, I get that you're having a moment here with... whatever he is now.
 FBI Agent: But you really might want to step back and look at the reality of your situation.
 FBI Agent: The guy has been textbook gaslighting you since day one.
@@ -84,17 +86,17 @@ title: Vincent
 ---
 <<background Outside>>
 <<play_sound "SetMusicToDramaTheme">>
-//hide FBI Agent
+<<hide agent>>
 <<hide y/nbox>>
 <<play_sound "PlaySFXHelicopter">>
 Narrator: Wait a helicopter landed over there
 Narrator: FBI is already here, who could it be?
 <<play_sound "PlaySFXHelicopter">>
 <<show y/nbox>>
-//show FBI Agent
+<<show agent>>
 FBI Agent: ?
 FBI Agent: Who's there? get off the helicopter right now
-//hide FBI Agent
+<<hide agent>>
 <<play_sound "PlaySFXFootsteps">>
 <<show vincent_shadow>>
 ???: Well, well, well, what an absolutely delightful little tragedy we have unfolding on the pavement today~
@@ -186,9 +188,12 @@ title: ending_credits
 <<hide y/n_calm>>
 <<hide y/n_sob>>
 <<hide vincent>>
+<<hide agent>>
 <<hide vincent_shadow>>
 <<hide secretary_calm>>
 <<hide secretary_anxious>>
+
+<<show Credits>>
 
 <<hide y/nbox>>
 <<hide narratorbox>>
