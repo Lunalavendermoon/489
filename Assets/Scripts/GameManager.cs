@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public enum GameState { Normal, CountdownToSuper, Super, GameOver, EndScreen }
 
-    public float waitTime = 0.5f;
+    //public float waitTime = 0.5f;
     [Header("Mode Toggles")]
     [Tooltip("Practice mode: only dots + curves. Disables bullets and Super Mode.")]
     public bool dotsAndCurvesOnlyMode = false;
@@ -82,8 +82,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //RestartGame();
-        StartCoroutine(BeginGameRoutine());
+        RestartGame();
+        //StartCoroutine(BeginGameRoutine());
     }
 
     private void Update()
@@ -306,16 +306,16 @@ public class GameManager : MonoBehaviour
         spawns?.SetPaused(false);
         bullets?.SetPaused(false);
     }
-    private IEnumerator BeginGameRoutine()
-    {
-    #if UNITY_EDITOR
-        yield return new WaitForSeconds(waitTime);
-    #endif
+    // private IEnumerator BeginGameRoutine()
+    // {
+    // // #if UNITY_EDITOR
+    // //     yield return new WaitForSeconds(waitTime);
+    // // #endif
 
-        RestartGame();
+    //     RestartGame();
 
-        AudioManager.Instance.PlayEvent("SetMusicToDiesIrae");
-    }
+    //     //AudioManager.Instance.PlayEvent("SetMusicToDiesIrae");
+    // }
     private void ApplyModeRules()
     {
         if (spawns != null)
