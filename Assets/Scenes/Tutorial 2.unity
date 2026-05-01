@@ -523,9 +523,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSteps:
-  - videoClip: {fileID: 32900000, guid: 9f94ab930f7ac9d49be356a6a86646c7, type: 3}
-    caption: Touch the love bombs with your cursor or rumors to prevent them from
-      reaching the core and losing points!
+  - videoClip: {fileID: 32900000, guid: d21f8cbbd35078f4eae6a9c82d69c22d, type: 3}
+    caption: This is a Bomb. Its countdown is always ticking, and it will become
+      more red as it gets closer to exploding. If a bomb explodes, you will lose
+      a massive amount of score.
+  - videoClip: {fileID: 32900000, guid: a9046314f91001e418291f42064aedee, type: 3}
+    caption: When a bomb becomes larger and turns yellow, it is attackable. Deposit
+      rumors into it during this state to increase its countdown again.
+  - videoClip: {fileID: 32900000, guid: 40340bdc707136a4eb38ce6409a168c1, type: 3}
+    caption: Each time you successfully deposit a rumor into a bomb, your next deposit
+      into the center will gain a massive score bonus.
   videoPlayer: {fileID: 689740925}
   captionText: {fileID: 1851544836}
   leftArrowButton: {fileID: 93864934}
@@ -559,6 +566,7 @@ GameObject:
   - component: {fileID: 1105063440}
   - component: {fileID: 1105063439}
   - component: {fileID: 1105063438}
+  - component: {fileID: 1105063442}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -609,7 +617,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105063439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1105063442}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105063439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +687,18 @@ RectTransform:
   m_AnchoredPosition: {x: -1.6966553, y: -458}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1105063442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105063437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e37df854a717fd46b41f2ef27c6dd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1222340340
 GameObject:
   m_ObjectHideFlags: 0
