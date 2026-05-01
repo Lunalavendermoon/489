@@ -531,7 +531,7 @@ MonoBehaviour:
   leftArrowButton: {fileID: 93864934}
   rightArrowButton: {fileID: 1283957228}
   startGameButton: {fileID: 1105063438}
-  gameSceneName: Level 3
+  gameSceneName: Level 2
 --- !u!4 &755588686
 Transform:
   m_ObjectHideFlags: 0
