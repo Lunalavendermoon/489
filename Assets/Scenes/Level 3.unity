@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cef3829f158324a8b3612f7ddc6be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.4
   dotsAndCurvesOnlyMode: 0
   enableSuperMode: 1
   enableBullets: 1
@@ -1944,7 +1943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2925545379332563280, guid: bebf6fadc69e74142b98b71c3c5e6f16, type: 3}
       propertyPath: manualSongLengthSeconds
-      value: 130
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2925545379332563280, guid: bebf6fadc69e74142b98b71c3c5e6f16, type: 3}
       propertyPath: pulseSprites.Array.data[0].target
@@ -2481,7 +2480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: attackWindows.Array.size
-      value: 22
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: attackableScaleMultiplier
@@ -2580,6 +2579,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[22].duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[23].duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[24].duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[25].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: attackWindows.Array.data[2].startTime
       value: 1.7
       objectReference: {fileID: 0}
@@ -2658,6 +2673,22 @@ PrefabInstance:
     - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: attackWindows.Array.data[21].startTime
       value: 109
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[22].startTime
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[23].startTime
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[24].startTime
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381751187914148151, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
+      propertyPath: attackWindows.Array.data[25].startTime
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 6908960983809547208, guid: b24d11e3cc393c3439c0e113cbddac02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4143,7 +4174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2131076080
 Transform:
   m_ObjectHideFlags: 0

@@ -164,7 +164,7 @@ public class UIManager : MonoBehaviour
     {
         if (countdownText == null) return;
         int s = Mathf.CeilToInt(Mathf.Max(0f, secondsLeft));
-        countdownText.text = $"SUPER IN {s}...";
+        countdownText.text = $"SLAP HIM AS MANY TIMES AS POSSIBLE TO EARN POINTS!\nSUPER IN {s}...";
     }
 
     public void ShowSuperUI(bool show)
