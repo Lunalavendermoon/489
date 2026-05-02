@@ -78,6 +78,7 @@ FBI Agent: m’am, our crew has found this in the Villa
 FBI Agent: You might want to look at it
 <<show obj_report>>
 y/n: You knew…
+<<hide obj_report>>
 y/n: You said you love me… but for four years... You kept this from me…?
 <<play_sound "PlaySFXCrowdGasp">>
 <<hide agent>>
