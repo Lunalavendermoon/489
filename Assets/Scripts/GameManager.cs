@@ -232,7 +232,7 @@ public class GameManager : MonoBehaviour
         ui?.SetSuperTimer(1f);
 
         fx?.SuperStartBurst();
-
+        fx?.SetCoreToSuperModeSprite();
     }
 
     private void ExitSuperMode() 
@@ -250,6 +250,7 @@ public class GameManager : MonoBehaviour
             supermodeFromSongEnd = false;
             state = GameState.EndScreen;
             ui?.ShowSuperUI(false);
+            fx?.RestoreCoreNormalSprite();
             ui?.ShowEndScreen(true, score, UIManager.GetGrade(score));
         }
         else
@@ -260,6 +261,7 @@ public class GameManager : MonoBehaviour
             ui?.ShowSuperUI(false);
             ui?.ClearJudgment();
             core?.ResetFill();
+            fx?.RestoreCoreNormalSprite();
 
             if (superPausesSpawns)
             {

@@ -3858,6 +3858,7 @@ MonoBehaviour:
   perfectFlashOut: 0.04
   perfectFlashCooldown: 0.08
   coreSpriteRenderer: {fileID: 785314991}
+  coreSuperModeSprite: {fileID: 1147312979246425590, guid: 18e23163b6fefee4ea056a8cfb926890, type: 3}
   coreNormalSprite: {fileID: 2584463399953633601, guid: 61fec07009fe2374682034a7f0846b2c, type: 3}
   corePerfectSpriteUp: {fileID: 3980221568984097663, guid: 57a5c0549d3f94943b9c7a72f7cbd86f, type: 3}
   corePerfectSpriteDown: {fileID: 1654319959812378679, guid: d295bc0c5fdb23c4582ae6225ea40eea, type: 3}

@@ -46,6 +46,9 @@ public class EffectsManager : MonoBehaviour
     [Header("Perfect Core Sprite Swap")]
     [Tooltip("SpriteRenderer on the Core GameObject. If null, you can drag Core here or it will try to find one.")]
     public SpriteRenderer coreSpriteRenderer;
+    [Header("Super Mode Core Sprite")]
+    [Tooltip("Sprite shown on the core for the general supermode state.")]
+    public Sprite coreSuperModeSprite;
 
     [Tooltip("Normal sprite for the core (restored after perfect flash). If left null, we cache the sprite at runtime.")]
     public Sprite coreNormalSprite;
@@ -250,10 +253,30 @@ public class EffectsManager : MonoBehaviour
         if (perfectVolume != null) perfectVolume.weight = 0f;
 
         // --- Restore core sprite ---
-        if (coreSpriteRenderer != null && coreNormalSprite != null)
-            coreSpriteRenderer.sprite = coreNormalSprite;
+       if (coreSpriteRenderer != null)
+        {
+            if (FindObjectOfType<GameManager>() != null && FindObjectOfType<GameManager>().state == GameManager.GameState.Super && coreSuperModeSprite != null)
+                coreSpriteRenderer.sprite = coreSuperModeSprite;
+            else if (coreNormalSprite != null)
+                coreSpriteRenderer.sprite = coreNormalSprite;
+        }
 
         currentPerfectSprite = null;
         perfectFlashRoutine = null;
+    }
+    public void SetCoreToSuperModeSprite()
+    {
+        CacheCoreNormalSpriteIfNeeded();
+
+        if (coreSpriteRenderer != null && coreSuperModeSprite != null)
+            coreSpriteRenderer.sprite = coreSuperModeSprite;
+    }
+
+    public void RestoreCoreNormalSprite()
+    {
+        CacheCoreNormalSpriteIfNeeded();
+
+        if (coreSpriteRenderer != null && coreNormalSprite != null)
+            coreSpriteRenderer.sprite = coreNormalSprite;
     }
 }
