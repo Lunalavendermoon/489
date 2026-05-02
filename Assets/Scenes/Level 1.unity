@@ -2283,7 +2283,15 @@ MonoBehaviour:
   spawnOffscreenPadding: 0.7
   baseSpeed: 2
   extraSpeedAtMaxDifficulty: 1
-  phases: []
+  phases:
+  - startTime: 10
+    endTime: 120
+    spawnBullets: 1
+    bulletIntervalSeconds: 2
+    bulletsPerInterval: 3
+    overrideSpeed: 0
+    baseSpeed: 0
+    extraSpeedAtMaxDifficulty: 0
   timelineTime: 0
   activePhaseIndex: -1
 --- !u!1 &1316528589
